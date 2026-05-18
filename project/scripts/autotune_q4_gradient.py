@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Auto-tune asymmetric VHEE Q4 gradient in TOPAS until Whitmore pass."""
+"""Auto-tune asymmetric quadrupole-beamline Q4 gradient in TOPAS until Whitmore pass."""
 
 from __future__ import annotations
 
@@ -41,7 +41,7 @@ def parse_args() -> argparse.Namespace:
     root = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(
         description=(
-            "Iteratively tune Q4 gradient for the asymmetric 4-quad VHEE beamline "
+            "Iteratively tune Q4 gradient for the asymmetric 4-quad beamline "
             "to match Whitmore metrics."
         )
     )

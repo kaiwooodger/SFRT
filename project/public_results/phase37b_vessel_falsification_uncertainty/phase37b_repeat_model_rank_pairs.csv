@@ -1,0 +1,325 @@
+repeat_id,plan_id,comparator_id,comparator_label,true_rank,comparator_rank,true_rank_minus_comparator_rank
+seed11_hist0p5,case02,no_sink,"Bystander, no vascular sink",2,6,-4
+seed11_hist0p5,case02,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",2,7,-5
+seed11_hist0p5,case02,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",2,5,-3
+seed11_hist0p5,case02,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",2,3,-1
+seed11_hist0p5,case02,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",2,4,-2
+seed11_hist0p5,case02,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed11_hist0p5,case03,no_sink,"Bystander, no vascular sink",4,6,-2
+seed11_hist0p5,case03,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",4,3,1
+seed11_hist0p5,case03,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",4,7,-3
+seed11_hist0p5,case03,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",4,5,-1
+seed11_hist0p5,case03,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",4,2,2
+seed11_hist0p5,case03,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",4,1,3
+seed11_hist0p5,case04,no_sink,"Bystander, no vascular sink",2,7,-5
+seed11_hist0p5,case04,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",2,3,-1
+seed11_hist0p5,case04,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",2,4,-2
+seed11_hist0p5,case04,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",2,6,-4
+seed11_hist0p5,case04,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",2,5,-3
+seed11_hist0p5,case04,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed11_hist0p5,case05,no_sink,"Bystander, no vascular sink",6,5,1
+seed11_hist0p5,case05,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",6,3,3
+seed11_hist0p5,case05,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",6,7,-1
+seed11_hist0p5,case05,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",6,4,2
+seed11_hist0p5,case05,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",6,2,4
+seed11_hist0p5,case05,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",6,1,5
+seed11_hist0p5,case06,no_sink,"Bystander, no vascular sink",4,7,-3
+seed11_hist0p5,case06,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",4,3,1
+seed11_hist0p5,case06,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",4,5,-1
+seed11_hist0p5,case06,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",4,6,-2
+seed11_hist0p5,case06,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",4,2,2
+seed11_hist0p5,case06,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",4,1,3
+seed11_hist0p5,case07,no_sink,"Bystander, no vascular sink",3,7,-4
+seed11_hist0p5,case07,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",3,5,-2
+seed11_hist0p5,case07,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",3,4,-1
+seed11_hist0p5,case07,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",3,6,-3
+seed11_hist0p5,case07,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",3,2,1
+seed11_hist0p5,case07,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",3,1,2
+seed11_hist1p0,case02,no_sink,"Bystander, no vascular sink",3,7,-4
+seed11_hist1p0,case02,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",3,6,-3
+seed11_hist1p0,case02,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",3,5,-2
+seed11_hist1p0,case02,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",3,4,-1
+seed11_hist1p0,case02,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",3,2,1
+seed11_hist1p0,case02,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",3,1,2
+seed11_hist1p0,case03,no_sink,"Bystander, no vascular sink",4,6,-2
+seed11_hist1p0,case03,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",4,3,1
+seed11_hist1p0,case03,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",4,7,-3
+seed11_hist1p0,case03,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",4,5,-1
+seed11_hist1p0,case03,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",4,2,2
+seed11_hist1p0,case03,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",4,1,3
+seed11_hist1p0,case04,no_sink,"Bystander, no vascular sink",2,7,-5
+seed11_hist1p0,case04,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",2,3,-1
+seed11_hist1p0,case04,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",2,4,-2
+seed11_hist1p0,case04,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",2,6,-4
+seed11_hist1p0,case04,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",2,5,-3
+seed11_hist1p0,case04,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed11_hist1p0,case05,no_sink,"Bystander, no vascular sink",4,6,-2
+seed11_hist1p0,case05,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",4,3,1
+seed11_hist1p0,case05,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",4,7,-3
+seed11_hist1p0,case05,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",4,5,-1
+seed11_hist1p0,case05,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",4,2,2
+seed11_hist1p0,case05,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",4,1,3
+seed11_hist1p0,case06,no_sink,"Bystander, no vascular sink",4,7,-3
+seed11_hist1p0,case06,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",4,3,1
+seed11_hist1p0,case06,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",4,5,-1
+seed11_hist1p0,case06,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",4,6,-2
+seed11_hist1p0,case06,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",4,2,2
+seed11_hist1p0,case06,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",4,1,3
+seed11_hist1p0,case07,no_sink,"Bystander, no vascular sink",3,7,-4
+seed11_hist1p0,case07,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",3,5,-2
+seed11_hist1p0,case07,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",3,4,-1
+seed11_hist1p0,case07,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",3,6,-3
+seed11_hist1p0,case07,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",3,2,1
+seed11_hist1p0,case07,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",3,1,2
+seed11_hist2p0,case02,no_sink,"Bystander, no vascular sink",3,7,-4
+seed11_hist2p0,case02,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",3,5,-2
+seed11_hist2p0,case02,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",3,6,-3
+seed11_hist2p0,case02,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",3,4,-1
+seed11_hist2p0,case02,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",3,2,1
+seed11_hist2p0,case02,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",3,1,2
+seed11_hist2p0,case03,no_sink,"Bystander, no vascular sink",4,6,-2
+seed11_hist2p0,case03,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",4,3,1
+seed11_hist2p0,case03,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",4,7,-3
+seed11_hist2p0,case03,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",4,5,-1
+seed11_hist2p0,case03,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",4,2,2
+seed11_hist2p0,case03,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",4,1,3
+seed11_hist2p0,case04,no_sink,"Bystander, no vascular sink",2,7,-5
+seed11_hist2p0,case04,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",2,4,-2
+seed11_hist2p0,case04,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",2,5,-3
+seed11_hist2p0,case04,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",2,6,-4
+seed11_hist2p0,case04,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",2,3,-1
+seed11_hist2p0,case04,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed11_hist2p0,case05,no_sink,"Bystander, no vascular sink",4,6,-2
+seed11_hist2p0,case05,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",4,3,1
+seed11_hist2p0,case05,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",4,7,-3
+seed11_hist2p0,case05,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",4,5,-1
+seed11_hist2p0,case05,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",4,2,2
+seed11_hist2p0,case05,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",4,1,3
+seed11_hist2p0,case06,no_sink,"Bystander, no vascular sink",4,7,-3
+seed11_hist2p0,case06,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",4,3,1
+seed11_hist2p0,case06,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",4,5,-1
+seed11_hist2p0,case06,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",4,6,-2
+seed11_hist2p0,case06,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",4,2,2
+seed11_hist2p0,case06,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",4,1,3
+seed11_hist2p0,case07,no_sink,"Bystander, no vascular sink",3,7,-4
+seed11_hist2p0,case07,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",3,5,-2
+seed11_hist2p0,case07,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",3,4,-1
+seed11_hist2p0,case07,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",3,6,-3
+seed11_hist2p0,case07,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",3,2,1
+seed11_hist2p0,case07,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",3,1,2
+seed22_hist0p5,case02,no_sink,"Bystander, no vascular sink",3,7,-4
+seed22_hist0p5,case02,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",3,6,-3
+seed22_hist0p5,case02,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",3,5,-2
+seed22_hist0p5,case02,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",3,4,-1
+seed22_hist0p5,case02,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",3,2,1
+seed22_hist0p5,case02,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",3,1,2
+seed22_hist0p5,case03,no_sink,"Bystander, no vascular sink",4,6,-2
+seed22_hist0p5,case03,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",4,3,1
+seed22_hist0p5,case03,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",4,7,-3
+seed22_hist0p5,case03,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",4,5,-1
+seed22_hist0p5,case03,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",4,2,2
+seed22_hist0p5,case03,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",4,1,3
+seed22_hist0p5,case04,no_sink,"Bystander, no vascular sink",2,7,-5
+seed22_hist0p5,case04,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",2,4,-2
+seed22_hist0p5,case04,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",2,5,-3
+seed22_hist0p5,case04,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",2,6,-4
+seed22_hist0p5,case04,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",2,3,-1
+seed22_hist0p5,case04,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed22_hist0p5,case05,no_sink,"Bystander, no vascular sink",6,5,1
+seed22_hist0p5,case05,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",6,3,3
+seed22_hist0p5,case05,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",6,7,-1
+seed22_hist0p5,case05,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",6,4,2
+seed22_hist0p5,case05,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",6,2,4
+seed22_hist0p5,case05,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",6,1,5
+seed22_hist0p5,case06,no_sink,"Bystander, no vascular sink",4,7,-3
+seed22_hist0p5,case06,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",4,3,1
+seed22_hist0p5,case06,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",4,5,-1
+seed22_hist0p5,case06,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",4,6,-2
+seed22_hist0p5,case06,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",4,2,2
+seed22_hist0p5,case06,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",4,1,3
+seed22_hist0p5,case07,no_sink,"Bystander, no vascular sink",3,7,-4
+seed22_hist0p5,case07,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",3,5,-2
+seed22_hist0p5,case07,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",3,4,-1
+seed22_hist0p5,case07,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",3,6,-3
+seed22_hist0p5,case07,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",3,2,1
+seed22_hist0p5,case07,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",3,1,2
+seed22_hist1p0,case02,no_sink,"Bystander, no vascular sink",3,7,-4
+seed22_hist1p0,case02,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",3,6,-3
+seed22_hist1p0,case02,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",3,5,-2
+seed22_hist1p0,case02,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",3,4,-1
+seed22_hist1p0,case02,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",3,2,1
+seed22_hist1p0,case02,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",3,1,2
+seed22_hist1p0,case03,no_sink,"Bystander, no vascular sink",4,6,-2
+seed22_hist1p0,case03,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",4,3,1
+seed22_hist1p0,case03,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",4,7,-3
+seed22_hist1p0,case03,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",4,5,-1
+seed22_hist1p0,case03,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",4,2,2
+seed22_hist1p0,case03,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",4,1,3
+seed22_hist1p0,case04,no_sink,"Bystander, no vascular sink",2,7,-5
+seed22_hist1p0,case04,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",2,4,-2
+seed22_hist1p0,case04,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",2,5,-3
+seed22_hist1p0,case04,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",2,6,-4
+seed22_hist1p0,case04,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",2,3,-1
+seed22_hist1p0,case04,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed22_hist1p0,case05,no_sink,"Bystander, no vascular sink",6,5,1
+seed22_hist1p0,case05,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",6,3,3
+seed22_hist1p0,case05,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",6,7,-1
+seed22_hist1p0,case05,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",6,4,2
+seed22_hist1p0,case05,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",6,2,4
+seed22_hist1p0,case05,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",6,1,5
+seed22_hist1p0,case06,no_sink,"Bystander, no vascular sink",4,7,-3
+seed22_hist1p0,case06,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",4,3,1
+seed22_hist1p0,case06,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",4,5,-1
+seed22_hist1p0,case06,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",4,6,-2
+seed22_hist1p0,case06,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",4,2,2
+seed22_hist1p0,case06,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",4,1,3
+seed22_hist1p0,case07,no_sink,"Bystander, no vascular sink",3,7,-4
+seed22_hist1p0,case07,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",3,5,-2
+seed22_hist1p0,case07,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",3,4,-1
+seed22_hist1p0,case07,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",3,6,-3
+seed22_hist1p0,case07,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",3,2,1
+seed22_hist1p0,case07,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",3,1,2
+seed22_hist2p0,case02,no_sink,"Bystander, no vascular sink",2,7,-5
+seed22_hist2p0,case02,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",2,5,-3
+seed22_hist2p0,case02,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",2,6,-4
+seed22_hist2p0,case02,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",2,4,-2
+seed22_hist2p0,case02,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",2,3,-1
+seed22_hist2p0,case02,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed22_hist2p0,case03,no_sink,"Bystander, no vascular sink",4,6,-2
+seed22_hist2p0,case03,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",4,3,1
+seed22_hist2p0,case03,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",4,7,-3
+seed22_hist2p0,case03,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",4,5,-1
+seed22_hist2p0,case03,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",4,2,2
+seed22_hist2p0,case03,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",4,1,3
+seed22_hist2p0,case04,no_sink,"Bystander, no vascular sink",2,7,-5
+seed22_hist2p0,case04,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",2,4,-2
+seed22_hist2p0,case04,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",2,5,-3
+seed22_hist2p0,case04,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",2,6,-4
+seed22_hist2p0,case04,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",2,3,-1
+seed22_hist2p0,case04,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed22_hist2p0,case05,no_sink,"Bystander, no vascular sink",4,6,-2
+seed22_hist2p0,case05,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",4,3,1
+seed22_hist2p0,case05,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",4,7,-3
+seed22_hist2p0,case05,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",4,5,-1
+seed22_hist2p0,case05,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",4,2,2
+seed22_hist2p0,case05,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",4,1,3
+seed22_hist2p0,case06,no_sink,"Bystander, no vascular sink",4,7,-3
+seed22_hist2p0,case06,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",4,2,2
+seed22_hist2p0,case06,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",4,5,-1
+seed22_hist2p0,case06,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",4,6,-2
+seed22_hist2p0,case06,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",4,3,1
+seed22_hist2p0,case06,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",4,1,3
+seed22_hist2p0,case07,no_sink,"Bystander, no vascular sink",3,7,-4
+seed22_hist2p0,case07,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",3,5,-2
+seed22_hist2p0,case07,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",3,4,-1
+seed22_hist2p0,case07,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",3,6,-3
+seed22_hist2p0,case07,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",3,2,1
+seed22_hist2p0,case07,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",3,1,2
+seed33_hist0p5,case02,no_sink,"Bystander, no vascular sink",3,7,-4
+seed33_hist0p5,case02,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",3,6,-3
+seed33_hist0p5,case02,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",3,5,-2
+seed33_hist0p5,case02,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",3,4,-1
+seed33_hist0p5,case02,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",3,2,1
+seed33_hist0p5,case02,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",3,1,2
+seed33_hist0p5,case03,no_sink,"Bystander, no vascular sink",4,6,-2
+seed33_hist0p5,case03,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",4,3,1
+seed33_hist0p5,case03,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",4,7,-3
+seed33_hist0p5,case03,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",4,5,-1
+seed33_hist0p5,case03,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",4,2,2
+seed33_hist0p5,case03,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",4,1,3
+seed33_hist0p5,case04,no_sink,"Bystander, no vascular sink",2,7,-5
+seed33_hist0p5,case04,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",2,4,-2
+seed33_hist0p5,case04,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",2,5,-3
+seed33_hist0p5,case04,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",2,6,-4
+seed33_hist0p5,case04,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",2,3,-1
+seed33_hist0p5,case04,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed33_hist0p5,case05,no_sink,"Bystander, no vascular sink",4,6,-2
+seed33_hist0p5,case05,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",4,3,1
+seed33_hist0p5,case05,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",4,7,-3
+seed33_hist0p5,case05,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",4,5,-1
+seed33_hist0p5,case05,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",4,2,2
+seed33_hist0p5,case05,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",4,1,3
+seed33_hist0p5,case06,no_sink,"Bystander, no vascular sink",4,7,-3
+seed33_hist0p5,case06,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",4,2,2
+seed33_hist0p5,case06,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",4,5,-1
+seed33_hist0p5,case06,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",4,6,-2
+seed33_hist0p5,case06,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",4,3,1
+seed33_hist0p5,case06,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",4,1,3
+seed33_hist0p5,case07,no_sink,"Bystander, no vascular sink",3,6,-3
+seed33_hist0p5,case07,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",3,7,-4
+seed33_hist0p5,case07,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",3,4,-1
+seed33_hist0p5,case07,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",3,5,-2
+seed33_hist0p5,case07,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",3,2,1
+seed33_hist0p5,case07,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",3,1,2
+seed33_hist1p0,case02,no_sink,"Bystander, no vascular sink",3,7,-4
+seed33_hist1p0,case02,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",3,5,-2
+seed33_hist1p0,case02,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",3,6,-3
+seed33_hist1p0,case02,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",3,4,-1
+seed33_hist1p0,case02,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",3,2,1
+seed33_hist1p0,case02,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",3,1,2
+seed33_hist1p0,case03,no_sink,"Bystander, no vascular sink",4,6,-2
+seed33_hist1p0,case03,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",4,3,1
+seed33_hist1p0,case03,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",4,7,-3
+seed33_hist1p0,case03,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",4,5,-1
+seed33_hist1p0,case03,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",4,2,2
+seed33_hist1p0,case03,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",4,1,3
+seed33_hist1p0,case04,no_sink,"Bystander, no vascular sink",2,7,-5
+seed33_hist1p0,case04,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",2,4,-2
+seed33_hist1p0,case04,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",2,5,-3
+seed33_hist1p0,case04,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",2,6,-4
+seed33_hist1p0,case04,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",2,3,-1
+seed33_hist1p0,case04,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed33_hist1p0,case05,no_sink,"Bystander, no vascular sink",4,6,-2
+seed33_hist1p0,case05,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",4,3,1
+seed33_hist1p0,case05,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",4,7,-3
+seed33_hist1p0,case05,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",4,5,-1
+seed33_hist1p0,case05,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",4,2,2
+seed33_hist1p0,case05,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",4,1,3
+seed33_hist1p0,case06,no_sink,"Bystander, no vascular sink",3,7,-4
+seed33_hist1p0,case06,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",3,2,1
+seed33_hist1p0,case06,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",3,5,-2
+seed33_hist1p0,case06,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",3,6,-3
+seed33_hist1p0,case06,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",3,4,-1
+seed33_hist1p0,case06,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",3,1,2
+seed33_hist1p0,case07,no_sink,"Bystander, no vascular sink",3,7,-4
+seed33_hist1p0,case07,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",3,5,-2
+seed33_hist1p0,case07,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",3,4,-1
+seed33_hist1p0,case07,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",3,6,-3
+seed33_hist1p0,case07,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",3,2,1
+seed33_hist1p0,case07,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",3,1,2
+seed33_hist2p0,case02,no_sink,"Bystander, no vascular sink",3,7,-4
+seed33_hist2p0,case02,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",3,5,-2
+seed33_hist2p0,case02,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",3,6,-3
+seed33_hist2p0,case02,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",3,4,-1
+seed33_hist2p0,case02,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",3,2,1
+seed33_hist2p0,case02,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",3,1,2
+seed33_hist2p0,case03,no_sink,"Bystander, no vascular sink",4,6,-2
+seed33_hist2p0,case03,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",4,3,1
+seed33_hist2p0,case03,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",4,7,-3
+seed33_hist2p0,case03,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",4,5,-1
+seed33_hist2p0,case03,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",4,2,2
+seed33_hist2p0,case03,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",4,1,3
+seed33_hist2p0,case04,no_sink,"Bystander, no vascular sink",2,7,-5
+seed33_hist2p0,case04,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",2,4,-2
+seed33_hist2p0,case04,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",2,5,-3
+seed33_hist2p0,case04,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",2,6,-4
+seed33_hist2p0,case04,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",2,3,-1
+seed33_hist2p0,case04,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed33_hist2p0,case05,no_sink,"Bystander, no vascular sink",4,6,-2
+seed33_hist2p0,case05,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",4,3,1
+seed33_hist2p0,case05,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",4,7,-3
+seed33_hist2p0,case05,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",4,5,-1
+seed33_hist2p0,case05,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",4,2,2
+seed33_hist2p0,case05,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",4,1,3
+seed33_hist2p0,case06,no_sink,"Bystander, no vascular sink",3,7,-4
+seed33_hist2p0,case06,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",3,2,1
+seed33_hist2p0,case06,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",3,5,-2
+seed33_hist2p0,case06,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",3,6,-3
+seed33_hist2p0,case06,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",3,4,-1
+seed33_hist2p0,case06,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",3,1,2
+seed33_hist2p0,case07,no_sink,"Bystander, no vascular sink",3,7,-4
+seed33_hist2p0,case07,ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",3,5,-2
+seed33_hist2p0,case07,si_flip_sink,"Bystander, superior-inferior flipped vessel sink",3,4,-1
+seed33_hist2p0,case07,local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",3,6,-3
+seed33_hist2p0,case07,randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",3,2,1
+seed33_hist2p0,case07,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",3,1,2

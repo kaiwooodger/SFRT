@@ -409,19 +409,19 @@ That design allowed the sink term to be evaluated as a falsifiable spatial hypot
 
 The most useful figures for the Methods section are:
 
-1. **Benchmark / phantom geometry:** [figure03_phase28_benchmark_geometry_and_biology.png](/Users/kw/Documents/Playground/vhee_topas/runs/phase25_to_phase37_publication_figure_atlas/figures/figure03_phase28_benchmark_geometry_and_biology.png)  
+1. **Benchmark / phantom geometry:** [figure03_phase28_benchmark_geometry_and_biology.png](PROJECT_ROOT/runs/phase25_to_phase37_publication_figure_atlas/figures/figure03_phase28_benchmark_geometry_and_biology.png)  
    Use to show the benchmark geometry, tumour, vertices, and the bridge between physical and biological interpretation.
 
-2. **TOPAS delivery architecture:** [figure04_phase30_topas_delivery_decomposition.png](/Users/kw/Documents/Playground/vhee_topas/runs/phase25_to_phase37_publication_figure_atlas/figures/figure04_phase30_topas_delivery_decomposition.png)  
+2. **TOPAS delivery architecture:** [figure04_phase30_topas_delivery_decomposition.png](PROJECT_ROOT/runs/phase25_to_phase37_publication_figure_atlas/figures/figure04_phase30_topas_delivery_decomposition.png)  
    Use to illustrate the two-component TOPAS delivery model: base field, vertex boost, and calibrated combination.
 
-3. **Site-specific cohort anatomy:** [figure06_phase32_site_specific_phantom_montage.png](/Users/kw/Documents/Playground/vhee_topas/runs/phase25_to_phase37_publication_figure_atlas/figures/figure06_phase32_site_specific_phantom_montage.png)  
+3. **Site-specific cohort anatomy:** [figure06_phase32_site_specific_phantom_montage.png](PROJECT_ROOT/runs/phase25_to_phase37_publication_figure_atlas/figures/figure06_phase32_site_specific_phantom_montage.png)  
    Use to show that the final cohort comprises distinct anatomies rather than a single reused phantom.
 
 4. **Optional historical phantom / vessel methods figures:**  
-   - [figureM1_voxel_phantom_anatomy.png](/Users/kw/Documents/Playground/vhee_topas/runs/manuscript_voxel_phantom_methods_assets/figureM1_voxel_phantom_anatomy.png)  
-   - [figureM3_topas_material_phantom.png](/Users/kw/Documents/Playground/vhee_topas/runs/manuscript_voxel_phantom_methods_assets/figureM3_topas_material_phantom.png)  
-   - [figureM5_vascular_sink_field.png](/Users/kw/Documents/Playground/vhee_topas/runs/manuscript_voxel_phantom_methods_assets/figureM5_vascular_sink_field.png)  
+   - [figureM1_voxel_phantom_anatomy.png](PROJECT_ROOT/runs/manuscript_voxel_phantom_methods_assets/figureM1_voxel_phantom_anatomy.png)  
+   - [figureM3_topas_material_phantom.png](PROJECT_ROOT/runs/manuscript_voxel_phantom_methods_assets/figureM3_topas_material_phantom.png)  
+   - [figureM5_vascular_sink_field.png](PROJECT_ROOT/runs/manuscript_voxel_phantom_methods_assets/figureM5_vascular_sink_field.png)  
    These are useful if the journal allows a longer Methods or Supplementary Methods section and you want to show phantom anatomy, materialization, and the explicit sink-field construction.
 
 ## Statistical and Reproducibility Notes

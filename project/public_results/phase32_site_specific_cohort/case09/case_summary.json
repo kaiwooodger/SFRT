@@ -1,0 +1,120 @@
+{
+  "template_id": "case09",
+  "label": "Deep parotid / infratemporal fossa bulky mass",
+  "site_group": "deep_parotid_infratemporal",
+  "site_note": "Deep parotid / infratemporal mass with skull-base adjacency.",
+  "tumour_model": "irregular ellipsoid",
+  "estimated_gtv_cc": 146.0,
+  "instantiated_gtv_cc": 155.952,
+  "ctvboost_cc": 213.832,
+  "proposed_vertex_count": 3,
+  "kept_vertex_count": 3,
+  "coordinate_note": "Coordinate system follows the synthetic benchmark convention: x = left (+) / right (-), y = anterior (+) / posterior (-), z = superior (+) / inferior (-).",
+  "site_centroid_mm": [
+    -38.0,
+    -4.0,
+    10.0
+  ],
+  "vertex_diameter_cm_recommended": 1.0,
+  "nearby_oars": [
+    {
+      "structure": "ARTERIES",
+      "min_distance_mm": 0.0
+    },
+    {
+      "structure": "VEINS",
+      "min_distance_mm": 0.0
+    },
+    {
+      "structure": "SPINAL_CORD",
+      "min_distance_mm": 0.0
+    },
+    {
+      "structure": "BRAINSTEM",
+      "min_distance_mm": 0.0
+    },
+    {
+      "structure": "OPTIC_NERVE_R",
+      "min_distance_mm": 0.0
+    }
+  ],
+  "vertex_details": [
+    {
+      "vertex_id": "V1",
+      "status": "kept",
+      "proposed_center_mm": [
+        -52.0,
+        -10.0,
+        20.0
+      ],
+      "adjusted_center_mm": [
+        -44.0,
+        -8.0,
+        26.0
+      ],
+      "shift_mm": [
+        8.0,
+        2.0,
+        6.0
+      ],
+      "edge_margin_mm": 0.657,
+      "critical_oar_clearance_mm": 15.976
+    },
+    {
+      "vertex_id": "V2",
+      "status": "kept",
+      "proposed_center_mm": [
+        -24.0,
+        -7.0,
+        19.0
+      ],
+      "adjusted_center_mm": [
+        -24.0,
+        -7.0,
+        19.0
+      ],
+      "shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "edge_margin_mm": 3.718,
+      "critical_oar_clearance_mm": 19.658
+    },
+    {
+      "vertex_id": "V3",
+      "status": "kept",
+      "proposed_center_mm": [
+        -38.0,
+        5.0,
+        -3.0
+      ],
+      "adjusted_center_mm": [
+        -34.0,
+        5.0,
+        -3.0
+      ],
+      "shift_mm": [
+        4.0,
+        0.0,
+        0.0
+      ],
+      "edge_margin_mm": 0.657,
+      "critical_oar_clearance_mm": 15.688
+    }
+  ],
+  "structure_volumes_cc": {
+    "MAXILLA": 125.528,
+    "MANDIBLE": 35.44,
+    "BRAINSTEM": 6.424,
+    "SPINAL_CORD": 7.64,
+    "PAROTID_L": 3.96,
+    "PAROTID_R": 3.96,
+    "THYROID": 5.168,
+    "ARTERIES": 6.976,
+    "VEINS": 9.888,
+    "SKIN": 203.928,
+    "GTV": 155.952,
+    "CTVBOOST": 213.832
+  }
+}

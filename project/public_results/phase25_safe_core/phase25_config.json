@@ -3,12 +3,12 @@
   "phase_description": "Protocol-constrained random-plan biological risk analysis across five independent lattice courses with aligned physical-versus-biological endpoints.",
   "plan_count": 5,
   "fractions": 5,
-  "baseline_run_root": "/Users/kw/Documents/Playground/vhee_topas/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_directplan",
-  "run_root": "/Users/kw/Documents/Playground/vhee_topas/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase25_safe_core_plan_library_1e5",
+  "baseline_run_root": "PROJECT_ROOT/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_directplan",
+  "run_root": "PROJECT_ROOT/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase25_safe_core_plan_library_1e5",
   "seed": 33,
   "histories": 100000,
   "library_mode": "explicit fixed safe-core library",
-  "plan_library_json": "/Users/kw/Documents/Playground/vhee_topas/data/phase25_safe_core_plan_library.json",
+  "plan_library_json": "PROJECT_ROOT/data/phase25_safe_core_plan_library.json",
   "primary_endpoints": [
     {
       "key": "ptv_d95",

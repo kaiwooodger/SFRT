@@ -1,4 +1,4 @@
-# Focused VHEE asymmetric 4-quadrupole beamline in TOPAS.
+# Focused asymmetric 4-quadrupole beamline in TOPAS.
 # Based on Whitmore et al., Sci Rep (2021) 11:14013:
 # - Main paper Table 2 (benchmark metrics)
 # - Supplementary Table 2 (asymmetric 4-quad baseline)

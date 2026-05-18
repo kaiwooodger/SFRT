@@ -1,0 +1,33 @@
+{
+  "phase": "37A",
+  "description": "Stronger vessel falsification and surrogate sink comparison on the Phase 33/34 cohort.",
+  "phase32_root": "PROJECT_ROOT/runs/phase32_site_specific_template_phantoms",
+  "phase33_root": "PROJECT_ROOT/runs/phase33_phase32_topas_cohort",
+  "phase34_root": "PROJECT_ROOT/runs/phase33_phase32_topas_cohort/phase34_bio_cohort",
+  "phase25_run_root": "PROJECT_ROOT/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase25_safe_core_plan_library_1e5",
+  "selected_case_ids": [
+    "case01",
+    "case02",
+    "case03",
+    "case04",
+    "case05",
+    "case06",
+    "case07",
+    "case08",
+    "case09",
+    "case10"
+  ],
+  "sink_models": [
+    "physical_only",
+    "no_sink",
+    "true_vessel_sink",
+    "ap_flip_sink",
+    "si_flip_sink",
+    "local_dropout_sink_20mm",
+    "randomized_displacement_sink",
+    "uniform_body_sink_mass_matched",
+    "blurred_vessel_sink_sigma10mm",
+    "peri_gtv_shell_sink_5_20mm",
+    "distance_decay_sink_lambda15mm"
+  ]
+}

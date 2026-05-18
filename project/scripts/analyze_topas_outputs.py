@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Analyze TOPAS dose CSV outputs against VHEE Whitmore metrics."""
+"""Analyze TOPAS dose CSV outputs against beamline Whitmore metrics."""
 
 from __future__ import annotations
 
@@ -33,7 +33,7 @@ REPORT_HEADER_RE = re.compile(
 def parse_args() -> argparse.Namespace:
     root = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(
-        description="Extract key focused VHEE metrics from TOPAS CSV dose grids."
+        description="Extract key focused beamline metrics from TOPAS CSV dose grids."
     )
     parser.add_argument(
         "--manifest",
@@ -1037,7 +1037,7 @@ def write_validation_report(
     out_file: Path, best_df: pd.DataFrame, args: argparse.Namespace, total_cases: int
 ) -> None:
     lines = []
-    lines.append("# Focused VHEE Validation Report")
+    lines.append("# Focused beamline Validation Report")
     lines.append("")
     lines.append(f"- Generated (UTC): {datetime.now(timezone.utc).isoformat(timespec='seconds')}")
     lines.append(f"- Cases analyzed: {total_cases}")

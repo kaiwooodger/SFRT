@@ -17,7 +17,7 @@ import pandas as pd
 from PIL import Image, ImageDraw, ImageFont
 
 
-ROOT = Path("/Users/kw/Documents/Playground/vhee_topas")
+ROOT = Path("PROJECT_ROOT")
 DESKTOP_ROOT = Path("/Users/kw/Desktop/PMB_SFRT_figures_for_overleaf")
 SRC_DIR = DESKTOP_ROOT / "figures"
 

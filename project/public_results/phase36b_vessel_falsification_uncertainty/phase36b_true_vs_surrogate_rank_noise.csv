@@ -1,0 +1,19 @@
+plan_id,comparator_id,comparator_label,nominal_true_rank_minus_comparator_rank,simulated_mean_rank_delta,simulated_rank_delta_sd,simulated_rank_delta_ci_lower,simulated_rank_delta_ci_upper,simulated_probability_same_direction_as_nominal,simulated_probability_true_better,noise_qualified_rank_change
+case02,no_sink,"Bystander, no vascular sink",-2.0,0.0715,1.7393641798082424,-3.0,3.0,0.477,0.477,False
+case02,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",-1.0,0.0215,1.7759610778392638,-3.0,3.0,0.4935,0.4935,False
+case02,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",1.0,0.975,1.6505680840244066,-2.0,3.0,0.7375,0.2625,False
+case03,no_sink,"Bystander, no vascular sink",-2.0,0.155,1.3820184513963625,-2.0,2.0,0.445,0.445,False
+case03,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",-1.0,0.0475,1.4564490207350205,-2.0,2.0,0.4865,0.4865,False
+case03,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",1.0,2.0615,0.8322966718664684,1.0,3.0,0.9975,0.0025,True
+case04,no_sink,"Bystander, no vascular sink",-2.0,-1.405,1.093606419147218,-3.0,1.0,0.905,0.905,False
+case04,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",-1.0,0.0015,1.4820586189486569,-2.0,2.0,0.498,0.498,False
+case04,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",1.0,0.9855,1.2642348476450092,-2.0,3.0,0.7985,0.2015,False
+case05,no_sink,"Bystander, no vascular sink",-2.0,0.2735,1.3959576462056433,-2.0,2.0,0.413,0.413,False
+case05,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",-1.0,0.0205,1.4529555223749973,-2.0,2.0,0.489,0.489,False
+case05,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",1.0,2.078,0.8525936898663983,1.0,3.0,0.995,0.005,True
+case06,no_sink,"Bystander, no vascular sink",-2.0,-0.0305,1.7525894413695413,-3.0,3.0,0.497,0.497,False
+case06,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",-1.0,0.025,1.786721858600269,-3.0,3.0,0.5045,0.5045,False
+case06,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",1.0,0.8155,1.6797201403805337,-3.0,3.0,0.704,0.296,False
+case07,no_sink,"Bystander, no vascular sink",-2.0,-0.245,1.7595382917117774,-3.0,3.0,0.5595,0.5595,False
+case07,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",-1.0,0.0085,1.8377779381633679,-3.0,3.0,0.504,0.504,False
+case07,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",1.0,0.4725,1.7785510254136652,-3.0,3.0,0.6225,0.3775,False

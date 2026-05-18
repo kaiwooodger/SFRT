@@ -1,0 +1,26 @@
+{
+  "phase": "37B",
+  "description": "Repeated-subset uncertainty overlay for stronger true-vs-surrogate sink comparisons.",
+  "phase35_root": "PROJECT_ROOT/runs/phase35_subset_repeat_uncertainty",
+  "phase37a_root": "PROJECT_ROOT/runs/phase37a_vessel_falsification_cohort",
+  "phase25_run_root": "PROJECT_ROOT/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase25_safe_core_plan_library_1e5",
+  "phase26_run_root": "PROJECT_ROOT/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase25_safe_core_plan_library_1e5/phase26_vascular_sink_ablation",
+  "selected_case_ids": [
+    "case02",
+    "case03",
+    "case04",
+    "case05",
+    "case06",
+    "case07"
+  ],
+  "model_ids": [
+    "no_sink",
+    "true_vessel_sink",
+    "ap_flip_sink",
+    "si_flip_sink",
+    "local_dropout_sink_20mm",
+    "randomized_displacement_sink",
+    "uniform_body_sink_mass_matched"
+  ],
+  "repeat_count": 9
+}

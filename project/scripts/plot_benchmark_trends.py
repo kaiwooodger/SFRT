@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Plot TOPAS sweep trends against focused VHEE Whitmore metrics."""
+"""Plot TOPAS sweep trends against focused beamline Whitmore metrics."""
 
 from __future__ import annotations
 
@@ -483,7 +483,7 @@ def plot_energy_panel(
     dpi: int,
 ) -> Path:
     fig, axes = plt.subplots(2, 2, figsize=(12.5, 8.5), constrained_layout=True)
-    fig.suptitle(f"Focused VHEE Whitmore Comparison - {energy} MeV", fontsize=14, fontweight="bold")
+    fig.suptitle(f"Focused beamline Whitmore Comparison - {energy} MeV", fontsize=14, fontweight="bold")
 
     x = df_energy["g4_t_per_m"].astype(float).to_numpy()
 

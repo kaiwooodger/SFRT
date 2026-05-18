@@ -2,7 +2,8 @@
 
 set -u
 
-REPO_ROOT="/Users/kw/Documents/Playground/vhee_topas"
+REPO_SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 RUN_ROOT="$REPO_ROOT/runs/publishable_subset"
 TARGET_ANALYZED=12
 CHECK_INTERVAL_SEC=120

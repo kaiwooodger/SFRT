@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate a minimum trend-agreement figure package for focused VHEE benchmarking.
+"""Generate a minimum trend-agreement figure package for focused beamline benchmarking.
 
 This script is designed for "trend agreement without full validation":
 - It shows where trends match (e.g., focal depth control vs Q4),

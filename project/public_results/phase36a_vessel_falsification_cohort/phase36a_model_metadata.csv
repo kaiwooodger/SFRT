@@ -1,0 +1,61 @@
+plan_id,case_label,site_group,model_id,model_label,support_voxels,target_mass_species0,target_mass_species1
+case01,Right sinonasal / maxillary bulky ellipsoid,sinonasal_midface,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2108,105.40000915527344,1722.800048828125
+case01,Right sinonasal / maxillary bulky ellipsoid,sinonasal_midface,shifted_sink_12mm_ap,"Bystander, vessel sink shifted 12 mm anterior",2102,105.40000915527344,1722.800048828125
+case01,Right sinonasal / maxillary bulky ellipsoid,sinonasal_midface,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",124698,105.40000915527344,1722.800048828125
+case01,Right sinonasal / maxillary bulky ellipsoid,sinonasal_midface,blurred_vessel_sink_sigma10mm,"Bystander, blurred vessel sink (10 mm sigma)",103993,105.40000915527344,1722.800048828125
+case01,Right sinonasal / maxillary bulky ellipsoid,sinonasal_midface,peri_gtv_shell_sink_5_20mm,"Bystander, peri-GTV shell sink (5-20 mm)",24221,105.40000915527344,1722.800048828125
+case01,Right sinonasal / maxillary bulky ellipsoid,sinonasal_midface,distance_decay_sink_lambda15mm,"Bystander, distance-decay sink (lambda 15 mm)",116620,105.40000915527344,1722.800048828125
+case02,Left maxillary sinus crescent abutting orbit,sinonasal_midface,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2108,105.40000915527344,1722.800048828125
+case02,Left maxillary sinus crescent abutting orbit,sinonasal_midface,shifted_sink_12mm_ap,"Bystander, vessel sink shifted 12 mm anterior",2102,105.40000915527344,1722.800048828125
+case02,Left maxillary sinus crescent abutting orbit,sinonasal_midface,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",124698,105.40000915527344,1722.800048828125
+case02,Left maxillary sinus crescent abutting orbit,sinonasal_midface,blurred_vessel_sink_sigma10mm,"Bystander, blurred vessel sink (10 mm sigma)",103993,105.40000915527344,1722.800048828125
+case02,Left maxillary sinus crescent abutting orbit,sinonasal_midface,peri_gtv_shell_sink_5_20mm,"Bystander, peri-GTV shell sink (5-20 mm)",29774,105.40000915527344,1722.800048828125
+case02,Left maxillary sinus crescent abutting orbit,sinonasal_midface,distance_decay_sink_lambda15mm,"Bystander, distance-decay sink (lambda 15 mm)",111681,105.40000915527344,1722.800048828125
+case03,Base-of-tongue / oropharynx bilobed central mass,oropharynx_bot,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2108,105.40000915527344,1722.800048828125
+case03,Base-of-tongue / oropharynx bilobed central mass,oropharynx_bot,shifted_sink_12mm_ap,"Bystander, vessel sink shifted 12 mm anterior",2102,105.40000915527344,1722.800048828125
+case03,Base-of-tongue / oropharynx bilobed central mass,oropharynx_bot,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",124698,105.40000915527344,1722.800048828125
+case03,Base-of-tongue / oropharynx bilobed central mass,oropharynx_bot,blurred_vessel_sink_sigma10mm,"Bystander, blurred vessel sink (10 mm sigma)",103993,105.40000915527344,1722.800048828125
+case03,Base-of-tongue / oropharynx bilobed central mass,oropharynx_bot,peri_gtv_shell_sink_5_20mm,"Bystander, peri-GTV shell sink (5-20 mm)",30218,105.40000915527344,1722.800048828125
+case03,Base-of-tongue / oropharynx bilobed central mass,oropharynx_bot,distance_decay_sink_lambda15mm,"Bystander, distance-decay sink (lambda 15 mm)",109640,105.40000915527344,1722.800048828125
+case04,Laryngo-hypopharyngeal elongated cylinder,laryngohypopharynx,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2108,105.40000915527344,1722.800048828125
+case04,Laryngo-hypopharyngeal elongated cylinder,laryngohypopharynx,shifted_sink_12mm_ap,"Bystander, vessel sink shifted 12 mm anterior",2102,105.40000915527344,1722.800048828125
+case04,Laryngo-hypopharyngeal elongated cylinder,laryngohypopharynx,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",124698,105.40000915527344,1722.800048828125
+case04,Laryngo-hypopharyngeal elongated cylinder,laryngohypopharynx,blurred_vessel_sink_sigma10mm,"Bystander, blurred vessel sink (10 mm sigma)",103993,105.40000915527344,1722.800048828125
+case04,Laryngo-hypopharyngeal elongated cylinder,laryngohypopharynx,peri_gtv_shell_sink_5_20mm,"Bystander, peri-GTV shell sink (5-20 mm)",25866,105.40000915527344,1722.800048828125
+case04,Laryngo-hypopharyngeal elongated cylinder,laryngohypopharynx,distance_decay_sink_lambda15mm,"Bystander, distance-decay sink (lambda 15 mm)",116395,105.40000915527344,1722.800048828125
+case05,Parapharyngeal / prestyloid deep-space bulky mass,parapharyngeal_deep_space,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2108,105.40000915527344,1722.800048828125
+case05,Parapharyngeal / prestyloid deep-space bulky mass,parapharyngeal_deep_space,shifted_sink_12mm_ap,"Bystander, vessel sink shifted 12 mm anterior",2102,105.40000915527344,1722.800048828125
+case05,Parapharyngeal / prestyloid deep-space bulky mass,parapharyngeal_deep_space,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",124698,105.40000915527344,1722.800048828125
+case05,Parapharyngeal / prestyloid deep-space bulky mass,parapharyngeal_deep_space,blurred_vessel_sink_sigma10mm,"Bystander, blurred vessel sink (10 mm sigma)",103993,105.40000915527344,1722.800048828125
+case05,Parapharyngeal / prestyloid deep-space bulky mass,parapharyngeal_deep_space,peri_gtv_shell_sink_5_20mm,"Bystander, peri-GTV shell sink (5-20 mm)",30226,105.40000915527344,1722.800048828125
+case05,Parapharyngeal / prestyloid deep-space bulky mass,parapharyngeal_deep_space,distance_decay_sink_lambda15mm,"Bystander, distance-decay sink (lambda 15 mm)",109532,105.40000915527344,1722.800048828125
+case06,Buccal mucosa / cheek infiltrative crescent,cheek_superficial,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2108,105.40000915527344,1722.800048828125
+case06,Buccal mucosa / cheek infiltrative crescent,cheek_superficial,shifted_sink_12mm_ap,"Bystander, vessel sink shifted 12 mm anterior",2102,105.40000915527344,1722.800048828125
+case06,Buccal mucosa / cheek infiltrative crescent,cheek_superficial,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",124698,105.40000915527344,1722.800048828125
+case06,Buccal mucosa / cheek infiltrative crescent,cheek_superficial,blurred_vessel_sink_sigma10mm,"Bystander, blurred vessel sink (10 mm sigma)",103993,105.40000915527344,1722.800048828125
+case06,Buccal mucosa / cheek infiltrative crescent,cheek_superficial,peri_gtv_shell_sink_5_20mm,"Bystander, peri-GTV shell sink (5-20 mm)",21585,105.40000915527344,1722.800048828125
+case06,Buccal mucosa / cheek infiltrative crescent,cheek_superficial,distance_decay_sink_lambda15mm,"Bystander, distance-decay sink (lambda 15 mm)",112121,105.40000915527344,1722.800048828125
+case07,Oral tongue / floor-of-mouth horseshoe,oral_tongue_floor_mouth,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2108,105.40000915527344,1722.800048828125
+case07,Oral tongue / floor-of-mouth horseshoe,oral_tongue_floor_mouth,shifted_sink_12mm_ap,"Bystander, vessel sink shifted 12 mm anterior",2102,105.40000915527344,1722.800048828125
+case07,Oral tongue / floor-of-mouth horseshoe,oral_tongue_floor_mouth,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",124698,105.40000915527344,1722.800048828125
+case07,Oral tongue / floor-of-mouth horseshoe,oral_tongue_floor_mouth,blurred_vessel_sink_sigma10mm,"Bystander, blurred vessel sink (10 mm sigma)",103993,105.40000915527344,1722.800048828125
+case07,Oral tongue / floor-of-mouth horseshoe,oral_tongue_floor_mouth,peri_gtv_shell_sink_5_20mm,"Bystander, peri-GTV shell sink (5-20 mm)",26589,105.40000915527344,1722.800048828125
+case07,Oral tongue / floor-of-mouth horseshoe,oral_tongue_floor_mouth,distance_decay_sink_lambda15mm,"Bystander, distance-decay sink (lambda 15 mm)",112000,105.40000915527344,1722.800048828125
+case08,Bulky nodal conglomerate level II-IV with central necrosis,nodal_neck,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2108,105.40000915527344,1722.800048828125
+case08,Bulky nodal conglomerate level II-IV with central necrosis,nodal_neck,shifted_sink_12mm_ap,"Bystander, vessel sink shifted 12 mm anterior",2102,105.40000915527344,1722.800048828125
+case08,Bulky nodal conglomerate level II-IV with central necrosis,nodal_neck,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",124698,105.40000915527344,1722.800048828125
+case08,Bulky nodal conglomerate level II-IV with central necrosis,nodal_neck,blurred_vessel_sink_sigma10mm,"Bystander, blurred vessel sink (10 mm sigma)",103993,105.40000915527344,1722.800048828125
+case08,Bulky nodal conglomerate level II-IV with central necrosis,nodal_neck,peri_gtv_shell_sink_5_20mm,"Bystander, peri-GTV shell sink (5-20 mm)",23594,105.40000915527344,1722.800048828125
+case08,Bulky nodal conglomerate level II-IV with central necrosis,nodal_neck,distance_decay_sink_lambda15mm,"Bystander, distance-decay sink (lambda 15 mm)",103561,105.40000915527344,1722.800048828125
+case09,Deep parotid / infratemporal fossa bulky mass,deep_parotid_infratemporal,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2108,105.40000915527344,1722.800048828125
+case09,Deep parotid / infratemporal fossa bulky mass,deep_parotid_infratemporal,shifted_sink_12mm_ap,"Bystander, vessel sink shifted 12 mm anterior",2102,105.40000915527344,1722.800048828125
+case09,Deep parotid / infratemporal fossa bulky mass,deep_parotid_infratemporal,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",124698,105.40000915527344,1722.800048828125
+case09,Deep parotid / infratemporal fossa bulky mass,deep_parotid_infratemporal,blurred_vessel_sink_sigma10mm,"Bystander, blurred vessel sink (10 mm sigma)",103993,105.40000915527344,1722.800048828125
+case09,Deep parotid / infratemporal fossa bulky mass,deep_parotid_infratemporal,peri_gtv_shell_sink_5_20mm,"Bystander, peri-GTV shell sink (5-20 mm)",29446,105.40000915527344,1722.800048828125
+case09,Deep parotid / infratemporal fossa bulky mass,deep_parotid_infratemporal,distance_decay_sink_lambda15mm,"Bystander, distance-decay sink (lambda 15 mm)",105204,105.40000915527344,1722.800048828125
+case10,Composite oropharynx + upper-neck very bulky tumour,composite_oropharynx_upper_neck,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2108,105.40000915527344,1722.800048828125
+case10,Composite oropharynx + upper-neck very bulky tumour,composite_oropharynx_upper_neck,shifted_sink_12mm_ap,"Bystander, vessel sink shifted 12 mm anterior",2102,105.40000915527344,1722.800048828125
+case10,Composite oropharynx + upper-neck very bulky tumour,composite_oropharynx_upper_neck,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",124698,105.40000915527344,1722.800048828125
+case10,Composite oropharynx + upper-neck very bulky tumour,composite_oropharynx_upper_neck,blurred_vessel_sink_sigma10mm,"Bystander, blurred vessel sink (10 mm sigma)",103993,105.40000915527344,1722.800048828125
+case10,Composite oropharynx + upper-neck very bulky tumour,composite_oropharynx_upper_neck,peri_gtv_shell_sink_5_20mm,"Bystander, peri-GTV shell sink (5-20 mm)",31213,105.40000915527344,1722.800048828125
+case10,Composite oropharynx + upper-neck very bulky tumour,composite_oropharynx_upper_neck,distance_decay_sink_lambda15mm,"Bystander, distance-decay sink (lambda 15 mm)",83569,105.40000915527344,1722.800048828125

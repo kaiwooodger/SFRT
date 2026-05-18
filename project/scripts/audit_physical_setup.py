@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit the TOPAS VHEE beamline setup against the Whitmore paper inputs."""
+"""Audit the TOPAS beamline setup against the Whitmore paper inputs."""
 
 from __future__ import annotations
 
@@ -28,7 +28,7 @@ class Finding:
 def parse_args() -> argparse.Namespace:
     root = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(
-        description="Audit source/geometry/physics assumptions for the asymmetric VHEE beamline."
+        description="Audit source/geometry/physics assumptions for the asymmetric beamline beamline."
     )
     parser.add_argument(
         "--reference",

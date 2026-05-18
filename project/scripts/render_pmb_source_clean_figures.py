@@ -21,7 +21,7 @@ import pandas as pd
 from PIL import Image, ImageDraw, ImageFont
 
 
-ROOT = Path("/Users/kw/Documents/Playground/vhee_topas")
+ROOT = Path("PROJECT_ROOT")
 DESKTOP = Path("/Users/kw/Desktop")
 RUNS = ROOT / "runs"
 

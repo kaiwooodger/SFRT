@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate and optionally run TOPAS asymmetric 4-quadrupole VHEE sweeps."""
+"""Generate and optionally run TOPAS asymmetric 4-quadrupole beamline sweeps."""
 
 from __future__ import annotations
 
@@ -32,7 +32,7 @@ def parse_args() -> argparse.Namespace:
     root = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(
         description=(
-            "Build TOPAS input decks for the asymmetric 4-quad VHEE beamline "
+            "Build TOPAS input decks for the asymmetric 4-quad beamline beamline "
             "and optionally execute the sweep."
         )
     )

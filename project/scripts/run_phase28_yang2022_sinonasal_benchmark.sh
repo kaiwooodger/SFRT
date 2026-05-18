@@ -1,7 +1,8 @@
 #!/usr/bin/env zsh
 set -euo pipefail
 
-ROOT="/Users/kw/Documents/Playground/vhee_topas"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 cd "$ROOT"
 
 export MPLCONFIGDIR="/Users/kw/Documents/Playground/tmp_mpl"

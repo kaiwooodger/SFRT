@@ -1,0 +1,111 @@
+{
+  "template_id": "case07",
+  "label": "Oral tongue / floor-of-mouth horseshoe",
+  "site_group": "oral_tongue_floor_mouth",
+  "site_note": "Oral tongue / floor-of-mouth horseshoe geometry in the anterior oral cavity.",
+  "tumour_model": "horseshoe / wraparound",
+  "estimated_gtv_cc": 94.0,
+  "instantiated_gtv_cc": 101.584,
+  "ctvboost_cc": 155.48,
+  "proposed_vertex_count": 3,
+  "kept_vertex_count": 2,
+  "coordinate_note": "Coordinate system follows the synthetic benchmark convention: x = left (+) / right (-), y = anterior (+) / posterior (-), z = superior (+) / inferior (-).",
+  "site_centroid_mm": [
+    0.0,
+    16.0,
+    -16.0
+  ],
+  "vertex_diameter_cm_recommended": 0.8,
+  "nearby_oars": [
+    {
+      "structure": "ARTERIES",
+      "min_distance_mm": 0.0
+    },
+    {
+      "structure": "VEINS",
+      "min_distance_mm": 0.0
+    },
+    {
+      "structure": "MANDIBLE",
+      "min_distance_mm": 0.0
+    },
+    {
+      "structure": "MAXILLA",
+      "min_distance_mm": 0.0
+    },
+    {
+      "structure": "SKULL",
+      "min_distance_mm": 0.0
+    }
+  ],
+  "vertex_details": [
+    {
+      "vertex_id": "V1",
+      "status": "kept",
+      "proposed_center_mm": [
+        -15.0,
+        16.0,
+        -8.0
+      ],
+      "adjusted_center_mm": [
+        -17.0,
+        16.0,
+        -8.0
+      ],
+      "shift_mm": [
+        -2.0,
+        0.0,
+        0.0
+      ],
+      "edge_margin_mm": 10.142,
+      "critical_oar_clearance_mm": 10.422
+    },
+    {
+      "vertex_id": "V2",
+      "status": "kept",
+      "proposed_center_mm": [
+        15.0,
+        16.0,
+        -8.0
+      ],
+      "adjusted_center_mm": [
+        17.0,
+        18.0,
+        -8.0
+      ],
+      "shift_mm": [
+        2.0,
+        2.0,
+        0.0
+      ],
+      "edge_margin_mm": 10.142,
+      "critical_oar_clearance_mm": 10.142
+    },
+    {
+      "vertex_id": "V3",
+      "status": "pruned",
+      "proposed_center_mm": [
+        0.0,
+        7.0,
+        -34.0
+      ],
+      "adjusted_center_mm": null,
+      "shift_mm": null,
+      "reason": "insufficient_oar_clearance"
+    }
+  ],
+  "structure_volumes_cc": {
+    "MAXILLA": 125.528,
+    "MANDIBLE": 35.44,
+    "BRAINSTEM": 6.424,
+    "SPINAL_CORD": 7.64,
+    "PAROTID_L": 3.96,
+    "PAROTID_R": 3.96,
+    "THYROID": 5.168,
+    "ARTERIES": 6.976,
+    "VEINS": 9.888,
+    "SKIN": 203.928,
+    "GTV": 101.584,
+    "CTVBOOST": 155.48
+  }
+}

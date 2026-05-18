@@ -1,0 +1,32 @@
+\begin{table}[H]
+\centering
+\caption{\textbf{Voxelized-phantom planning and Monte Carlo transport parameters.}}
+\label{tab:planning_transport_parameters}
+\small
+\begin{tabular}{p{5.4cm}p{7.2cm}}
+\toprule
+Parameter & Setting \\
+\midrule
+Voxel grid & $133 \times 173 \times 120$ \\
+Voxel size & $1.5 \times 1.5 \times 1.5$ mm$^3$ \\
+Physical phantom extent & $20 \times 26 \times 18$ cm \\
+Beam model & Direct-photon polyenergetic 6 MV surrogate loaded from discrete spectrum CSV \\
+Particle type & $\gamma$ \\
+TOPAS transport profile & \texttt{em\_opt4\_only} \\
+Production cuts & 0.01 mm for photons, electrons, and positrons \\
+Primary histories & $10^6$ \\
+Threads & 8 \\
+Random seed & 33 \\
+Target prescription & Physical PTV $D_{95} = 6$ Gy after normalization \\
+Nominal lattice spacing & $18 \times 20 \times 18$ mm in $x$, $y$, and $z$ \\
+Lattice beamlet radius & 8 mm \\
+Accepted direct-plan lattice vertices & 4 \\
+Broad AP base-field history fraction & 0.95 \\
+Remaining history fraction & 0.05 distributed equally across AP, left-lateral, and right-lateral lattice boosts \\
+AP base-field radius & PTV projected $99^\mathrm{th}$ percentile radius + 6 mm margin \\
+Lateral field radius & Sagittal projected $99^\mathrm{th}$ percentile radius + 6 mm margin \\
+Source-plane placement & 5 mm outside the phantom surface for AP and lateral beams \\
+Beam directions & AP, left lateral, right lateral \\
+\bottomrule
+\end{tabular}
+\end{table}

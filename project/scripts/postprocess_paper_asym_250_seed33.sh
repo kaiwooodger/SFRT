@@ -1,7 +1,8 @@
 #!/bin/zsh
 set -euo pipefail
 
-REPO_ROOT="/Users/kw/Documents/Playground/vhee_topas"
+REPO_SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 RUN_ROOT="$REPO_ROOT/runs/paper_asym_250_seed33"
 CASE_ID="E250_p14p30"
 MANIFEST="$RUN_ROOT/manifest.json"
@@ -47,7 +48,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import sys
 
-repo = Path("/Users/kw/Documents/Playground/vhee_topas")
+repo = Path("PROJECT_ROOT")
 sys.path.append(str(repo / "scripts"))
 from analyze_topas_outputs import load_topas_grid
 

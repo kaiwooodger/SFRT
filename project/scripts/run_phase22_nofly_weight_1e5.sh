@@ -1,7 +1,8 @@
 #!/bin/zsh
 set -euo pipefail
 
-ROOT="/Users/kw/Documents/Playground/vhee_topas"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 OUT_ROOT="$ROOT/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase22_nofly_weight_1e5"
 
 mkdir -p /Users/kw/Documents/Playground/tmp_mpl /Users/kw/Documents/Playground/tmp_cache /Users/kw/Documents/Playground/tmp_pycache

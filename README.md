@@ -1,4 +1,4 @@
-# SFRT Submission Reproducibility Bundle
+# SFRT Biological Risk Analysis Reproducibility Package
 
 This repository gathers the source code, figure-generation scripts, manuscript-facing figure outputs, and the curated result artifacts used for the current SFRT submission package.
 

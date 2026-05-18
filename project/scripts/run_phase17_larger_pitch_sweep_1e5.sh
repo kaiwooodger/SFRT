@@ -1,7 +1,8 @@
 #!/bin/zsh
 set -euo pipefail
 
-ROOT="/Users/kw/Documents/Playground/vhee_topas"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 SCRIPT="$ROOT/scripts/run_phase17_fraction_aware_bio_optimization.py"
 OUT_ROOT="$ROOT/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase17_larger_pitch_sweep_1e5"
 
