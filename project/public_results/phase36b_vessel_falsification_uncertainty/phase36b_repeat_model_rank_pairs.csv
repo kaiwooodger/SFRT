@@ -1,0 +1,163 @@
+repeat_id,plan_id,comparator_id,comparator_label,true_rank,comparator_rank,true_rank_minus_comparator_rank
+seed11_hist0p5,case02,no_sink,"Bystander, no vascular sink",2,4,-2
+seed11_hist0p5,case02,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed11_hist0p5,case02,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed11_hist0p5,case03,no_sink,"Bystander, no vascular sink",2,4,-2
+seed11_hist0p5,case03,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed11_hist0p5,case03,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed11_hist0p5,case04,no_sink,"Bystander, no vascular sink",2,4,-2
+seed11_hist0p5,case04,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed11_hist0p5,case04,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed11_hist0p5,case05,no_sink,"Bystander, no vascular sink",2,4,-2
+seed11_hist0p5,case05,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed11_hist0p5,case05,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed11_hist0p5,case06,no_sink,"Bystander, no vascular sink",2,4,-2
+seed11_hist0p5,case06,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed11_hist0p5,case06,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed11_hist0p5,case07,no_sink,"Bystander, no vascular sink",2,4,-2
+seed11_hist0p5,case07,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed11_hist0p5,case07,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed11_hist1p0,case02,no_sink,"Bystander, no vascular sink",2,4,-2
+seed11_hist1p0,case02,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed11_hist1p0,case02,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed11_hist1p0,case03,no_sink,"Bystander, no vascular sink",2,4,-2
+seed11_hist1p0,case03,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed11_hist1p0,case03,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed11_hist1p0,case04,no_sink,"Bystander, no vascular sink",2,4,-2
+seed11_hist1p0,case04,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed11_hist1p0,case04,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed11_hist1p0,case05,no_sink,"Bystander, no vascular sink",2,4,-2
+seed11_hist1p0,case05,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed11_hist1p0,case05,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed11_hist1p0,case06,no_sink,"Bystander, no vascular sink",2,4,-2
+seed11_hist1p0,case06,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed11_hist1p0,case06,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed11_hist1p0,case07,no_sink,"Bystander, no vascular sink",2,4,-2
+seed11_hist1p0,case07,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed11_hist1p0,case07,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed11_hist2p0,case02,no_sink,"Bystander, no vascular sink",2,4,-2
+seed11_hist2p0,case02,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed11_hist2p0,case02,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed11_hist2p0,case03,no_sink,"Bystander, no vascular sink",2,4,-2
+seed11_hist2p0,case03,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed11_hist2p0,case03,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed11_hist2p0,case04,no_sink,"Bystander, no vascular sink",2,4,-2
+seed11_hist2p0,case04,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed11_hist2p0,case04,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed11_hist2p0,case05,no_sink,"Bystander, no vascular sink",2,4,-2
+seed11_hist2p0,case05,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed11_hist2p0,case05,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed11_hist2p0,case06,no_sink,"Bystander, no vascular sink",2,4,-2
+seed11_hist2p0,case06,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed11_hist2p0,case06,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed11_hist2p0,case07,no_sink,"Bystander, no vascular sink",2,4,-2
+seed11_hist2p0,case07,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed11_hist2p0,case07,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed22_hist0p5,case02,no_sink,"Bystander, no vascular sink",2,4,-2
+seed22_hist0p5,case02,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed22_hist0p5,case02,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed22_hist0p5,case03,no_sink,"Bystander, no vascular sink",2,4,-2
+seed22_hist0p5,case03,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed22_hist0p5,case03,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed22_hist0p5,case04,no_sink,"Bystander, no vascular sink",2,4,-2
+seed22_hist0p5,case04,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed22_hist0p5,case04,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed22_hist0p5,case05,no_sink,"Bystander, no vascular sink",3,2,1
+seed22_hist0p5,case05,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",3,4,-1
+seed22_hist0p5,case05,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",3,1,2
+seed22_hist0p5,case06,no_sink,"Bystander, no vascular sink",2,4,-2
+seed22_hist0p5,case06,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed22_hist0p5,case06,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed22_hist0p5,case07,no_sink,"Bystander, no vascular sink",2,4,-2
+seed22_hist0p5,case07,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed22_hist0p5,case07,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed22_hist1p0,case02,no_sink,"Bystander, no vascular sink",2,4,-2
+seed22_hist1p0,case02,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed22_hist1p0,case02,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed22_hist1p0,case03,no_sink,"Bystander, no vascular sink",2,4,-2
+seed22_hist1p0,case03,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed22_hist1p0,case03,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed22_hist1p0,case04,no_sink,"Bystander, no vascular sink",2,4,-2
+seed22_hist1p0,case04,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed22_hist1p0,case04,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed22_hist1p0,case05,no_sink,"Bystander, no vascular sink",2,4,-2
+seed22_hist1p0,case05,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed22_hist1p0,case05,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed22_hist1p0,case06,no_sink,"Bystander, no vascular sink",2,4,-2
+seed22_hist1p0,case06,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed22_hist1p0,case06,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed22_hist1p0,case07,no_sink,"Bystander, no vascular sink",2,4,-2
+seed22_hist1p0,case07,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed22_hist1p0,case07,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed22_hist2p0,case02,no_sink,"Bystander, no vascular sink",2,4,-2
+seed22_hist2p0,case02,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed22_hist2p0,case02,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed22_hist2p0,case03,no_sink,"Bystander, no vascular sink",2,4,-2
+seed22_hist2p0,case03,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed22_hist2p0,case03,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed22_hist2p0,case04,no_sink,"Bystander, no vascular sink",2,4,-2
+seed22_hist2p0,case04,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed22_hist2p0,case04,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed22_hist2p0,case05,no_sink,"Bystander, no vascular sink",2,4,-2
+seed22_hist2p0,case05,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed22_hist2p0,case05,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed22_hist2p0,case06,no_sink,"Bystander, no vascular sink",2,4,-2
+seed22_hist2p0,case06,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed22_hist2p0,case06,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed22_hist2p0,case07,no_sink,"Bystander, no vascular sink",2,4,-2
+seed22_hist2p0,case07,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed22_hist2p0,case07,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed33_hist0p5,case02,no_sink,"Bystander, no vascular sink",2,4,-2
+seed33_hist0p5,case02,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed33_hist0p5,case02,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed33_hist0p5,case03,no_sink,"Bystander, no vascular sink",2,4,-2
+seed33_hist0p5,case03,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed33_hist0p5,case03,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed33_hist0p5,case04,no_sink,"Bystander, no vascular sink",2,4,-2
+seed33_hist0p5,case04,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed33_hist0p5,case04,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed33_hist0p5,case05,no_sink,"Bystander, no vascular sink",2,4,-2
+seed33_hist0p5,case05,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed33_hist0p5,case05,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed33_hist0p5,case06,no_sink,"Bystander, no vascular sink",2,4,-2
+seed33_hist0p5,case06,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed33_hist0p5,case06,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed33_hist0p5,case07,no_sink,"Bystander, no vascular sink",2,4,-2
+seed33_hist0p5,case07,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed33_hist0p5,case07,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed33_hist1p0,case02,no_sink,"Bystander, no vascular sink",2,4,-2
+seed33_hist1p0,case02,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed33_hist1p0,case02,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed33_hist1p0,case03,no_sink,"Bystander, no vascular sink",2,4,-2
+seed33_hist1p0,case03,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed33_hist1p0,case03,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed33_hist1p0,case04,no_sink,"Bystander, no vascular sink",2,4,-2
+seed33_hist1p0,case04,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed33_hist1p0,case04,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed33_hist1p0,case05,no_sink,"Bystander, no vascular sink",2,4,-2
+seed33_hist1p0,case05,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed33_hist1p0,case05,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed33_hist1p0,case06,no_sink,"Bystander, no vascular sink",2,4,-2
+seed33_hist1p0,case06,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed33_hist1p0,case06,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed33_hist1p0,case07,no_sink,"Bystander, no vascular sink",2,4,-2
+seed33_hist1p0,case07,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed33_hist1p0,case07,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed33_hist2p0,case02,no_sink,"Bystander, no vascular sink",2,4,-2
+seed33_hist2p0,case02,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed33_hist2p0,case02,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed33_hist2p0,case03,no_sink,"Bystander, no vascular sink",2,4,-2
+seed33_hist2p0,case03,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed33_hist2p0,case03,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed33_hist2p0,case04,no_sink,"Bystander, no vascular sink",2,4,-2
+seed33_hist2p0,case04,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed33_hist2p0,case04,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed33_hist2p0,case05,no_sink,"Bystander, no vascular sink",2,4,-2
+seed33_hist2p0,case05,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed33_hist2p0,case05,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed33_hist2p0,case06,no_sink,"Bystander, no vascular sink",2,4,-2
+seed33_hist2p0,case06,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed33_hist2p0,case06,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1
+seed33_hist2p0,case07,no_sink,"Bystander, no vascular sink",2,4,-2
+seed33_hist2p0,case07,mirror_lr_sink,"Bystander, mirrored left-right vessel sink",2,3,-1
+seed33_hist2p0,case07,uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",2,1,1

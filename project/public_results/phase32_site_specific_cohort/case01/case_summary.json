@@ -1,0 +1,99 @@
+{
+  "template_id": "case01",
+  "label": "Right sinonasal / maxillary bulky ellipsoid",
+  "site_group": "sinonasal_midface",
+  "site_note": "Right midface / maxillary compartment near orbit and skull base.",
+  "tumour_model": "ellipsoid",
+  "estimated_gtv_cc": 66.0,
+  "instantiated_gtv_cc": 64.624,
+  "ctvboost_cc": 104.36800000000001,
+  "proposed_vertex_count": 2,
+  "kept_vertex_count": 2,
+  "coordinate_note": "Coordinate system follows the synthetic benchmark convention: x = left (+) / right (-), y = anterior (+) / posterior (-), z = superior (+) / inferior (-).",
+  "site_centroid_mm": [
+    -24.0,
+    18.0,
+    18.0
+  ],
+  "vertex_diameter_cm_recommended": 1.0,
+  "nearby_oars": [
+    {
+      "structure": "CHIASM",
+      "min_distance_mm": 0.0
+    },
+    {
+      "structure": "OPTIC_NERVE_R",
+      "min_distance_mm": 0.0
+    },
+    {
+      "structure": "OPTIC_NERVE_L",
+      "min_distance_mm": 0.0
+    },
+    {
+      "structure": "EYE_R",
+      "min_distance_mm": 0.0
+    },
+    {
+      "structure": "LENS_R",
+      "min_distance_mm": 0.0
+    }
+  ],
+  "vertex_details": [
+    {
+      "vertex_id": "V1",
+      "status": "kept",
+      "proposed_center_mm": [
+        -38.0,
+        18.0,
+        26.0
+      ],
+      "adjusted_center_mm": [
+        -34.0,
+        18.0,
+        22.0
+      ],
+      "shift_mm": [
+        4.0,
+        0.0,
+        -4.0
+      ],
+      "edge_margin_mm": 8.416,
+      "critical_oar_clearance_mm": 11.125
+    },
+    {
+      "vertex_id": "V2",
+      "status": "kept",
+      "proposed_center_mm": [
+        -10.0,
+        18.0,
+        10.0
+      ],
+      "adjusted_center_mm": [
+        -14.0,
+        18.0,
+        14.0
+      ],
+      "shift_mm": [
+        -4.0,
+        0.0,
+        4.0
+      ],
+      "edge_margin_mm": 11.125,
+      "critical_oar_clearance_mm": 11.125
+    }
+  ],
+  "structure_volumes_cc": {
+    "MAXILLA": 125.528,
+    "MANDIBLE": 35.44,
+    "BRAINSTEM": 6.424,
+    "SPINAL_CORD": 7.64,
+    "PAROTID_L": 3.96,
+    "PAROTID_R": 3.96,
+    "THYROID": 5.168,
+    "ARTERIES": 6.976,
+    "VEINS": 9.888,
+    "SKIN": 203.928,
+    "GTV": 64.624,
+    "CTVBOOST": 104.368
+  }
+}

@@ -1,0 +1,88 @@
+\section{Methods}
+
+\subsection{Study design}
+
+This study used a computational workflow to assess lattice radiotherapy plans in synthetic head-and-neck anatomy. The objective was to test whether protocol-constrained lattice plans that were similar under physical dose metrics retained the same interpretation after biology-informed post-processing, uncertainty testing, and vascular-sink falsification. The workflow comprised four steps: construction of synthetic phantoms and case templates, generation of lattice dose with TOPAS Monte Carlo transport, standardized endpoint extraction from the resulting dose grids, and downstream comparison under multiple biological and surrogate conditions (Figure~\ref{fig:methods_flow}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{figureM0_methods_model_flowchart.png}
+\caption{\textbf{Study workflow.} Synthetic phantoms and protocol-constrained lattice cases were generated first, followed by TOPAS-based physical transport, endpoint extraction, repeat-run uncertainty analysis, and vascular-sink falsification.}
+\label{fig:methods_flow}
+\end{figure}
+
+\subsection{Synthetic phantom generation}
+
+A synthetic heterogeneous head-and-neck phantom was first developed to establish the anatomical, material, and transport framework. The phantom included body contour, skull, mandible, vertebral bone, airway, brain, brainstem, spinal cord, major salivary glands, thyroid, parathyroids, arterial and venous structures, and tumour compartments. All masks were created algorithmically from geometric primitives and Boolean operations so that the full anatomy remained reproducible and fully synthetic. The resulting anatomy was exported as a TOPAS \texttt{TsImageCube} phantom with explicit voxel-level material tags and bulk densities. A representative foundational phantom is shown in Figure~\ref{fig:voxel_phantom_anatomy}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{figureM4_voxel_phantom_anatomy.png}
+\caption{\textbf{Representative synthetic head-and-neck phantom.} The phantom was used to define tumour, organs at risk, and explicit vessel structures within a transport-ready voxelized anatomy.}
+\label{fig:voxel_phantom_anatomy}
+\end{figure}
+
+To move beyond a single-anatomy test bed, a 10-case site-specific synthetic cohort was then created. Each case used a distinct tumour site, surrounding organ geometry, vessel layout, and accepted lattice arrangement. The cohort included sinonasal/maxillary, oropharyngeal, laryngo-hypopharyngeal, parapharyngeal, buccal/cheek, oral tongue/floor-of-mouth, nodal, deep parotid/infratemporal, and composite upper-neck presentations. Estimated tumour volumes ranged from approximately 66 to 326~cc. Each case was instantiated within its own synthetic anatomy rather than reusing a single phantom. This design allowed the workflow to test whether interpretation changed across different realized anatomical settings rather than only across different vertex coordinates. A cohort montage is shown in Figure~\ref{fig:site_specific_cohort}, and the case library is summarized in Table~\ref{tab:case_library}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{figureM3_phase32_site_specific_phantom_montage.png}
+\caption{\textbf{Site-specific synthetic cohort.} Ten separate head-and-neck phantoms were instantiated to span distinct tumour sites, organ-at-risk constellations, and accepted lattice layouts.}
+\label{fig:site_specific_cohort}
+\end{figure}
+
+\input{tables/table01_case_library}
+
+\subsection{Lattice case protocol}
+
+All lattice cases followed a common Yang-style boost concept. The peripheral lattice target was defined as $\mathrm{CTV}_{\mathrm{boost}} = \mathrm{GTV} + 5$~mm. Intratumoural vertices were assigned a nominal 15~Gy peak concept, while the peripheral target was assigned 3.0--3.5~Gy. Vertex diameters were typically 0.8--1.2~cm, with 1.0~cm used as the default size and 1.2~cm permitted in very large tumours.
+
+Vertices were accepted only when they remained fully intratumoural, preserved minimum spacing, and did not encroach on high-priority anatomy. In the head-and-neck setting, this pruning step was essential. Candidate vertices were deleted rather than forced when they approached the carotid or jugular territories, spinal cord, brainstem, optic pathway, cochlea, mandible, skull base, or skin. Candidate selection in the fixed safe-core branch used a 5~mm contracted GTV, 15~mm OAR clearance, 6~mm sampling step, 6~mm spot radius, and 18~mm minimum inter-vertex spacing. Symmetry was not enforced when anatomy was crowded.
+
+The final case set therefore represents protocol-constrained, safety-filtered lattice layouts rather than free geometric arrays. This was important because the study was designed to assess biological reinterpretation of clinically plausible lattice placements, not idealized hotspot patterns.
+
+\subsection{TOPAS physical dose generation}
+
+TOPAS was used as the physical dose engine. It was not used as a clinical inverse planner and did not attempt to reproduce a patient-specific VMAT optimization or multileaf-collimator sequence. Instead, each accepted lattice case was converted into a transport-ready \texttt{TsImageCube} phantom, and dose was generated with a two-component photon surrogate: a broad base component to cover the peripheral target and a focused component to intensify dose at the lattice vertices.
+
+Because absorbed dose is linear in incident fluence, the final physical dose was formed as a weighted sum of the two component dose grids,
+\begin{equation}
+D_{\mathrm{phys}}(\mathbf{x}) = w_{\mathrm{base}} D_{\mathrm{base}}(\mathbf{x}) + w_{\mathrm{vert}} D_{\mathrm{vert}}(\mathbf{x}),
+\end{equation}
+with component weights chosen to match the target planning goals. The calibration targets were PTV $D_{95} \approx 3.5$~Gy and peak mean dose $\approx 15$~Gy. A representative benchmark geometry and the component-based TOPAS delivery scheme are shown in Figures~\ref{fig:benchmark_geometry} and \ref{fig:topas_decomposition}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{figureM1_phase28_benchmark_geometry_and_biology.png}
+\caption{\textbf{Benchmark lattice geometry.} The benchmark case provided a fixed geometry against which the transport and post-processing workflow could be anchored.}
+\label{fig:benchmark_geometry}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{figureM2_phase30_topas_delivery_decomposition.png}
+\caption{\textbf{Two-component TOPAS delivery scheme.} Physical dose was generated from a broad peripheral component and a focused vertex component, then combined offline to match the lattice planning targets.}
+\label{fig:topas_decomposition}
+\end{figure}
+
+TOPAS runs used case-specific \texttt{TsImageCube} phantoms, multithreaded photon transport, and modest but reproducible history counts. By default, approximately 12{,}000 histories were assigned to the base component and 24{,}000 to the vertex component. Raw dose grids were smoothed with a body-aware Gaussian denoising step before component-weight calibration to stabilize lattice metrics while preserving overall peak-valley structure. TOPAS settings used for planning, transport, and repeat-run uncertainty are summarized in Table~\ref{tab:planning_transport_parameters}.
+
+\input{tables/table03_planning_transport_parameters}
+
+\subsection{Risk-analysis workflow}
+
+For each case, the resulting physical dose grid was processed in three comparison modes: physical-only, biology-informed without vascular uptake, and biology-informed with explicit vascular uptake. The intent of the downstream analysis was not to optimize the plan further, but to determine whether the ranking and endpoint profile of a physically plausible lattice case changed once biology-informed post-processing was applied.
+
+All cases were assessed with a fixed endpoint set. The primary endpoints were PTV $D_{95}$, PVDR, peri-GTV spill in 0--5~mm and 5--15~mm shells, spinal cord $D_{2}$, brainstem $D_{2}$, and right parotid mean. Supplemental outputs included additional target, spill, and outside-GTV measures, together with assay-like readouts used for interpretation rather than validation. The framework used for endpoint comparison, repeat-run analysis, and falsification testing is summarized in Table~\ref{tab:risk_framework}.
+
+\input{tables/table05_risk_framework}
+
+\subsection{Uncertainty and falsification}
+
+Repeat-run uncertainty was assessed on a six-case subset using three random seeds and three history scales. This produced repeated physical dose packages for the same case geometry and lattice arrangement, allowing endpoint variability to be estimated under combined Monte Carlo and uptake-sensitivity uncertainty. The primary uncertainty criterion was whether a sink-driven endpoint change exceeded the corresponding 95\% combined noise band.
+
+The vascular-sink term was then challenged using surrogate and falsification controls. Initial controls included no sink, uniform body sink, blurred vessel sink, peri-GTV shell sink, and distance-decay sink. Stronger falsifications included anterior-posterior flip, superior-inferior flip, local vessel dropout within 20~mm of the tumour, and randomized anatomy-constrained vessel displacement. These tests were designed to determine whether the signal attributed to the anatomical sink persisted when the same uptake strength was redistributed or locally disrupted.
+
+\subsection{Reproducibility}
+
+All cases, seeds, history schedules, and output roots were fixed before the final analyses and written to reproducibility manifests within the saved run directories. The study used only synthetic data and involved no patient-identifiable information or prospective clinical intervention.

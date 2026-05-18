@@ -1,0 +1,133 @@
+{
+  "template_id": "case08",
+  "label": "Bulky nodal conglomerate level II-IV with central necrosis",
+  "site_group": "nodal_neck",
+  "site_note": "Lateral neck nodal conglomerate spanning upper and mid neck levels.",
+  "tumour_model": "irregular nodal mass",
+  "estimated_gtv_cc": 168.0,
+  "instantiated_gtv_cc": 169.096,
+  "ctvboost_cc": 230.256,
+  "proposed_vertex_count": 4,
+  "kept_vertex_count": 3,
+  "coordinate_note": "Coordinate system follows the synthetic benchmark convention: x = left (+) / right (-), y = anterior (+) / posterior (-), z = superior (+) / inferior (-).",
+  "site_centroid_mm": [
+    -28.0,
+    -6.0,
+    -26.0
+  ],
+  "vertex_diameter_cm_recommended": 1.0,
+  "nearby_oars": [
+    {
+      "structure": "ARTERIES",
+      "min_distance_mm": 0.0
+    },
+    {
+      "structure": "VEINS",
+      "min_distance_mm": 0.0
+    },
+    {
+      "structure": "SPINAL_CORD",
+      "min_distance_mm": 0.0
+    },
+    {
+      "structure": "BRAINSTEM",
+      "min_distance_mm": 0.0
+    },
+    {
+      "structure": "BRACHIAL_PLEXUS_R",
+      "min_distance_mm": 0.0
+    }
+  ],
+  "vertex_details": [
+    {
+      "vertex_id": "V1",
+      "status": "pruned",
+      "proposed_center_mm": [
+        -46.0,
+        -6.0,
+        -14.0
+      ],
+      "adjusted_center_mm": null,
+      "shift_mm": null,
+      "reason": "insufficient_gtv_edge_margin"
+    },
+    {
+      "vertex_id": "V2",
+      "status": "kept",
+      "proposed_center_mm": [
+        -10.0,
+        -6.0,
+        -14.0
+      ],
+      "adjusted_center_mm": [
+        -14.0,
+        -10.0,
+        -8.0
+      ],
+      "shift_mm": [
+        -4.0,
+        -4.0,
+        6.0
+      ],
+      "edge_margin_mm": 9.697,
+      "critical_oar_clearance_mm": 10.1
+    },
+    {
+      "vertex_id": "V3",
+      "status": "kept",
+      "proposed_center_mm": [
+        -36.0,
+        -16.0,
+        -38.0
+      ],
+      "adjusted_center_mm": [
+        -28.0,
+        -14.0,
+        -46.0
+      ],
+      "shift_mm": [
+        8.0,
+        2.0,
+        -8.0
+      ],
+      "edge_margin_mm": 0.657,
+      "critical_oar_clearance_mm": 10.232
+    },
+    {
+      "vertex_id": "V4",
+      "status": "kept",
+      "proposed_center_mm": [
+        -19.0,
+        4.0,
+        -39.0
+      ],
+      "adjusted_center_mm": [
+        -19.0,
+        4.0,
+        -39.0
+      ],
+      "shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "edge_margin_mm": 6.489,
+      "critical_oar_clearance_mm": 10.62
+    }
+  ],
+  "structure_volumes_cc": {
+    "MAXILLA": 125.528,
+    "MANDIBLE": 35.44,
+    "BRAINSTEM": 6.424,
+    "SPINAL_CORD": 7.64,
+    "PAROTID_L": 3.96,
+    "PAROTID_R": 3.96,
+    "THYROID": 5.168,
+    "ARTERIES": 6.976,
+    "VEINS": 9.888,
+    "SKIN": 203.928,
+    "GTV": 169.096,
+    "CTVBOOST": 230.256,
+    "TUMOUR_NECROSIS": 2.968
+  }
+}

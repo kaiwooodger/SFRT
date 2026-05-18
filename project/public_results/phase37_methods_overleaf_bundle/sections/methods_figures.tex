@@ -1,0 +1,48 @@
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{figureM0_methods_model_flowchart.png}
+\caption{\textbf{Overall computational workflow used in the final risk-analysis branch of the study.} Synthetic phantoms and protocol-constrained lattice plans were generated first, followed by TOPAS-based physical transport, multispecies biological reinterpretation, endpoint extraction, repeat-run uncertainty analysis, and vessel-falsification testing.}
+\label{fig:methods_flow}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{figureM4_voxel_phantom_anatomy.png}
+\caption{\textbf{Foundational voxelized head-and-neck phantom.} This synthetic anatomy was used to establish the heterogeneous phantom framework, explicit vessel masks, and the transfer path between lattice geometry, Monte Carlo transport, and the biological sink model.}
+\label{fig:voxel_phantom_anatomy}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{figureM5_topas_material_phantom.png}
+\caption{\textbf{TOPAS materialized ImageCube phantom.} Voxelwise material tags and densities were assigned to the synthetic H\&N anatomy to enable physically heterogeneous photon transport while preserving the same structures for downstream biology analysis.}
+\label{fig:topas_material_phantom}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{figureM1_phase28_benchmark_geometry_and_biology.png}
+\caption{\textbf{Yang-style benchmark geometry and biological interpretation.} This benchmark anchored the later workflow by linking a literature-matched lattice geometry to the same biological reinterpretation framework used for the synthetic cohort.}
+\label{fig:benchmark_geometry}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{figureM2_phase30_topas_delivery_decomposition.png}
+\caption{\textbf{TOPAS-derived photon lattice delivery decomposition.} The mature physical-dose workflow used separate broad-base and focused-vertex components, then combined them offline to achieve the desired peripheral coverage and lattice peak goals.}
+\label{fig:topas_decomposition}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{figureM3_phase32_site_specific_phantom_montage.png}
+\caption{\textbf{Site-specific synthetic H\&N cohort.} Ten separate anatomically distinct phantoms were instantiated to test whether the biological risk-analysis model generalized across different tumour sites, OAR constellations, and accepted vertex patterns rather than only within a single reused phantom.}
+\label{fig:site_specific_cohort}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{figureM6_vascular_sink_field.png}
+\caption{\textbf{Representative anatomy-derived vascular sink field.} Arterial and venous voxel masks were converted into species-specific uptake fields, allowing the model to test whether vessel-adjacent biological washout altered interpretation of the same physical dose.}
+\label{fig:vascular_sink_field}
+\end{figure}

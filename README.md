@@ -1,125 +1,30 @@
-#topas-unified
+# SFRT Biological Risk Analysis Reproducibility Package
 
-`topas-unified` is a Python package for spatially fractionated
-radiotherapy  workflows. It pulls reusable phantom generation, planning,
-TOPAS I/O, biology, and metric code out of the older `vhee_topas` research
-scripts and exposes them through one installable package and one CLI.
+This repository gathers the source code, figure-generation scripts, manuscript-facing figure outputs, and the curated result artifacts used for the current SFRT submission package.
 
-This repository is intended to become the cleaner public home for the model as
-the remaining  workflows are migrated across.
+## Structure
+- `project/scripts/` — project scripts, run wrappers, renderers, and analysis utilities.
+- `project/topas/` — TOPAS templates.
+- `project/data/` — supporting input data.
+- `project/public_results/` — copied manuscript-facing summary tables, quick assessments, and selected result assets for public sharing.
+- `figures/PMB_SFRT_publishable_source_clean/` — cleaned manuscript figure bundle.
+- `manuscript/SFRT_Submission.pdf` — current submission PDF.
 
-## Current Status
+## Important note
+This is a portable public-clean package. Machine-specific symbolic links and oversized raw transport intermediates have been removed. The repository keeps the code, final figures, manuscript PDF, and manuscript-facing summary outputs needed to inspect the study and regenerate the paper workflow, while excluding bulky case-level dose cubes, binary material-tag files, and large volume arrays that are not suitable for standard GitHub hosting.
 
-What is native in this package today:
+The principal excluded raw artifacts were the largest transport-volume products and repeat-run intermediates, including the original `phase11c_assay_volumes.npz`, `phase12_mc_coupled_volumes.npz`, case-level combined physical dose grids, and repeated-subset raw dose exports. These can be regenerated from the included scripts.
 
-- core biology utilities
-- DVH and structure metrics
-- simple and detailed synthetic head-and-neck phantoms
-- TOPAS material-tag generation and ImageCube helpers
-- spectrum loading, TOPAS CSV readers, and TOPAS case helpers
-- lattice/source-plan generation
-- biology-guided lattice candidate selection helpers
-- native CLI workflows for:
-  - `simple-physical`
-  - `detailed-phantom`
-  - `material-phantom`
-  - `simple-plan-preview`
-  - `detailed-plan-preview`
+The `project/public_results/` directory is intentionally curated rather than exhaustive. It contains the high-signal manuscript-facing summaries from the benchmark, cohort, uncertainty, and falsification analyses, while leaving raw transport scratch space out of the public repository.
 
-What still uses the legacy bridge:
-
-- `detailed-physical`
-- `bioaware`
-- `bioopt`
-- `candidate-tradeoff`
-
-
-
-The package currently requires:
-
-- Python `>=3.10`
-- `numpy`
-
-Optional runtime requirements for physical dose workflows:
-
-- a working TOPAS installation
-- Geant4 data available to TOPAS
-
-## Quickstart
-
-Show the CLI surface:
-
-```bash
-vhee-topas-unified info
-vhee-topas-unified list-workflows
-```
-
-Generate the detailed anatomy natively:
-
-```bash
-vhee-topas-unified run detailed-phantom
-vhee-topas-unified run material-phantom
-```
-
-Generate source-plan previews without running TOPAS:
-
-```bash
-vhee-topas-unified run simple-plan-preview
-vhee-topas-unified run detailed-plan-preview
-```
-
-Run the first native physical workflow:
-
-```bash
-vhee-topas-unified run simple-physical
-```
-
-Use a legacy workflow when needed:
-
-```bash
-vhee-topas-unified run detailed-physical --legacy-root /path/to/vhee_topas -- --skip-existing
-```
-
-## Repo Layout
-
-```text
-src/vhee_topas_unified/
-  biology/
-  phantom/
-  planning/
-  metrics/
-  io/
-  workflows/
-  cli.py
-
-tests/
-.github/workflows/ci.yml
-ARCHITECTURE_PLAN.md
-```
-
-## Testing
-
-Run the smoke-test suite locally:
-
-```bash
-python -m unittest discover -s tests -v
-```
-
-The GitHub Actions workflow in [.github/workflows/ci.yml](.github/workflows/ci.yml)
-installs the package, compiles the source tree, and runs the same smoke tests.
-
-## Design Notes
-
-- Generated outputs are written under `runs/` and are ignored by Git.
-- The legacy bridge remains available so migration can continue without blocking
-  current  workflows.
-- The longer-term migration map is in [ARCHITECTURE_PLAN.md](ARCHITECTURE_PLAN.md).
-
-## Known Limitations
-
-- Not all end-to-end workflows are local and complete yet.
-- The richer biology-aware and optimization paths still depend on the sibling
-  legacy repo.
-- Physical workflows require a local TOPAS executable and Geant4 data.
-
-
+## Main reproduction entry points
+- `project/scripts/run_phase30_phase28_topas_true_lattice_delivery.py`
+- `project/scripts/run_phase33_phase32_topas_cohort.py`
+- `project/scripts/run_phase34_phase32_bio_cohort.py`
+- `project/scripts/run_phase35_subset_repeat_uncertainty.py`
+- `project/scripts/run_phase36a_vessel_falsification_cohort.py`
+- `project/scripts/run_phase36b_vessel_falsification_uncertainty.py`
+- `project/scripts/run_phase37a_vessel_falsification_cohort.py`
+- `project/scripts/run_phase37b_vessel_falsification_uncertainty.py`
+- `project/scripts/render_pmb_source_clean_figures.py`
+- `project/scripts/run_high_history_paper_refresh.sh`

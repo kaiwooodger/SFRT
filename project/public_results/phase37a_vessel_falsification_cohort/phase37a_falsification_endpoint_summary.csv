@@ -1,0 +1,73 @@
+comparator_id,comparator_label,metric,label,units,n_cases,mean_true_minus_comparator,median_true_minus_comparator,ci_lower,ci_upper,cases_favoring_true_sink,fraction_favoring_true_sink,ci_excludes_zero
+ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",brainstem_d2,Brainstem D2,Gy,10,-0.37480555725097703,-0.31900905609130703,-0.6269115158081051,-0.16124056262970038,9,0.9,True
+ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",oar_adjacent_outside_gtv_mean,OAR-adjacent outside-GTV mean,Gy,10,0.10362324860122474,0.019147488159997117,-0.026050369545672022,0.26688181585673604,3,0.3,False
+ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",outside_gtv_d2,Outside-GTV D2,Gy,10,0.011003425598146776,-0.07914649963378473,-0.23610895700454554,0.28824508914947605,6,0.6,False
+ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",parotid_r_mean,Parotid R mean,Gy,10,-0.3458795745926682,-0.4487750323131845,-0.5414710854159478,-0.12277953465298022,8,0.8,True
+ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",ptv_d95,PTV D95,Gy,10,0.044794759750366175,0.6062125205993656,-1.0955642192363741,0.8046524424552913,8,0.8,False
+ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",pvdr,PVDR,ratio,10,-0.03525484010445097,-0.07339260780788082,-0.13106765586754252,0.06893664194021165,4,0.4,False
+ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",spill_shell_0_5_mean,Peri-GTV 0-5 mm mean,Gy,10,-0.03666771285879058,0.06626290081814545,-0.4511429100735111,0.2191100435349136,2,0.2,False
+ap_flip_sink,"Bystander, anterior-posterior flipped vessel sink",spill_shell_5_15_mean,Peri-GTV 5-15 mm mean,Gy,10,0.05915966979941008,0.06292203358200865,0.0012804478881448943,0.11977365779921799,3,0.3,True
+blurred_vessel_sink_sigma10mm,"Bystander, blurred vessel sink (10 mm sigma)",brainstem_d2,Brainstem D2,Gy,10,3.3055660629272454,2.973529319763184,2.409448114776611,4.235733921432494,0,0.0,True
+blurred_vessel_sink_sigma10mm,"Bystander, blurred vessel sink (10 mm sigma)",oar_adjacent_outside_gtv_mean,OAR-adjacent outside-GTV mean,Gy,10,1.2357528457120417,1.283821066338927,1.1369088050546348,1.3239324132171624,0,0.0,True
+blurred_vessel_sink_sigma10mm,"Bystander, blurred vessel sink (10 mm sigma)",outside_gtv_d2,Outside-GTV D2,Gy,10,0.6690304870605484,0.6538455390930196,0.4768760377883938,0.865677325057984,0,0.0,True
+blurred_vessel_sink_sigma10mm,"Bystander, blurred vessel sink (10 mm sigma)",parotid_r_mean,Parotid R mean,Gy,10,2.622671169993853,2.91727540372598,1.981780906448461,3.2201415321826925,0,0.0,True
+blurred_vessel_sink_sigma10mm,"Bystander, blurred vessel sink (10 mm sigma)",ptv_d95,PTV D95,Gy,10,0.980363144874573,1.0595502614974972,0.6025857273340227,1.328207021832466,9,0.9,True
+blurred_vessel_sink_sigma10mm,"Bystander, blurred vessel sink (10 mm sigma)",pvdr,PVDR,ratio,10,-0.019708131512497885,-0.018267539150730427,-0.03570697801316641,-0.004450048042593722,2,0.2,True
+blurred_vessel_sink_sigma10mm,"Bystander, blurred vessel sink (10 mm sigma)",spill_shell_0_5_mean,Peri-GTV 0-5 mm mean,Gy,10,1.1983331399131179,1.215278067446972,0.865952248587388,1.5527280144731024,0,0.0,True
+blurred_vessel_sink_sigma10mm,"Bystander, blurred vessel sink (10 mm sigma)",spill_shell_5_15_mean,Peri-GTV 5-15 mm mean,Gy,10,0.7835417725298914,0.7855142428060242,0.6055383711068113,0.9808050128455322,0,0.0,True
+distance_decay_sink_lambda15mm,"Bystander, distance-decay sink (lambda 15 mm)",brainstem_d2,Brainstem D2,Gy,10,0.8411136016845685,1.0099948501586855,-0.06771130771637147,1.6622130624771096,4,0.4,False
+distance_decay_sink_lambda15mm,"Bystander, distance-decay sink (lambda 15 mm)",oar_adjacent_outside_gtv_mean,OAR-adjacent outside-GTV mean,Gy,10,1.0400796975088926,1.0250566966670442,0.7228981899521777,1.3667674491121937,0,0.0,True
+distance_decay_sink_lambda15mm,"Bystander, distance-decay sink (lambda 15 mm)",outside_gtv_d2,Outside-GTV D2,Gy,10,1.3266631774902364,1.3593570518493685,1.141238324928289,1.5018629728317245,0,0.0,True
+distance_decay_sink_lambda15mm,"Bystander, distance-decay sink (lambda 15 mm)",parotid_r_mean,Parotid R mean,Gy,10,0.030021715477259337,0.05545090388770135,-0.6129449910726219,0.7106976217248225,4,0.4,False
+distance_decay_sink_lambda15mm,"Bystander, distance-decay sink (lambda 15 mm)",ptv_d95,PTV D95,Gy,10,1.1008867979049686,1.4037144184112558,0.3633922691345212,1.6710382040739067,9,0.9,True
+distance_decay_sink_lambda15mm,"Bystander, distance-decay sink (lambda 15 mm)",pvdr,PVDR,ratio,10,-0.1390151872268795,-0.13845137315185485,-0.20141829309823922,-0.06044605421362997,1,0.1,True
+distance_decay_sink_lambda15mm,"Bystander, distance-decay sink (lambda 15 mm)",spill_shell_0_5_mean,Peri-GTV 0-5 mm mean,Gy,10,2.1455538845606563,2.1921132141295114,1.8676317061904522,2.39969513210761,0,0.0,True
+distance_decay_sink_lambda15mm,"Bystander, distance-decay sink (lambda 15 mm)",spill_shell_5_15_mean,Peri-GTV 5-15 mm mean,Gy,10,1.952847383785937,1.9437547722891244,1.8468928999768293,2.065554093583773,0,0.0,True
+local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",brainstem_d2,Brainstem D2,Gy,10,-0.4448188400268567,-0.33351417541503814,-0.6982290519714384,-0.251518083190919,10,1.0,True
+local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",oar_adjacent_outside_gtv_mean,OAR-adjacent outside-GTV mean,Gy,10,-0.3606191915217103,-0.3243072340546913,-0.4548329249621888,-0.2733294512051257,10,1.0,True
+local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",outside_gtv_d2,Outside-GTV D2,Gy,10,-0.14854063415527358,-0.11413928985595767,-0.2621030517578133,-0.04073777265548978,9,0.9,True
+local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",parotid_r_mean,Parotid R mean,Gy,10,-0.848553184836802,-0.9794780437392419,-1.1104227549162782,-0.5611686815613451,9,0.9,True
+local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",ptv_d95,PTV D95,Gy,10,-1.4117196846008304,-1.0709498405456541,-2.2765042510032654,-0.8709528629779816,0,0.0,True
+local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",pvdr,PVDR,ratio,10,-0.042052292729990295,-0.0424669265861366,-0.11509751054122581,0.03189586886386488,5,0.5,False
+local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",spill_shell_0_5_mean,Peri-GTV 0-5 mm mean,Gy,10,-0.6846868712741593,-0.6437237453583773,-0.9836808564596017,-0.44870909316475305,10,1.0,True
+local_dropout_sink_20mm,"Bystander, local vessel dropout within 20 mm of GTV",spill_shell_5_15_mean,Peri-GTV 5-15 mm mean,Gy,10,-0.38322249591276664,-0.36830357966279603,-0.4962487619347196,-0.27718590784804076,10,1.0,True
+no_sink,"Bystander, no vascular sink",brainstem_d2,Brainstem D2,Gy,10,-0.4487947006225593,-0.33658508300781165,-0.6993731052398701,-0.25035864276885944,10,1.0,True
+no_sink,"Bystander, no vascular sink",oar_adjacent_outside_gtv_mean,OAR-adjacent outside-GTV mean,Gy,10,-0.590956841937472,-0.6145160724556211,-0.6724570184248527,-0.49767658615861826,10,1.0,True
+no_sink,"Bystander, no vascular sink",outside_gtv_d2,Outside-GTV D2,Gy,10,-0.25309756469726424,-0.1633842849731444,-0.4024209923744167,-0.11687058296203692,10,1.0,True
+no_sink,"Bystander, no vascular sink",parotid_r_mean,Parotid R mean,Gy,10,-0.8826418654123944,-0.9796479393737485,-1.120609537962712,-0.6213231242305105,10,1.0,True
+no_sink,"Bystander, no vascular sink",ptv_d95,PTV D95,Gy,10,-1.4127722358703614,-1.071114635467528,-2.244420359611511,-0.8817898621559148,0,0.0,True
+no_sink,"Bystander, no vascular sink",pvdr,PVDR,ratio,10,-0.04200597483486503,-0.04240677893180256,-0.11096669633971276,0.038236178278664934,5,0.5,False
+no_sink,"Bystander, no vascular sink",spill_shell_0_5_mean,Peri-GTV 0-5 mm mean,Gy,10,-0.6866591222954564,-0.6451498013804198,-1.0354088727683004,-0.4442217149771898,10,1.0,True
+no_sink,"Bystander, no vascular sink",spill_shell_5_15_mean,Peri-GTV 5-15 mm mean,Gy,10,-0.4078966384566721,-0.38179099721370946,-0.5175122308715583,-0.31340112544714727,10,1.0,True
+peri_gtv_shell_sink_5_20mm,"Bystander, peri-GTV shell sink (5-20 mm)",brainstem_d2,Brainstem D2,Gy,10,0.5670804672241199,0.06038246154785121,-0.20651577835083135,1.407530520439146,5,0.5,False
+peri_gtv_shell_sink_5_20mm,"Bystander, peri-GTV shell sink (5-20 mm)",oar_adjacent_outside_gtv_mean,OAR-adjacent outside-GTV mean,Gy,10,0.8187322354482742,0.8240457602003897,0.5565107079148208,1.072593447317366,0,0.0,True
+peri_gtv_shell_sink_5_20mm,"Bystander, peri-GTV shell sink (5-20 mm)",outside_gtv_d2,Outside-GTV D2,Gy,10,0.6990340080261237,0.665932483673096,0.5010163208007832,0.9270476993560764,0,0.0,True
+peri_gtv_shell_sink_5_20mm,"Bystander, peri-GTV shell sink (5-20 mm)",parotid_r_mean,Parotid R mean,Gy,10,-0.195785953396499,-0.3316000842084783,-0.8166610152095265,0.438322677212531,7,0.7,False
+peri_gtv_shell_sink_5_20mm,"Bystander, peri-GTV shell sink (5-20 mm)",ptv_d95,PTV D95,Gy,10,-0.35973152637481665,-0.0366011381149276,-1.1585910487174989,0.22397483968734846,4,0.4,False
+peri_gtv_shell_sink_5_20mm,"Bystander, peri-GTV shell sink (5-20 mm)",pvdr,PVDR,ratio,10,-0.07483685924635097,-0.07687050669827544,-0.1412970732468626,-0.0017262090955018508,1,0.1,True
+peri_gtv_shell_sink_5_20mm,"Bystander, peri-GTV shell sink (5-20 mm)",spill_shell_0_5_mean,Peri-GTV 0-5 mm mean,Gy,10,0.41958834183522137,0.43036577104074425,0.08121591248442327,0.6722779655462894,1,0.1,True
+peri_gtv_shell_sink_5_20mm,"Bystander, peri-GTV shell sink (5-20 mm)",spill_shell_5_15_mean,Peri-GTV 5-15 mm mean,Gy,10,2.4607357895167548,2.4232437992519973,2.2905167756069345,2.643394960694321,0,0.0,True
+randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",brainstem_d2,Brainstem D2,Gy,10,0.35933382415771253,-0.036612052917483595,-0.17595265159607143,1.1208623548507661,6,0.6,False
+randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",oar_adjacent_outside_gtv_mean,OAR-adjacent outside-GTV mean,Gy,10,-0.08513839550827988,-0.08983524687360944,-0.14381660363920887,-0.022529184676779904,8,0.8,True
+randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",outside_gtv_d2,Outside-GTV D2,Gy,10,-0.07441519165038848,-0.10559890747070533,-0.17685023946762057,0.030718773460391022,7,0.7,False
+randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",parotid_r_mean,Parotid R mean,Gy,10,-0.04109859684501016,-0.9231863137447469,-0.9475331161576088,1.242956378988844,8,0.8,False
+randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",ptv_d95,PTV D95,Gy,10,0.225770812034607,0.4521301269531248,-0.71210957801342,0.9117373217344282,8,0.8,False
+randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",pvdr,PVDR,ratio,10,-0.06237142793283459,-0.07578700624731682,-0.12106440324583545,0.004919176753687038,2,0.2,False
+randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",spill_shell_0_5_mean,Peri-GTV 0-5 mm mean,Gy,10,-0.11730503536616865,-0.06513731155790126,-0.33358144767034553,0.06361286410806781,5,0.5,False
+randomized_displacement_sink,"Bystander, randomized anatomy-constrained vessel displacement",spill_shell_5_15_mean,Peri-GTV 5-15 mm mean,Gy,10,-0.028487221697308485,-0.046480814787178915,-0.10424996995940249,0.049458426564395454,7,0.7,False
+si_flip_sink,"Bystander, superior-inferior flipped vessel sink",brainstem_d2,Brainstem D2,Gy,10,0.028643959045410127,0.01829074859619162,0.012781683349609115,0.052663911247251824,0,0.0,True
+si_flip_sink,"Bystander, superior-inferior flipped vessel sink",oar_adjacent_outside_gtv_mean,OAR-adjacent outside-GTV mean,Gy,10,-0.3479325773149709,-0.332932671394941,-0.39743531596254605,-0.2999903426544695,10,1.0,True
+si_flip_sink,"Bystander, superior-inferior flipped vessel sink",outside_gtv_d2,Outside-GTV D2,Gy,10,-0.03318431091308689,-2.8610230096148825e-07,-0.10621392354965312,0.031676391887662275,5,0.5,False
+si_flip_sink,"Bystander, superior-inferior flipped vessel sink",parotid_r_mean,Parotid R mean,Gy,10,-0.7038797262461503,-0.7597652700212265,-0.892776268340121,-0.4883624030219186,10,1.0,True
+si_flip_sink,"Bystander, superior-inferior flipped vessel sink",ptv_d95,PTV D95,Gy,10,-0.7188344573974605,-0.5026160240173336,-1.4877833397388451,-0.17937212634086558,3,0.3,True
+si_flip_sink,"Bystander, superior-inferior flipped vessel sink",pvdr,PVDR,ratio,10,0.019523725439933814,0.017066740767455957,-0.024256485385423396,0.06436573561766193,6,0.6,False
+si_flip_sink,"Bystander, superior-inferior flipped vessel sink",spill_shell_0_5_mean,Peri-GTV 0-5 mm mean,Gy,10,-0.3176052351019738,-0.210107806882883,-0.6384916172575034,-0.06052092361933589,7,0.7,True
+si_flip_sink,"Bystander, superior-inferior flipped vessel sink",spill_shell_5_15_mean,Peri-GTV 5-15 mm mean,Gy,10,-0.10465595863498826,-0.08296127414661658,-0.2323492668183209,0.011361620357705058,6,0.6,False
+uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",brainstem_d2,Brainstem D2,Gy,10,1.6469925918579087,1.517727851867674,1.2797426700592052,2.068108136367795,0,0.0,True
+uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",oar_adjacent_outside_gtv_mean,OAR-adjacent outside-GTV mean,Gy,10,0.48138063762187305,0.4643776160691173,0.3642482022713903,0.6288007174875715,0,0.0,True
+uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",outside_gtv_d2,Outside-GTV D2,Gy,10,1.0053544273376478,1.1059210395812986,0.8470997188568112,1.143041591072084,0,0.0,True
+uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",parotid_r_mean,Parotid R mean,Gy,10,0.48035989229125126,0.5171337113235923,0.3293436214285663,0.6304314724483859,0,0.0,True
+uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",ptv_d95,PTV D95,Gy,10,-0.05510478019714356,0.2852951049804693,-0.9083641680479049,0.48590815591812136,7,0.7,False
+uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",pvdr,PVDR,ratio,10,-0.04629978414775506,-0.04593795452334304,-0.11307976805333492,0.028616401759926264,5,0.5,False
+uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",spill_shell_0_5_mean,Peri-GTV 0-5 mm mean,Gy,10,0.846940117064177,0.9368032511937177,0.5312371357558279,1.0810781426815805,1,0.1,True
+uniform_body_sink_mass_matched,"Bystander, uniform body sink (mass matched)",spill_shell_5_15_mean,Peri-GTV 5-15 mm mean,Gy,10,0.733796532550891,0.7685932561653477,0.619441773417007,0.8400256907075644,0,0.0,True

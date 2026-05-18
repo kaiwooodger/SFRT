@@ -1,0 +1,57 @@
+\section{Results}
+
+\subsection{Physical cohort}
+
+All 10 site-specific synthetic head-and-neck cases completed the physical transport workflow. Peripheral target coverage was stable across the cohort, with mean PTV $D_{95}$ fixed at 3.50~Gy by design, while lattice selectivity varied more broadly. The median physical PVDR was approximately 1.80, and the physical cohort retained measurable spread in peri-tumour spill and OAR-adjacent dose. These distributions established the physical baseline against which biological reinterpretation was tested (Figure~\ref{fig:physical_cohort}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{figureR1_physical_cohort_summary.png}
+\caption{\textbf{Physical cohort summary.} Across 10 synthetic head-and-neck cases, the TOPAS-derived photon lattice plans achieved stable peripheral target coverage but retained broad variation in peak-valley contrast, spill, and OAR-adjacent physical dose.}
+\label{fig:physical_cohort}
+\end{figure}
+
+\subsection{Biological reinterpretation of the 10-case cohort}
+
+Applying the biology-informed post-processing substantially changed cohort interpretation. Relative to the physical-only view, cohort-mean PTV $D_{95}$ increased from 3.50~Gy to 17.14~Gy in the no-sink analysis and 15.73~Gy with the anatomical sink included. In contrast, mean PVDR fell from 1.817 physically to 1.478 without sink uptake and 1.436 with sink uptake, indicating biological filling-in of the physical peak-valley pattern. Peri-GTV 0--5~mm mean increased from 7.219~Gy physically to 20.616~Gy without sink uptake and 19.929~Gy with sink uptake. Brainstem $D_{2}$ increased from 11.454~Gy physically to 28.399~Gy without sink uptake and 27.951~Gy with sink uptake. Right parotid mean increased from 5.875~Gy physically to 18.821~Gy without sink uptake and 17.939~Gy with sink uptake (Table~\ref{tab:cohort_mode_summary}).
+
+\input{tables/table01_cohort_mode_summary}
+
+Biological reinterpretation changed the final ordering of 8 of 10 cases relative to physical-only ranking. The best-ranked physical case was the oral tongue/floor-of-mouth horseshoe case, but it dropped from rank 1 physically to rank 3 with the anatomical sink included. In contrast, the right sinonasal/maxillary bulky ellipsoid improved from physical rank 2 to biological rank 1. Five cases acquired biology-only OAR reinterpretations, all involving brainstem $D_{2}$. The full 10-case rank-change table is shown in Table~\ref{tab:rank_changes}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{figureR2_biological_reinterpretation.png}
+\caption{\textbf{Biological reinterpretation of the site-specific cohort.} The same physical cohort was rescored under biology-informed post-processing with and without anatomical vascular uptake. Plan ordering changed in most cases, and spill and OAR burden rose substantially relative to the physical-only view.}
+\label{fig:bio_reinterpretation}
+\end{figure}
+
+\input{tables/table02_rank_changes}
+
+\subsection{Uncertainty analysis}
+
+Repeat-run uncertainty was evaluated on a six-case subset using three seeds and three history scales, giving nine repeated transport combinations. Endpoint-level sink effects remained visible after uncertainty was introduced. Across the evaluated case-endpoint set, 40 of 42 sink-driven endpoint deltas exceeded the combined Monte Carlo plus uptake-sensitivity 95\% noise band. The strongest repeated signals were observed for PVDR, peri-GTV spill, and right parotid mean. However, no case showed a noise-qualified sink-driven rank change in this subset, indicating that the sink effect was more stable as an endpoint-level modifier than as a rank-reversal mechanism (Figure~\ref{fig:uncertainty_robustness}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{figureR3_uncertainty_robustness.png}
+\caption{\textbf{Uncertainty robustness.} Repeated transport and biology solves preserved most sink-driven endpoint shifts beyond the combined 95\% noise band, but did not produce stable sink-driven rank reversals in the repeated six-case subset.}
+\label{fig:uncertainty_robustness}
+\end{figure}
+
+\subsection{Vascular-sink falsification}
+
+The anatomical sink remained distinguishable from stronger surrogate controls. In the repeated subset, 222 of 288 true-versus-surrogate endpoint differences exceeded the combined 95\% noise band. The strongest repeated separations were observed for the no-sink comparator (42/48 endpoints), uniform body washout (42/48), and local vessel dropout near the tumour (41/48). Superior-inferior and anterior-posterior flips remained weaker but still measurable, with 32/48 and 31/48 endpoint differences above the same threshold, respectively. Only 2 of 36 true-versus-surrogate rank comparisons were noise-qualified, and both occurred against the mass-matched uniform washout control. Thus, the anatomical sink was reproducibly different from generic and spatially perturbed alternatives at the endpoint level, but it remained a weak rank-flipping signal (Table~\ref{tab:falsification_summary}; Figure~\ref{fig:falsification}).
+
+\input{tables/table03_falsification_summary}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{figureR4_stronger_falsification_controls.png}
+\caption{\textbf{Stronger spatial falsification controls.} The anatomical sink remained distinguishable from multiple perturbed or redistributed washout fields, especially from local vessel dropout and uniform body washout, even after repeat-run uncertainty was included.}
+\label{fig:falsification}
+\end{figure}
+
+\subsection{Summary}
+
+Taken together, the cohort results support three points. First, the physical TOPAS-derived photon lattice plans were reproducibly generated across 10 anatomically distinct synthetic H\&N cases. Second, biology-informed post-processing materially changed case interpretation, including rank order and OAR burden. Third, the vascular-sink term behaved as a measurable endpoint-level modifier that remained distinguishable from several stronger surrogate controls, although it did not produce broad noise-qualified rank reversals.

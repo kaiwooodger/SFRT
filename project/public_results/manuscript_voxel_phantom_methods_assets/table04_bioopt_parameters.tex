@@ -1,0 +1,26 @@
+\begin{table}[H]
+\centering
+\caption{\textbf{Exploratory biology-guided lattice optimization parameters used on the voxelized phantom.}}
+\label{tab:bioopt_parameters}
+\small
+\begin{tabular}{p{5.4cm}p{7.2cm}}
+\toprule
+Parameter & Setting \\
+\midrule
+Baseline plan & Detailed direct-plan lattice arrangement from the voxelized phantom branch \\
+Total candidate plans evaluated & 5 (1 baseline + 4 feedback-generated candidates) \\
+Candidate center grid step & 6 mm \\
+Required in-GTV support & Full 8 mm-radius spherical support within the GTV \\
+Number of lattice spots per candidate & 4 \\
+Minimum inter-spot spacing & 18 mm (with fallback relaxation only if needed to maintain feasibility) \\
+Target effective-dose guidance level & 28 Gy \\
+Hard minimum distance to spinal cord & 55 mm from any spinal cord voxel \\
+Hard minimum distance to brainstem & 50 mm from any brainstem voxel \\
+Hard acceptance criterion, cord & Effective $D_{2} \leq 45$ Gy \\
+Hard acceptance criterion, brainstem & Effective $D_{2} \leq 10$ Gy \\
+Feedback inputs & Prior effective-dose map, hypoxia mask, vessel-distance reward, OAR proximity penalties, and placement history \\
+Ranking objective & $2.5D_{95,\mathrm{GTV}}^{(\mathrm{eff})} + 2.0D_{95,\mathrm{PTV}}^{(\mathrm{eff})} + 0.5D_{50,\mathrm{GTV}}^{(\mathrm{eff})}$ minus weighted OAR exceedance penalties \\
+Primary OAR penalty metrics & Cord $D_{2}$, brainstem $D_{2}$, parotid mean, thyroid mean, parathyroid mean, brain mean, BBB mean, mandible mean \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,17 @@
+{
+  "phase32_root": "PROJECT_ROOT/runs/phase32_site_specific_template_phantoms",
+  "phase33_root": "PROJECT_ROOT/runs/phase33_phase32_topas_cohort",
+  "phase25_run_root": "PROJECT_ROOT/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase25_safe_core_plan_library_1e5",
+  "cases": [
+    "case01",
+    "case02",
+    "case03",
+    "case04",
+    "case05",
+    "case06",
+    "case07",
+    "case08",
+    "case09",
+    "case10"
+  ]
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "plan_id": "plan01",
+    "plan_dir": "PROJECT_ROOT/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase25_safe_core_plan_library_1e5/plans/plan01",
+    "course_volumes_npz": "PROJECT_ROOT/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase25_safe_core_plan_library_1e5/plans/plan01/course_volumes.npz",
+    "summary_json": "PROJECT_ROOT/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase25_safe_core_plan_library_1e5/plans/plan01/phase25_plan_summary.json"
+  },
+  {
+    "plan_id": "plan02",
+    "plan_dir": "PROJECT_ROOT/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase25_safe_core_plan_library_1e5/plans/plan02",
+    "course_volumes_npz": "PROJECT_ROOT/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase25_safe_core_plan_library_1e5/plans/plan02/course_volumes.npz",
+    "summary_json": "PROJECT_ROOT/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase25_safe_core_plan_library_1e5/plans/plan02/phase25_plan_summary.json"
+  },
+  {
+    "plan_id": "plan03",
+    "plan_dir": "PROJECT_ROOT/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase25_safe_core_plan_library_1e5/plans/plan03",
+    "course_volumes_npz": "PROJECT_ROOT/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase25_safe_core_plan_library_1e5/plans/plan03/course_volumes.npz",
+    "summary_json": "PROJECT_ROOT/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase25_safe_core_plan_library_1e5/plans/plan03/phase25_plan_summary.json"
+  },
+  {
+    "plan_id": "plan04",
+    "plan_dir": "PROJECT_ROOT/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase25_safe_core_plan_library_1e5/plans/plan04",
+    "course_volumes_npz": "PROJECT_ROOT/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase25_safe_core_plan_library_1e5/plans/plan04/course_volumes.npz",
+    "summary_json": "PROJECT_ROOT/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase25_safe_core_plan_library_1e5/plans/plan04/phase25_plan_summary.json"
+  },
+  {
+    "plan_id": "plan05",
+    "plan_dir": "PROJECT_ROOT/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase25_safe_core_plan_library_1e5/plans/plan05",
+    "course_volumes_npz": "PROJECT_ROOT/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase25_safe_core_plan_library_1e5/plans/plan05/course_volumes.npz",
+    "summary_json": "PROJECT_ROOT/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase25_safe_core_plan_library_1e5/plans/plan05/phase25_plan_summary.json"
+  }
+]
