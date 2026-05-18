@@ -17,6 +17,8 @@ The principal excluded raw artifacts were the largest transport-volume products 
 
 The `project/public_results/` directory is intentionally curated rather than exhaustive. It contains the high-signal manuscript-facing summaries from the benchmark, cohort, uncertainty, and falsification analyses, while leaving raw transport scratch space out of the public repository.
 
+Current TOPAS defaults for the benchmark and cohort transport scripts are `1×10^6` histories for the background/base component and `2×10^6` histories for the vertex component. Historical result tables preserved under `project/public_results/` retain the metadata from the original archived runs and should be interpreted as fixed records rather than regenerated outputs at the current defaults.
+
 ## Main reproduction entry points
 - `project/scripts/run_phase30_phase28_topas_true_lattice_delivery.py`
 - `project/scripts/run_phase33_phase32_topas_cohort.py`

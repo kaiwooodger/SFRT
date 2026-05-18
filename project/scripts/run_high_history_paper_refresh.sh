@@ -5,9 +5,9 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 
 PYTHON_BIN="${PYTHON_BIN:-python3.12}"
-OUT_ROOT="${REPO_ROOT}/runs/paper_refresh_hihist_10x"
-HISTORIES_BASE=120000
-HISTORIES_SPOT=240000
+OUT_ROOT="${REPO_ROOT}/runs/paper_refresh_histories_1e6_2e6"
+HISTORIES_BASE=1000000
+HISTORIES_SPOT=2000000
 THREADS=4
 SEED=33
 REPEAT_SEEDS_CSV="11,22,33"
@@ -22,8 +22,8 @@ Usage:
 
 Options:
   --out-root PATH             Refresh root for all new outputs.
-  --histories-base INT        Base-field TOPAS histories per run. Default: 120000
-  --histories-spot INT        Spot/vertex TOPAS histories per run. Default: 240000
+  --histories-base INT        Base-field TOPAS histories per run. Default: 1000000
+  --histories-spot INT        Spot/vertex TOPAS histories per run. Default: 2000000
   --threads INT               TOPAS threads. Default: 4
   --seed INT                  Baseline TOPAS seed. Default: 33
   --repeat-seeds CSV          Seeds for the repeated subset. Default: 11,22,33

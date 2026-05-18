@@ -162,10 +162,10 @@ This decomposition was first demonstrated on the Yang-style benchmark phantom (P
 
 ### Monte Carlo settings and dose handling
 
-TOPAS was driven through case-specific `TsImageCube` phantoms with multithreaded photon transport. The benchmark and cohort runs used modest but reproducible history counts per component, with default Phase 30/33 values of approximately:
+TOPAS was driven through case-specific `TsImageCube` phantoms with multithreaded photon transport. The benchmark and cohort runs used reproducible component-specific history counts, with default values of:
 
-- base component histories: `12,000`
-- vertex component histories: `24,000`
+- base component histories: `1×10^6`
+- vertex component histories: `2×10^6`
 
 Raw dose grids were smoothed using a body-aware Gaussian denoising step prior to component-weight calibration. This step was introduced to reduce Monte Carlo noise sufficiently for stable lattice metrics while preserving the broader peak-valley structure used in the downstream biological analysis.
 
@@ -429,4 +429,3 @@ The most useful figures for the Methods section are:
 All synthetic cases, seeds, history schedules, and output roots were fixed and written to reproducibility manifests during the publication-package phases. Bootstrap summaries, repeated-run uncertainty bands, and surrogate-comparison noise tables were used to quantify whether the sink-driven effects exceeded practical computational uncertainty.
 
 Because the study was entirely synthetic and computational, no patient-identifiable data, institutional review, or prospective clinical intervention was involved. The intended claim is therefore restricted to **computational risk analysis and hypothesis generation**, not clinical validation.
-

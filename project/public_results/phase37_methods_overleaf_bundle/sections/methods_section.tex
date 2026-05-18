@@ -65,7 +65,7 @@ with component weights chosen to match the target planning goals. The calibratio
 \label{fig:topas_decomposition}
 \end{figure}
 
-TOPAS runs used case-specific \texttt{TsImageCube} phantoms, multithreaded photon transport, and modest but reproducible history counts. By default, approximately 12{,}000 histories were assigned to the base component and 24{,}000 to the vertex component. Raw dose grids were smoothed with a body-aware Gaussian denoising step before component-weight calibration to stabilize lattice metrics while preserving overall peak-valley structure. TOPAS settings used for planning, transport, and repeat-run uncertainty are summarized in Table~\ref{tab:planning_transport_parameters}.
+TOPAS runs used case-specific \texttt{TsImageCube} phantoms, multithreaded photon transport, and reproducible history counts. By default, $1\times10^{6}$ histories were assigned to the base component and $2\times10^{6}$ to the vertex component. Raw dose grids were smoothed with a body-aware Gaussian denoising step before component-weight calibration to stabilize lattice metrics while preserving overall peak-valley structure. TOPAS settings used for planning, transport, and repeat-run uncertainty are summarized in Table~\ref{tab:planning_transport_parameters}.
 
 \input{tables/table03_planning_transport_parameters}
 

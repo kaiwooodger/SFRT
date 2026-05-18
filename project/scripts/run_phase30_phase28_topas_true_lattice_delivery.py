@@ -216,8 +216,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--physics-profile", choices=sorted(PHYSICS_PROFILES), default="em_opt4_only")
     parser.add_argument("--threads", type=int, default=4)
     parser.add_argument("--seed", type=int, default=33)
-    parser.add_argument("--histories-base", type=int, default=12000, help="TOPAS histories for the base-field component.")
-    parser.add_argument("--histories-spot", type=int, default=24000, help="TOPAS histories for the vertex-field component.")
+    parser.add_argument("--histories-base", type=int, default=1_000_000, help="TOPAS histories for the base-field component.")
+    parser.add_argument("--histories-spot", type=int, default=2_000_000, help="TOPAS histories for the vertex-field component.")
     parser.add_argument("--sad-mm", type=float, default=260.0, help="Source-to-axis distance surrogate for coplanar delivery.")
     parser.add_argument(
         "--base-angles-deg",
@@ -822,7 +822,7 @@ def write_quick_assessment(path: Path, *, summary: Mapping[str, object]) -> None
         "## Interpretation",
         "",
         "- This is physically more meaningful than the earlier single-field validation run because the dose now comes from actual TOPAS transport of both broad target coverage fields and vertex-directed fields through the full voxel phantom.",
-        "- A body-aware Gaussian denoising step is applied before calibration so the final dose reflects the expected Monte Carlo field rather than sparse per-voxel hit noise from moderate history counts.",
+        "- A body-aware Gaussian denoising step is applied before calibration so the final dose reflects the expected Monte Carlo field rather than finite-history per-voxel hit noise.",
         "- It is still not a clinical VMAT replication. It is a coplanar arc-sampled photon lattice-delivery surrogate calibrated against the Yang-style benchmark prescription.",
     ]
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
