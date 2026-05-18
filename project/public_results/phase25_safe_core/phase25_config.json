@@ -1,0 +1,114 @@
+{
+  "phase_number": 25,
+  "phase_description": "Protocol-constrained random-plan biological risk analysis across five independent lattice courses with aligned physical-versus-biological endpoints.",
+  "plan_count": 5,
+  "fractions": 5,
+  "baseline_run_root": "/Users/kw/Documents/Playground/vhee_topas/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_directplan",
+  "run_root": "/Users/kw/Documents/Playground/vhee_topas/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase25_safe_core_plan_library_1e5",
+  "seed": 33,
+  "histories": 100000,
+  "library_mode": "explicit fixed safe-core library",
+  "plan_library_json": "/Users/kw/Documents/Playground/vhee_topas/data/phase25_safe_core_plan_library.json",
+  "primary_endpoints": [
+    {
+      "key": "ptv_d95",
+      "label": "PTV D95",
+      "units": "Gy",
+      "higher_is_better": true
+    },
+    {
+      "key": "pvdr",
+      "label": "PVDR",
+      "units": "ratio",
+      "higher_is_better": true
+    },
+    {
+      "key": "spill_shell_0_5_mean",
+      "label": "Peri-GTV 0-5 mm",
+      "units": "Gy",
+      "higher_is_better": false
+    },
+    {
+      "key": "spill_shell_5_15_mean",
+      "label": "Peri-GTV 5-15 mm",
+      "units": "Gy",
+      "higher_is_better": false
+    },
+    {
+      "key": "cord_d2",
+      "label": "Cord D2",
+      "units": "Gy",
+      "higher_is_better": false
+    },
+    {
+      "key": "brainstem_d2",
+      "label": "Brainstem D2",
+      "units": "Gy",
+      "higher_is_better": false
+    },
+    {
+      "key": "parotid_r_mean",
+      "label": "Parotid R mean",
+      "units": "Gy",
+      "higher_is_better": false
+    }
+  ],
+  "candidate_pool_debug": {
+    "candidate_count": 9,
+    "selected_stage": "center_in_contracted_gtv_all_oars",
+    "selected_hard_oars": [
+      "SPINAL_CORD",
+      "BRAINSTEM",
+      "PAROTID_R",
+      "PAROTID_L",
+      "THYROID",
+      "PARATHYROIDS",
+      "MANDIBLE"
+    ],
+    "contraction_mm": 5.0,
+    "oar_clearance_mm": 15.0,
+    "spot_radius_mm": 6.0,
+    "candidate_step_mm": 6.0,
+    "stage_debug": [
+      {
+        "stage": "strict_contracted_shell_all_oars",
+        "hard_oars": [
+          "SPINAL_CORD",
+          "BRAINSTEM",
+          "PAROTID_R",
+          "PAROTID_L",
+          "THYROID",
+          "PARATHYROIDS",
+          "MANDIBLE"
+        ],
+        "candidate_count": 0
+      },
+      {
+        "stage": "center_in_contracted_gtv_all_oars",
+        "hard_oars": [
+          "SPINAL_CORD",
+          "BRAINSTEM",
+          "PAROTID_R",
+          "PAROTID_L",
+          "THYROID",
+          "PARATHYROIDS",
+          "MANDIBLE"
+        ],
+        "candidate_count": 9
+      }
+    ]
+  },
+  "bio_parameters": {
+    "alpha": 0.03,
+    "beta": 0.003,
+    "pde_steps": 400,
+    "pde_dt": 0.12,
+    "tumor_cytokine_multiplier": 2.0,
+    "hypoxic_ros_scale": 0.12,
+    "hypoxic_cytokine_multiplier": 2.7,
+    "artery_ros_uptake": 0.05,
+    "artery_cyto_uptake": 0.7,
+    "vein_ros_uptake": 0.05,
+    "vein_cyto_uptake": 0.9
+  }
+}

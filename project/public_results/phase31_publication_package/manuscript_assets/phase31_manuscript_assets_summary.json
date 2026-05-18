@@ -1,0 +1,18 @@
+{
+  "phase31_root": "/Users/kw/Documents/Playground/vhee_topas/runs/phase31_publication_package",
+  "output_root": "/Users/kw/Documents/Playground/vhee_topas/runs/phase31_publication_package/manuscript_assets",
+  "figures": {
+    "figure1_benchmark_template_library": "/Users/kw/Documents/Playground/vhee_topas/runs/phase31_publication_package/manuscript_assets/figures/figure1_benchmark_template_library.png",
+    "figure2_rank_reinterpretation_and_robustness": "/Users/kw/Documents/Playground/vhee_topas/runs/phase31_publication_package/manuscript_assets/figures/figure2_rank_reinterpretation_and_robustness.png",
+    "figure3_vascular_sink_effect_sizes": "/Users/kw/Documents/Playground/vhee_topas/runs/phase31_publication_package/manuscript_assets/figures/figure3_vascular_sink_effect_sizes.png",
+    "figure4_phase30_topas_biological_reinterpretation": "/Users/kw/Documents/Playground/vhee_topas/runs/phase31_publication_package/manuscript_assets/figures/figure4_phase30_topas_biological_reinterpretation.png",
+    "figure5_phase30_repeat_uncertainty": "/Users/kw/Documents/Playground/vhee_topas/runs/phase31_publication_package/manuscript_assets/figures/figure5_phase30_repeat_uncertainty.png"
+  },
+  "text_outputs": {
+    "abstract": "/Users/kw/Documents/Playground/vhee_topas/runs/phase31_publication_package/manuscript_assets/phase31_manuscript_abstract.md",
+    "results": "/Users/kw/Documents/Playground/vhee_topas/runs/phase31_publication_package/manuscript_assets/phase31_manuscript_results.md",
+    "manuscript_draft": "/Users/kw/Documents/Playground/vhee_topas/runs/phase31_publication_package/manuscript_assets/phase31_manuscript_draft.md",
+    "figure_legends": "/Users/kw/Documents/Playground/vhee_topas/runs/phase31_publication_package/manuscript_assets/phase31_manuscript_figure_legends.md",
+    "locked_table": "/Users/kw/Documents/Playground/vhee_topas/runs/phase31_publication_package/manuscript_assets/phase31_manuscript_table_locked_endpoints.csv"
+  }
+}

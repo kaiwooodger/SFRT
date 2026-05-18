@@ -1,0 +1,105 @@
+{
+  "phase": 31,
+  "description": "Publication-oriented package for lattice biological risk-analysis study.",
+  "script": "/Users/kw/Documents/Playground/vhee_topas/scripts/run_phase31_publication_package.py",
+  "repo_root": "/Users/kw/Documents/Playground/vhee_topas",
+  "input_roots": {
+    "phase25_run_root": "/Users/kw/Documents/Playground/vhee_topas/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase25_safe_core_plan_library_1e5",
+    "phase26_run_root": "/Users/kw/Documents/Playground/vhee_topas/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase25_safe_core_plan_library_1e5/phase26_vascular_sink_ablation",
+    "phase28_run_root": "/Users/kw/Documents/Playground/vhee_topas/runs/phase28_yang2022_sinonasal_benchmark",
+    "phase30_run_root": "/Users/kw/Documents/Playground/vhee_topas/runs/phase30_phase28_topas_true_lattice_delivery"
+  },
+  "output_root": "/Users/kw/Documents/Playground/vhee_topas/runs/phase31_publication_package",
+  "phase30_repeat_settings": {
+    "seeds": [
+      11,
+      22,
+      33
+    ],
+    "history_scales": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "threads": 4,
+    "dose_smoothing_mm": 6.0
+  },
+  "bootstrap": {
+    "samples": 4000,
+    "seed": 31
+  },
+  "benchmark_template_count": 10,
+  "benchmark_templates_are_synthetic": true,
+  "repeat_runs": [
+    {
+      "seed": 11,
+      "history_scale": 0.5,
+      "histories_base": 6000,
+      "histories_spot": 12000,
+      "run_root": "/Users/kw/Documents/Playground/vhee_topas/runs/phase31_publication_package/phase30_repeats/seed11_hist0p5"
+    },
+    {
+      "seed": 11,
+      "history_scale": 1.0,
+      "histories_base": 12000,
+      "histories_spot": 24000,
+      "run_root": "/Users/kw/Documents/Playground/vhee_topas/runs/phase31_publication_package/phase30_repeats/seed11_hist1p0"
+    },
+    {
+      "seed": 11,
+      "history_scale": 2.0,
+      "histories_base": 24000,
+      "histories_spot": 48000,
+      "run_root": "/Users/kw/Documents/Playground/vhee_topas/runs/phase31_publication_package/phase30_repeats/seed11_hist2p0"
+    },
+    {
+      "seed": 22,
+      "history_scale": 0.5,
+      "histories_base": 6000,
+      "histories_spot": 12000,
+      "run_root": "/Users/kw/Documents/Playground/vhee_topas/runs/phase31_publication_package/phase30_repeats/seed22_hist0p5"
+    },
+    {
+      "seed": 22,
+      "history_scale": 1.0,
+      "histories_base": 12000,
+      "histories_spot": 24000,
+      "run_root": "/Users/kw/Documents/Playground/vhee_topas/runs/phase31_publication_package/phase30_repeats/seed22_hist1p0"
+    },
+    {
+      "seed": 22,
+      "history_scale": 2.0,
+      "histories_base": 24000,
+      "histories_spot": 48000,
+      "run_root": "/Users/kw/Documents/Playground/vhee_topas/runs/phase31_publication_package/phase30_repeats/seed22_hist2p0"
+    },
+    {
+      "seed": 33,
+      "history_scale": 0.5,
+      "histories_base": 6000,
+      "histories_spot": 12000,
+      "run_root": "/Users/kw/Documents/Playground/vhee_topas/runs/phase31_publication_package/phase30_repeats/seed33_hist0p5"
+    },
+    {
+      "seed": 33,
+      "history_scale": 1.0,
+      "histories_base": 12000,
+      "histories_spot": 24000,
+      "run_root": "/Users/kw/Documents/Playground/vhee_topas/runs/phase31_publication_package/phase30_repeats/seed33_hist1p0"
+    },
+    {
+      "seed": 33,
+      "history_scale": 2.0,
+      "histories_base": 24000,
+      "histories_spot": 48000,
+      "run_root": "/Users/kw/Documents/Playground/vhee_topas/runs/phase31_publication_package/phase30_repeats/seed33_hist2p0"
+    }
+  ],
+  "script_dependencies": [
+    "/Users/kw/Documents/Playground/vhee_topas/scripts/run_phase25_bio_risk_analysis.py",
+    "/Users/kw/Documents/Playground/vhee_topas/scripts/run_phase26_vascular_sink_ablation.py",
+    "/Users/kw/Documents/Playground/vhee_topas/scripts/run_phase28_yang2022_sinonasal_benchmark.py",
+    "/Users/kw/Documents/Playground/vhee_topas/scripts/run_phase30_phase28_topas_true_lattice_delivery.py",
+    "/Users/kw/Documents/Playground/vhee_topas/scripts/run_phase31_publication_package.py"
+  ]
+}
