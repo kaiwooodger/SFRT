@@ -1,40 +1,40 @@
 {
-  "template_id": "case01",
-  "label": "Right sinonasal / maxillary bulky ellipsoid",
+  "template_id": "case02",
+  "label": "Left maxillary sinus crescent abutting orbit",
   "site_group": "sinonasal_midface",
-  "site_note": "Right midface / maxillary compartment near orbit and skull base.",
-  "tumour_model": "ellipsoid",
-  "estimated_gtv_cc": 66.0,
-  "instantiated_gtv_cc": 64.624,
-  "ctvboost_cc": 104.36800000000001,
+  "site_note": "Left maxillary crescent wrapping toward the orbit.",
+  "tumour_model": "crescent / banana",
+  "estimated_gtv_cc": 87.0,
+  "instantiated_gtv_cc": 104.136,
+  "ctvboost_cc": 166.336,
   "proposed_vertex_count": 2,
   "kept_vertex_count": 2,
   "coordinate_note": "Coordinate system follows the synthetic benchmark convention: x = left (+) / right (-), y = anterior (+) / posterior (-), z = superior (+) / inferior (-).",
   "site_centroid_mm": [
-    -24.0,
+    22.0,
     18.0,
     18.0
   ],
   "vertex_diameter_cm_recommended": 1.0,
   "nearby_oars": [
     {
+      "structure": "ARTERIES",
+      "min_distance_mm": 0.0
+    },
+    {
+      "structure": "VEINS",
+      "min_distance_mm": 0.0
+    },
+    {
+      "structure": "BRAINSTEM",
+      "min_distance_mm": 0.0
+    },
+    {
       "structure": "CHIASM",
       "min_distance_mm": 0.0
     },
     {
       "structure": "OPTIC_NERVE_R",
-      "min_distance_mm": 0.0
-    },
-    {
-      "structure": "OPTIC_NERVE_L",
-      "min_distance_mm": 0.0
-    },
-    {
-      "structure": "EYE_R",
-      "min_distance_mm": 0.0
-    },
-    {
-      "structure": "LENS_R",
       "min_distance_mm": 0.0
     }
   ],
@@ -43,43 +43,43 @@
       "vertex_id": "V1",
       "status": "kept",
       "proposed_center_mm": [
-        -38.0,
-        18.0,
-        26.0
+        7.0,
+        12.0,
+        25.0
       ],
       "adjusted_center_mm": [
-        -34.0,
-        18.0,
-        22.0
+        9.0,
+        14.0,
+        27.0
       ],
       "shift_mm": [
-        4.0,
-        0.0,
-        -4.0
+        2.0,
+        2.0,
+        2.0
       ],
-      "edge_margin_mm": 8.416,
-      "critical_oar_clearance_mm": 11.125
+      "edge_margin_mm": 9.56,
+      "critical_oar_clearance_mm": 10.1
     },
     {
       "vertex_id": "V2",
       "status": "kept",
       "proposed_center_mm": [
-        -10.0,
-        18.0,
+        34.0,
+        22.0,
         10.0
       ],
       "adjusted_center_mm": [
-        -14.0,
-        18.0,
+        26.0,
+        14.0,
         14.0
       ],
       "shift_mm": [
-        -4.0,
-        0.0,
+        -8.0,
+        -8.0,
         4.0
       ],
-      "edge_margin_mm": 11.125,
-      "critical_oar_clearance_mm": 11.125
+      "edge_margin_mm": 9.142,
+      "critical_oar_clearance_mm": 10.1
     }
   ],
   "structure_volumes_cc": {
@@ -93,7 +93,7 @@
     "ARTERIES": 6.976,
     "VEINS": 9.888,
     "SKIN": 203.928,
-    "GTV": 64.624,
-    "CTVBOOST": 104.368
+    "GTV": 104.136,
+    "CTVBOOST": 166.336
   }
 }

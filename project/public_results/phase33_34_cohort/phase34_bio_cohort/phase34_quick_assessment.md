@@ -1,0 +1,7 @@
+# Phase 34 quick assessment
+
+- Cases analyzed: `10`.
+- Endpoint rows written: `30`.
+- Cases with with-sink rank shift vs physical-only: `8`.
+- Biology-added OAR failures: `5`.
+- This package is intended to be run locally after the Phase 33 cohort transport so the full biology cohort does not need to be executed through chat.

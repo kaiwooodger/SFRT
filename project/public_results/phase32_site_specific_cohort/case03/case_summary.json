@@ -1,0 +1,120 @@
+{
+  "template_id": "case03",
+  "label": "Base-of-tongue / oropharynx bilobed central mass",
+  "site_group": "oropharynx_bot",
+  "site_note": "Bulky midline BOT / oropharyngeal deep-core mass.",
+  "tumour_model": "bilobed",
+  "estimated_gtv_cc": 111.0,
+  "instantiated_gtv_cc": 120.464,
+  "ctvboost_cc": 178.68800000000002,
+  "proposed_vertex_count": 3,
+  "kept_vertex_count": 3,
+  "coordinate_note": "Coordinate system follows the synthetic benchmark convention: x = left (+) / right (-), y = anterior (+) / posterior (-), z = superior (+) / inferior (-).",
+  "site_centroid_mm": [
+    0.0,
+    -6.0,
+    -4.0
+  ],
+  "vertex_diameter_cm_recommended": 1.0,
+  "nearby_oars": [
+    {
+      "structure": "ARTERIES",
+      "min_distance_mm": 0.0
+    },
+    {
+      "structure": "VEINS",
+      "min_distance_mm": 0.0
+    },
+    {
+      "structure": "SPINAL_CORD",
+      "min_distance_mm": 0.0
+    },
+    {
+      "structure": "BRAINSTEM",
+      "min_distance_mm": 0.0
+    },
+    {
+      "structure": "MANDIBLE",
+      "min_distance_mm": 0.0
+    }
+  ],
+  "vertex_details": [
+    {
+      "vertex_id": "V1",
+      "status": "kept",
+      "proposed_center_mm": [
+        -17.0,
+        -6.0,
+        5.0
+      ],
+      "adjusted_center_mm": [
+        -17.0,
+        -6.0,
+        5.0
+      ],
+      "shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "edge_margin_mm": 9.0,
+      "critical_oar_clearance_mm": 11.248
+    },
+    {
+      "vertex_id": "V2",
+      "status": "kept",
+      "proposed_center_mm": [
+        17.0,
+        -6.0,
+        5.0
+      ],
+      "adjusted_center_mm": [
+        19.0,
+        -6.0,
+        5.0
+      ],
+      "shift_mm": [
+        2.0,
+        0.0,
+        0.0
+      ],
+      "edge_margin_mm": 9.0,
+      "critical_oar_clearance_mm": 11.248
+    },
+    {
+      "vertex_id": "V3",
+      "status": "kept",
+      "proposed_center_mm": [
+        0.0,
+        -14.0,
+        -18.0
+      ],
+      "adjusted_center_mm": [
+        -4.0,
+        -18.0,
+        -14.0
+      ],
+      "shift_mm": [
+        -4.0,
+        -4.0,
+        4.0
+      ],
+      "edge_margin_mm": 10.1,
+      "critical_oar_clearance_mm": 10.1
+    }
+  ],
+  "structure_volumes_cc": {
+    "MAXILLA": 125.528,
+    "MANDIBLE": 35.44,
+    "BRAINSTEM": 6.424,
+    "SPINAL_CORD": 7.64,
+    "PAROTID_L": 3.96,
+    "PAROTID_R": 3.96,
+    "THYROID": 5.168,
+    "ARTERIES": 6.976,
+    "VEINS": 9.888,
+    "SKIN": 203.928,
+    "GTV": 120.464,
+    "CTVBOOST": 178.688
+  }
+}
