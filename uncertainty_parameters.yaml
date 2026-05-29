@@ -1,0 +1,23 @@
+uncertainty_design:
+  description: Repeated-subset and falsification uncertainty settings used in the PMB submission.
+  repeated_subset:
+    case_ids: [case02, case03, case04, case05, case06, case07]
+    seeds: [11, 22, 33]
+    history_scales: [0.5, 1.0, 2.0]
+    histories:
+      background_base: 1000000
+      vertices: 2000000
+    dose_smoothing_mm: 6.0
+    history_interval: 20
+    progress_interval: 100
+  statistical_settings:
+    bootstrap_samples: 2000
+    bootstrap_seed_phase36a: 36
+    bootstrap_seed_phase37b: 361
+    rank_sim_samples: 2000
+  dose_limits_used_for_reporting:
+    spinal_cord_d2_gy: 85.0
+    brainstem_d2_gy: 30.0
+    parotid_right_mean_gy: 60.0
+    thyroid_mean_gy: 50.0
+    body_dmax_gy: 400.0

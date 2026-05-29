@@ -1,0 +1,36 @@
+topas_case_defaults:
+  description: Default synthetic-case, transport, and dose-combination settings used in the PMB submission workflows.
+  phase32_geometry:
+    voxel_mm: 2.0
+    x_extent_mm: [-90.0, 90.0]
+    y_extent_mm: [-86.0, 86.0]
+    z_extent_mm: [-74.0, 90.0]
+    ctv_boost_margin_mm: 5.0
+    vertex_oar_clearance_mm: 10.0
+    vertex_search_step_mm: 2.0
+    vertex_search_extent_mm: 8.0
+    min_center_spacing_mm: 16.0
+  phase33_transport:
+    physics_profile: em_opt4_only
+    threads: 4
+    seed: 33
+    histories:
+      background_base: 1000000
+      vertices: 2000000
+    sad_mm: 260.0
+    base_angles_deg: [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330]
+    vertex_angles_deg: [0, 60, 120, 180, 240, 300]
+    base_margin_mm: 4.0
+    vertex_margin_mm: 1.0
+    vertex_radius_mm: 5.0
+    target_ptv_d95_gy: 3.5
+    target_peak_mean_gy: 15.0
+    ratio_search:
+      min: 0.01
+      max: 100.0
+      count: 121
+    dose_smoothing_mm: 6.0
+    production_cuts_mm:
+      gamma: 0.01
+      electron: 0.01
+      positron: 0.01
