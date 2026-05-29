@@ -7,7 +7,7 @@ This repository is provided for research reproducibility. The biological outputs
 ## Structure
 - `configs/` — reviewer-facing YAML snapshots of the locked biology, vascular-sink, TOPAS, and uncertainty settings used in the PMB submission.
 - `examples/` — small runnable examples that demonstrate biological reinterpretation, vascular-sink comparison, and endpoint extraction from the archived public result tables.
-- `project/scripts/` — project scripts, run wrappers, renderers, and analysis utilities.
+- `project/scripts/` — project scripts, run wrappers, renderers, and analysis utilities. Start with `project/scripts/00_START_HERE.md`, then use `project/scripts/01_REPRODUCE_PMB.sh` and `project/scripts/02_SCRIPT_MAP.md`.
 - `project/topas/` — TOPAS templates.
 - `project/data/` — supporting input data.
 - `project/public_results/` — copied manuscript-facing summary tables, quick assessments, and selected result assets for public sharing.
