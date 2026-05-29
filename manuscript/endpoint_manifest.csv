@@ -1,0 +1,24 @@
+endpoint_id,label,category,units,reported_in,description,higher_is_better
+ptv_d95,PTV D95,primary,Gy,phase34_endpoint_table.csv,PTV dose covering 95 percent of the target volume,True
+pvdr,PVDR,primary,ratio,phase34_endpoint_table.csv,Peak-to-valley dose ratio within the lattice target,True
+spill_shell_0_5_mean,Peri-GTV 0-5 mm mean,primary,Gy,phase34_endpoint_table.csv,Mean dose or effective-dose-like burden in the 0-5 mm peri-tumour shell,False
+spill_shell_5_15_mean,Peri-GTV 5-15 mm mean,primary,Gy,phase34_endpoint_table.csv,Mean dose or effective-dose-like burden in the 5-15 mm peri-tumour shell,False
+cord_d2,Spinal cord D2,primary,Gy,phase34_endpoint_table.csv,Dose to the hottest 2 percent-equivalent spinal cord region,False
+brainstem_d2,Brainstem D2,primary,Gy,phase34_endpoint_table.csv,Dose to the hottest 2 percent-equivalent brainstem region,False
+parotid_r_mean,Parotid R mean,primary,Gy,phase34_endpoint_table.csv,Mean right parotid burden,False
+gtv_d95,GTV D95,supplemental,Gy,phase34_endpoint_table.csv,GTV dose covering 95 percent of the gross tumour volume,True
+peak_mean,Peak mean,supplemental,Gy,phase34_endpoint_table.csv,Mean dose or effective-dose-like burden in vertex-centred peak regions,True
+valley_mean,Valley mean,supplemental,Gy,phase34_endpoint_table.csv,Mean dose or effective-dose-like burden in valley regions,False
+thyroid_mean,Thyroid mean,supplemental,Gy,phase34_endpoint_table.csv,Mean thyroid burden,False
+body_dmax,Body Dmax,supplemental,Gy,phase34_endpoint_table.csv,Maximum whole-body dose-like burden,False
+parotid_l_mean,Parotid L mean,supplemental,Gy,phase34_endpoint_table.csv,Mean left parotid burden,False
+spill_shell_15_30_mean,Peri-GTV 15-30 mm mean,supplemental,Gy,phase34_endpoint_table.csv,Mean burden in the 15-30 mm peri-tumour shell,False
+outside_gtv_d2,Outside-GTV D2,supplemental,Gy,phase34_endpoint_table.csv,Hottest 2 percent-equivalent burden outside the GTV,False
+oar_adjacent_outside_gtv_mean,OAR-adjacent outside-GTV mean,supplemental,Gy,phase34_endpoint_table.csv,Mean burden in outside-GTV voxels adjacent to critical organs at risk,False
+ptv_valley_outside_gtv_mean,PTV-valley outside-GTV mean,supplemental,Gy,phase34_endpoint_table.csv,Outside-GTV burden near valley-facing peripheral target regions,False
+gammah2ax_peak,Peak gammaH2AX proxy,assay,relative units,phase34_assay_proxy_table.csv,Assay-like DNA damage proxy averaged over peak regions,False
+gammah2ax_valley,Valley gammaH2AX proxy,assay,relative units,phase34_assay_proxy_table.csv,Assay-like DNA damage proxy averaged over valley regions,False
+tunel_peak,Peak TUNEL proxy,assay,relative units,phase34_assay_proxy_table.csv,Assay-like apoptosis proxy averaged over peak regions,False
+tunel_valley,Valley TUNEL proxy,assay,relative units,phase34_assay_proxy_table.csv,Assay-like apoptosis proxy averaged over valley regions,False
+cytokine_global_auc,Cytokine global AUC,assay,arbitrary units,phase34_assay_proxy_table.csv,Global cytokine burden integrated over the simulated time course,False
+cytokine_valley_auc,Cytokine valley AUC,assay,arbitrary units,phase34_assay_proxy_table.csv,Valley-region cytokine burden integrated over the simulated time course,False
