@@ -2,6 +2,8 @@
 
 This repository gathers the source code, figure-generation scripts, manuscript-facing figure outputs, and the curated result artifacts used for the current SFRT submission package.
 
+This repository is provided for research reproducibility. The biological outputs are model-derived effective-dose-like scores and relative assay-like proxies. They are not delivered absorbed dose, clinical toxicity predictions, or treatment-planning recommendations.
+
 ## Structure
 - `project/scripts/` — project scripts, run wrappers, renderers, and analysis utilities.
 - `project/topas/` — TOPAS templates.
