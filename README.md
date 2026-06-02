@@ -27,12 +27,11 @@ The `project/public_results/` directory is intentionally curated rather than exh
 
 Current TOPAS defaults for the benchmark and cohort transport scripts are `1×10^6` histories for the background/base component and `2×10^6` histories for the vertex component.
 
-## Reproducing the PMB submission
-This repository supports the manuscript:
+
 
 > **Biology-informed reinterpretation of lattice radiotherapy using non-local bystander signalling and anatomy-aware vascular sink modelling**
 
-The public PMB bundle is **script-first**. Manuscript reproduction does not depend on a legacy package CLI. The central submission workflows in this repository cover:
+The public bundle is **script-first**. Manuscript reproduction does not depend on a legacy package CLI. The central submission workflows in this repository cover:
 
 1. synthetic phantom generation,
 2. lattice candidate and retained-vertex generation,
