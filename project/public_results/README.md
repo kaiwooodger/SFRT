@@ -1,5 +1,12 @@
-# SFRT Public Results Bundle
+# Public Results Index
 
-This directory contains the manuscript-facing result tables, quick assessments, case summaries, Overleaf bundles, and figure assets copied into the public repository. Raw Monte Carlo dose cubes, large volume arrays, and other heavy transport intermediates were excluded from the public bundle and can be regenerated from the included source scripts.
+This directory is the clean manuscript-facing result layer.
 
-Repository-level transport defaults are `1×10^6` histories for the background/base component and `2×10^6` histories for the vertex component.
+## Subdirectories
+
+- `cohort_summary/` — physical cohort summary plus primary and oxygen-sensitivity biological reinterpretation tables
+- `repeat_run_uncertainty/` — repeated-run Monte Carlo uncertainty and sink-rank stability summaries
+- `sink_falsification/` — cohort and uncertainty summaries for the sink falsification controls
+- `biology_parameter_robustness/` — bounded phenomenological robustness summaries for the primary and oxygen-sensitivity branches
+- `smoothing_kernel_sensitivity/` — three-kernel sensitivity summary
+- `paper_regeneration_smoke/` — frozen manuscript artifact smoke-check outputs

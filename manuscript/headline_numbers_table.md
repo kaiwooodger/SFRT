@@ -1,0 +1,12 @@
+# Headline Numbers Guardrail
+
+| Analysis | Headline result | Interpretation | Source |
+| --- | --- | --- | --- |
+| Primary oxygen-neutral model | with-sink vs physical shifts: 6/10 | biology changes interpretation | oxygen-neutral robustness overview |
+| Primary no-sink model | no-sink vs physical shifts: 5/10 | non-local biology is the main driver | oxygen-neutral robustness overview |
+| Sink-only increment | with-sink vs no-sink shifts: 2/10 | sink is secondary | oxygen-neutral robustness overview |
+| Primary brainstem reinterpretation | biology-added brainstem flags: 2/10 | endpoint-level OAR reinterpretation persists in the main model | oxygen-neutral robustness overview |
+| Oxygen sensitivity | with-sink vs physical shifts: 8/10; brainstem flags: 5/10 | oxygen amplifies the effect; sensitivity only | oxygen-modulated sensitivity overview |
+| Repeated-run endpoint uncertainty | 65/70 endpoint deltas exceed the 95% band | endpoint effects are robust to repeated-run uncertainty | repeated-run noise table |
+| Repeated-run rank uncertainty | 0/10 noise-qualified sink rank changes | no strong sink-driven plan-ordering claim | repeated-run rank-noise assessment |
+| Smoothing-kernel sensitivity | 4 and 6 mm preserved the main interpretation; 2 mm was calibration-unstable | the smoothed substrate is justified and the sink remains secondary | smoothing-kernel sensitivity summary |

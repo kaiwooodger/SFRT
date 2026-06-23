@@ -1,0 +1,520 @@
+% PMB-ready compact manuscript for Overleaf
+% Main file: main.tex
+% Target: compact journal-style article with 6 main figures.
+
+\documentclass[10pt,a4paper]{article}
+
+% ---------- Packages ----------
+\usepackage[margin=0.68in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{authblk}
+\usepackage[round,authoryear]{natbib}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{subcaption}
+\usepackage{tabularx}
+
+% ---------- Compact formatting ----------
+\graphicspath{{figures/}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.22em}
+\linespread{0.97}
+\setlist{nosep,leftmargin=*}
+\setlength{\textfloatsep}{6pt plus 1pt minus 2pt}
+\setlength{\floatsep}{5pt plus 1pt minus 2pt}
+\setlength{\intextsep}{5pt plus 1pt minus 2pt}
+\setlength{\abovecaptionskip}{3pt}
+\setlength{\belowcaptionskip}{0pt}
+\setlength{\bibsep}{0pt plus 0.3ex}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.85}
+\setcounter{topnumber}{6}
+\setcounter{bottomnumber}{6}
+\setcounter{totalnumber}{12}
+
+% ---------- Commands ----------
+\newcommand{\Deff}{D_{\mathrm{eff}}}
+\newcommand{\Dphys}{D_{\mathrm{phys}}}
+\newcommand{\SF}{S_{\mathrm{final}}}
+\newcommand{\SLQ}{S_{\mathrm{LQ}}}
+\newcommand{\PVDR}{peak-to-valley dose ratio}
+\newcommand{\CTVboost}{\mathrm{CTV}_{\mathrm{boost}}}
+
+% ---------- Title metadata ----------
+\title{\bfseries Biology-informed reinterpretation of lattice radiotherapy using non-local bystander signalling and anatomy-aware vascular sink modelling}
+\author[1]{Kai Woodger}
+\affil[1]{\small [University of Sydney], Sydney, Australia}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-1.2em}
+
+\begin{abstract}
+\textbf{Objective.} Lattice radiotherapy is usually evaluated using physical dose metrics such as target coverage, peak-to-valley dose ratio (PVDR), and organ-at-risk dose. These metrics do not explicitly represent non-local biological signalling between high-dose vertices and low-dose valleys. This study developed a hypothesis-generating computational framework combining a transferable spatiotemporal bystander model using reaction--diffusion modelling with a synthetic head-and-neck lattice cohort to test whether physically plausible plans retain the same risk interpretation after non-local signalling and anatomy-aware vascular uptake are considered.
+
+\textbf{Approach.} A reaction--diffusion framework propagated short-range reactive-oxygen-species-like and longer-range cytokine-like signals from TOPAS-derived dose distributions evaluated on a body-aware smoothed Monte Carlo dose substrate. The transport model was calibrated once in a one-dimensional half-field assay and transferred without geometry-specific retuning into two-dimensional stripe, three-dimensional lattice, and irregular surrogate geometries. A fully synthetic 10-case bulky head-and-neck cohort was generated with algorithmic tumour, organ-at-risk, and vessel masks. Physical dose distributions were produced using a two-component photon lattice surrogate comprising broad peripheral coverage and focal vertex boosts. Each case was rescored as physical-only, biology-informed without vascular uptake, and biology-informed with anatomical vascular uptake. Repeat-run uncertainty, vascular-sink falsification, and bounded biology-parameter robustness analyses were then performed.
+
+\textbf{Main results.} The transferred model predicted persistent biological valley burden despite physical valley sparing. In a direct TOPAS-derived benchmark case, the PVDR-like ratio decreased from 1.945 under physical-dose interpretation to 1.276 without vascular uptake and 1.295 with anatomical uptake, consistent with biological valley fill-in after Monte Carlo transport. In the 10-case oxygen-neutral primary cohort, the cohort-mean PVDR-like ratio decreased from 1.817 under physical-dose interpretation to 1.292 without vascular uptake and 1.270 with anatomical uptake. Biology-informed reinterpretation changed case ranking in 5 of 10 cases for no-sink versus physical-only, 6 of 10 cases for with-sink versus physical-only, and 2 of 10 cases for with-sink versus no-sink; biology-added brainstem-adjacent burden flags were present in 2 of 10 cases. In repeated runs, 65/70 sink-related case-endpoint shifts exceeded the combined 95\% Monte Carlo plus uptake-sensitivity band, whereas 0/10 cases showed a noise-qualified sink-driven rank change. Supplementary oxygen-modulated sensitivity reruns increased the magnitude of reinterpretation relative to the oxygen-neutral primary model.
+
+\textbf{Significance.} This work should be interpreted as a hypothesis-generating computational risk-analysis framework rather than as a validated clinical toxicity predictor or treatment-planning optimizer. It provides a reproducible method for testing whether physically acceptable lattice dose patterns may acquire different biological interpretations once non-local signalling is introduced, while suggesting that anatomy-aware vascular uptake acts mainly as a secondary spatial modifier. Translation will require patient-derived RTDOSE/RTSTRUCT data, realistic vascular segmentation, and experimental spatially fractionated assay validation before any clinical decision-support use.
+\end{abstract}
+
+\textbf{Keywords:} spatially fractionated radiotherapy; lattice radiotherapy; TOPAS; bystander effect; vascular sink; biological modelling; head and neck radiotherapy
+
+\section{Introduction}
+Spatially fractionated radiation therapy (SFRT) challenges the conventional assumption that therapeutic radiation should be delivered as a spatially uniform dose across the target. Instead, SFRT deliberately creates heterogeneous dose distributions containing high-dose peak regions and lower-dose valley regions. This family includes GRID therapy, microbeam radiotherapy, minibeam radiotherapy and three-dimensional lattice radiotherapy. Interest in SFRT has increased because spatial modulation may permit dose escalation in bulky, radioresistant, recurrent or anatomically constrained tumours while reducing normal-tissue exposure \cite{prezado2024critical,prezado2022divide,fernandez2022peak}.
+
+Lattice radiotherapy is a modern three-dimensional SFRT implementation in which discrete high-dose vertices are placed inside the tumour while a lower-dose background or peripheral component maintains broader target coverage. Contemporary lattice stereotactic body radiotherapy workflows can be delivered using image-guided photon planning systems, and the literature has consequently focused on vertex diameter, spacing, placement, prescription strategy, PVDR, target coverage, dose fall-off and organ-at-risk sparing \cite{duriseti2021lattice,kavanaugh2022planning,duriseti2022phase,grams2023clinical,iori2023lattice,zhang2023lattice,botti2024latticeopt,yang2022feasibility}.
+
+Although these physical metrics are essential, they provide an incomplete description of highly heterogeneous irradiation. A lattice plan creates steep gradients in which heavily irradiated subvolumes sit adjacent to lower-dose valleys. These valleys are often interpreted dosimetrically, but they should not necessarily be regarded as biologically passive. Preclinical SFRT reviews have questioned whether peak dose alone is an adequate response descriptor, emphasizing that valley dose, spatial scale and tissue-level response can be critical determinants of outcome \cite{fernandez2022peak,prezado2024critical}.
+
+A central reason physical dose alone may be insufficient is that radiation response is not purely local. Radiation-induced bystander effects describe responses in cells receiving little or no direct dose but affected by signals from irradiated cells. These signals may involve reactive oxygen species, inflammatory cytokines, DNA-damage mediators, oxidative metabolism, gap junction communication and soluble stress-response factors \cite{prise2009bystander,seymour2004bystander,azzam2003oxidative,mothersill2003models,blyth2011bystander}. In SFRT, where peaks and valleys coexist over short distances, such non-local signalling may alter survival, inflammatory burden and normal-tissue response in ways not captured by conventional dose-volume histograms.
+
+Mathematical and computational models provide a mechanism for testing this hypothesis. Prior work has separated direct radiation injury from bystander-mediated response and shown that heterogeneous or gradient irradiation can produce outcomes that differ from local dose-response models alone \cite{ebert2010framework,mcmahon2013kinetic,peng2018models,powathil2016bystander}. SFRT-specific modelling has further shown that bystander effects can alter equivalent uniform dose, mean biological dose and peak-valley interpretation \cite{cahoon2021spatial,mahmoudi2022potential}. These studies support treating SFRT plan assessment as more than a physical-dose problem.
+
+Most signalling-based SFRT interpretations, however, treat signal decay or removal as generic rather than anatomy-specific. This is limiting because the tumour microenvironment is spatially structured. Blood vessels influence oxygenation, perfusion, endothelial response, immune-cell trafficking and clearance of soluble mediators. In microbeam and related spatially fractionated modalities, vascular response and redistribution have been proposed as contributors to differential tumour and normal-tissue effects \cite{bouchet2015vascular,ortiz2024tumor}. SFRT has also been linked to immune and microenvironmental mechanisms beyond direct DNA damage \cite{lu2024combining}. Vasculature may therefore act not only as avoidance anatomy, but also as a spatial modifier of propagated biological stress.
+
+This raises an unresolved question for lattice radiotherapy: if non-local bystander signalling is incorporated into plan evaluation, does anatomical vasculature measurably modify the resulting biological burden? A vessel-associated uptake term could represent local clearance, washout, binding or removal of diffusible stress mediators. Such a term is meaningful only if its effect depends on vessel location relative to tumour, high-dose vertices, valley regions and nearby organs at risk. If the same effect can be reproduced by uniform washout or arbitrary smoothing, anatomical vascular uptake adds little mechanistic information.
+
+The present study addresses this gap by developing a biological risk-analysis framework combining Monte Carlo-derived physical dose, non-local bystander signalling and anatomy-aware vascular uptake. TOPAS and Geant4 provide the transport-grounded physical dose basis \cite{agostinelli2003geant4,perl2012topas}, while the biological layer converts dose into survival and effective-dose-like maps using linear-quadratic and equivalent-uniform-dose concepts \cite{fowler1989lq,niemierko1997eud}. The central novelty is not simply adding a vascular sink, but falsification-testing it against no-sink, uniform-washout, spatially perturbed and vessel-dropout controls. It is hypothesized that physically plausible lattice plans would not remain biologically equivalent after non-local signalling, and that anatomy-aware vascular uptake would behave as a measurable secondary modifier rather than a generic washout correction.
+
+\section{Methods}
+\subsection{Study design and workflow}
+The workflow is summarized in \cref{fig:workflow}. The study had four linked stages: (i) calibration and transfer testing of a non-local biological model, (ii) construction of synthetic head-and-neck lattice cases, (iii) TOPAS-based physical dose generation and (iv) biological reinterpretation with uncertainty and vascular-sink falsification. The model was used as a post-processing risk-analysis layer applied to fixed physical dose distributions. This is a computational biological risk-analysis framework for lattice radiotherapy, not a clinical treatment-planning-system replacement, inverse optimizer, clinical toxicity predictor, or validated treatment-delivery simulation. The motivation of this study was to test whether physical lattice dose metrics retain the same interpretation after non-local biological rescoring.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{fig01_workflow.png}
+    \caption{\textbf{Integrated workflow.} Synthetic lattice geometry was combined with Monte Carlo photon transport and biology-informed post-processing to derive survival-based reinterpretation, anatomy-aware vascular uptake effects, and endpoint-level risk metrics.}
+    \label{fig:workflow}
+\end{figure}
+\subsection{Transferable non-local biological model}
+Two signalling species were modelled: a short-range reactive oxygen species-like channel and a longer-range cytokine-like channel. For species $k$, the tissue concentration field $C_k(\mathbf{x},t)$ evolved as
+\begin{equation}
+\frac{\partial C_k}{\partial t}
+=
+D_k \nabla^2 C_k
+-
+\lambda_k C_k
+-
+u_k(\mathbf{x}) C_k
++
+E_k(\mathbf{x}),
+\end{equation}
+where $D_k$ is the diffusion coefficient, $\lambda_k$ is the first-order decay coefficient, $u_k(\mathbf{x})$ is a spatial uptake term, and $E_k(\mathbf{x})$ is the dose-driven emission source. Emission was modelled as
+\begin{equation}
+E_k(\mathbf{x})
+=
+E_{\max,k}
+\left[
+1-\exp\{-\gamma \Dphys(\mathbf{x})\}
+\right]
+M_{\mathrm{type}}(\mathbf{x},k)
+M_{\mathrm{oxygen}}(\mathbf{x},k),
+\end{equation}
+where $\Dphys(\mathbf{x})$ is the physical dose grid, $E_{\max,k}$ is the species-specific emission ceiling, $\gamma$ is the dose-to-emission saturation coefficient, $M_{\mathrm{type}}(\mathbf{x},k)$ is a tissue-state modifier, and $M_{\mathrm{oxygen}}(\mathbf{x},k)$ is an oxygen-state modifier. In the primary model,
+\begin{equation}
+M_{\mathrm{oxygen}}(\mathbf{x},k)=1,
+\end{equation}
+everywhere, yielding an oxygen-neutral main analysis. A separate sensitivity branch reintroduced synthetic hypoxic scaling by reducing ROS-like emission and increasing cytokine-like emission within the hypoxic mask; this is described in Supplementary Text~2. This branch was retained to test amplification sensitivity and does not form part of the primary model.
+
+In no-sink simulations,
+\begin{equation}
+u_k(\mathbf{x})=0.
+\end{equation}
+In anatomical-sink simulations, $u_k(\mathbf{x})$ was populated from explicit artery and vein masks, with stronger uptake assigned to the cytokine-like channel than to the short-lived ROS-like channel. In the current framework, this term should be interpreted as a spatially localized first-order tissue-loss term representing effective vascular uptake and clearance from the tissue-accessible signalling pool, rather than as an explicit haemodynamic transport model.
+
+The cumulative non-local hazard was defined as
+\begin{equation}
+H(\mathbf{x})
+=
+\int_0^{t_{\mathrm{final}}}
+\left[
+w_{\mathrm{ROS}} C_{\mathrm{ROS}}(\mathbf{x},t)
++
+w_{\mathrm{cyto}} C_{\mathrm{cyto}}(\mathbf{x},t)
+\right] dt,
+\end{equation}
+with
+\begin{equation}
+w_{\mathrm{ROS}}=w_{\mathrm{cyto}}=0.4
+\end{equation}
+in the  model. Direct radiation response was represented by
+\begin{equation}
+\SLQ(\mathbf{x})
+=
+\exp\left[-\alpha \Dphys(\mathbf{x})-\beta \Dphys(\mathbf{x})^2\right],
+\end{equation}
+and final survival was written as
+\begin{equation}
+\SF(\mathbf{x})
+=
+\SLQ(\mathbf{x})\exp[-sH(\mathbf{x})],
+\end{equation}
+where $s$ is the non-local transfer coefficient. Final survival was then inverted to a linear-quadratic-equivalent effective-dose-like quantity,
+\begin{equation}
+\Deff(\mathbf{x})
+=
+\frac{-\alpha+\sqrt{\alpha^2-4\beta\ln \SF(\mathbf{x})}}{2\beta}.
+\end{equation}
+
+The biology layer was implemented as a fixed post-processing rule applied to the physical dose grid, rather than as a geometry-specific optimizer. Calibration was performed once in a one-dimensional half-field assay geometry, with $x=0$ defined as the field edge. The transferable rule was locked using three nominal survival anchors: survival of 0.70 at $+2$~mm outside the field, survival below 0.01 at $-2$~mm inside the field, and approximately 0.95 at $+10$~mm in the shielded region. This produced a nominal coefficient set with $D_{\mathrm{ROS}}=0.8$, $D_{\mathrm{cyto}}=1.2$, $\lambda_{\mathrm{ROS}}=0.2$, $\lambda_{\mathrm{cyto}}=0.001$, $E_{\max,\mathrm{ROS}}=1.5$, $E_{\max,\mathrm{cyto}}=0.8$, $\gamma=0.35$, and $w_{\mathrm{ROS}}=w_{\mathrm{cyto}}=0.4$, with the half-field calibration yielding $s=2.94\times10^{-3}$. After this single calibration step, the resulting coefficient set was transferred without geometry-specific retuning to two-dimensional stripe, three-dimensional lattice, and irregular surrogate-plan geometries, so that a single biology-informed reinterpretation rule was preserved across all subsequent cohort analyses.
+
+These quantities should be interpreted as nominal phenomenological framework coefficients rather than independently validated biological constants. The values are reported at rounded precision consistent with that role. The non-local transfer coefficient $s$ was the only coefficient internally calibrated against the half-field anchors. By contrast, parameters such as $\gamma$, $D_{\mathrm{cyto}}$, and $\lambda_{\mathrm{cyto}}$ were treated as inherited reference settings and carried forward unchanged so that the same biology post-processing rule was applied across the full framework. The ROS-like and cytokine-like hazard weights were likewise held fixed during transfer rather than re-tuned on a case-by-case basis. Their definitions, nominal values, and calibration provenance are summarized in Table~S1.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{fig02_calibration_transfer.png}
+    \caption{\textbf{Calibration and transferability of the immune-free non-local biological model.} \textbf{(a)} One-dimensional half-field calibration used to define the transferred reference coefficient set. The blue step profile denotes the physical dose pattern, the red curve denotes the corresponding biological survival response, and the dashed grey line marks the field edge at $x=0$. \textbf{(b)} Stripe-pattern transfer tests across representative lattice spacings of 20, 30, and 40~mm. Blue curves show the physical lattice pattern and red curves show the transferred survival response obtained from the same locked coefficient set without retuning. \textbf{(c)} Holdout three-dimensional validation showing the effective-dose-like response as a function of lattice pitch; the red curve reports valley effective dose and the annotated labels give the corresponding survival fraction at each pitch.}
+    \label{fig:calibration}
+\end{figure} 
+
+
+\subsection{Synthetic head-and-neck-like geometries and physical dose generation}
+A fully synthetic 10-case head-and-neck cohort was constructed as an anatomy-rich computational stress test rather than as a patient-representative dataset (\cref{fig:cohort}). The head-and-neck site was chosen because it combines dense organ-at-risk (OAR) packing, marked geometric heterogeneity, and plausible relevance of spatially structured vascular clearance. This provides a stringent setting in which to test whether biology-aware post-processing alters endpoint interpretation. The cohort contained no patient-identifiable data. Tumour, OAR, and vessel masks were generated algorithmically and were not derived from patient contours, patient imaging, vascular segmentations, or statistical distributions fitted to real head-and-neck cohorts.
+
+Tumour geometries were created from site-specific combinations of geometric primitives and Boolean operations and then embedded within synthetic anatomical compartments representing sinonasal/maxillary, oropharyngeal, laryngo-hypopharyngeal, parapharyngeal, buccal, oral tongue/floor-of-mouth, nodal, deep parotid/infratemporal, and composite upper-neck presentations. Estimated gross tumour volumes ranged from approximately 66 to 326~cm$^3$. Accordingly, this cohort was intended to test internal consistency, anatomy dependence, and robustness of the framework, rather than to establish patient realism, vascular truth, or clinical prevalence.
+
+All cases followed a common peripheral lattice-boost concept. The peripheral boost target was defined as $\CTVboost=\mathrm{GTV}+5$~mm. Vertices were assigned a nominal 15~Gy peak concept, while the peripheral target received 3.0--3.5~Gy. Initial candidate vertices were proposed on a 6~mm sampling lattice and were retained only if they remained intratumoural, preserved minimum spacing, maintained adequate intratumoural support, and avoided high-priority anatomy. In the fixed safe-core branch, a 5~mm contracted GTV, 15~mm OAR clearance, 6~mm candidate support radius and 18~mm minimum inter-vertex spacing were enforced. Candidate vertices intersecting OAR or vessel exclusion regions were removed, no symmetry was imposed when local anatomy prevented regular placement.
+
+Physical dose was generated in TOPAS using transport-ready voxelized \texttt{TsImageCube} phantoms with explicit per-voxel material tags and \texttt{DoseToWater} scoring. A discrete representative 6~MV photon spectrum was transported through each phantom. Rather than reproducing a full clinical VMAT delivery, each plan was represented by a two-component photon-lattice surrogate comprising a broad base component and a focused vertex component. For each case, the base component comprised 12 coplanar beams sampled every $30^\circ$ about the target centre, with elliptical apertures defined from the projected planning target volume plus a 4~mm margin. The vertex component comprised 6 coplanar beams sampled every $60^\circ$ for each lattice vertex, with apertures defined from the projected 5~mm-radius vertex sphere plus a 1~mm margin. All beams used a flat elliptical position distribution, no angular divergence, and a source-to-axis-distance surrogate of 260~mm. The \texttt{em\_opt4\_only} physics profile and 0.01~mm production cuts were used throughout.
+
+The base and vertex dose grids were simulated separately, Gaussian-smoothed within the body mask ($\sigma=6$~mm), and then combined offline. Because absorbed dose is linear in primary fluence, the final physical dose was written as
+\begin{equation}
+\Dphys(\mathbf{x})=
+w_{\mathrm{base}}D_{\mathrm{base}}(\mathbf{x})+
+w_{\mathrm{vert}}D_{\mathrm{vert}}(\mathbf{x}),
+\end{equation}
+where $w_{\mathrm{base}}$ and $w_{\mathrm{vert}}$ denote the relative fluence weights of the two components. The spot-to-base weighting was first adjusted to set the relative vertex contribution, and a global scale factor was then chosen so that the final plan achieved approximately PTV $D_{95}=3.5$~Gy and a peak-region mean dose near 15~Gy. Default history counts were $1\times10^6$ and $2\times10^6$ primary histories for the base and vertex components, respectively.
+
+Monte Carlo transport uncertainty was treated explicitly as a limitation. Uncertainty handling implemented by keeping raw-versus-smoothed dose comparisons, performing repeated seed and history-scale reruns to estimate transport-driven variability, comparing sink-driven endpoint shifts against combined 95\% Monte Carlo plus uptake-sensitivity bands, and testing the sensitivity of the downstream biological interpretation to the smoothing kernel. Body-aware Gaussian smoothing was applied only after inspection of the raw transport grids and was used to stabilize macroscopic lattice metrics while preserving peak--valley structure. The body-masked smoothed dose field was treated as the predefined macroscopic Monte Carlo analysis surrogate, not as a negligible display or cosmetic denoising operation. A smoothing-kernel sensitivity analysis showed that the main interpretation was stable for 4--6~mm kernels, while the 2~mm branch was calibration-unstable. This was intended to reduce the risk that the reported biological reinterpretation reflects stochastic transport noise or a single smoothing choice. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{fig03_synthetic_cohort.png}
+    \caption{\textbf{Algorithmically generated synthetic head-and-neck cohort} Each tile shows one of the 10 cases in axial, coronal, and sagittal views with the accepted lattice vertices overlaid on the synthetic target. The case labels report the anatomical presentation, instantiated GTV volume, and retained versus proposed vertex count after intratumoural validation and anatomy-aware exclusion. The figure is intended to document cohort diversity in geometry and OAR crowding. Does not imply sampling from a real patient distribution.}
+    \label{fig:cohort}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{fig03a_synthetic_anatomy.png}
+    \caption{\textbf{Foundational synthetic head-and-neck anatomy used to define the heterogeneous transport and sink framework.} \textbf{(a)} Coronal projection of the composite phantom. \textbf{(b)} Axial-style projection through the major salivary, vascular, and tumour-bearing structures. \textbf{(c)} Sagittal projection showing the superior-inferior relationship between target, airway, and neurovascular compartments. \textbf{(d)} Neck close-up highlighting the thyroid, parathyroids, carotid/jugular structures, and adjacent glands that later contribute to the anatomy-localized uptake masks.}
+    \label{fig:placeholder}
+\end{figure}
+
+\subsection{Endpoint extraction, ranking terminology and falsification controls}
+
+Each synthetic case was evaluated in three comparison modes: physical-only, biology-informed without vascular uptake (no-sink), and biology-informed with anatomical vascular uptake (with-sink). Primary endpoints were PTV $D_{95}$, the peak-to-valley ratio endpoint (reported as physical PVDR in the absorbed-dose mode and as a PVDR-like ratio in the biology-informed modes), peri-GTV 0--5~mm mean, peri-GTV 5--15~mm mean, spinal cord $D_2$, brainstem $D_2$, and right parotid mean. In the physical-only mode these quantities were reported from the absorbed-dose distribution, whereas in the biology-informed modes the corresponding endpoint values were extracted from the effective-dose-like field obtained by linear-quadratic inversion of the modelled final survival field. Outputs were therefore separated into absorbed physical dose, effective-dose-like reinterpretation scores, and assay-like relative proxies (\cref{tab:definitions}). These model-derived quantities were not presented as delivered dose or as validated toxicity probabilities.
+
+Case ranking within each mode was computed from this fixed primary endpoint set by cohort-wise $z$-scoring of each endpoint and summing unweighted signed contributions according to whether larger or smaller values were preferred. Endpoints for which lower values were favorable contributed positively when below the cohort mean, whereas endpoints for which higher values were favorable contributed positively when above the cohort mean. This produced a reproducible mode-specific aggregate ranking while preserving the underlying endpoint values for direct inspection and uncertainty analysis.
+
+Assay-like readouts were retained only as interpretive surrogates. Peak and valley regions of interest were defined within the PTV using the assigned lattice vertex geometry: the peak ROI was the union of 8~mm-radius vertex-centered spherical supports clipped to the PTV, and the valley ROI comprised PTV voxels outside a 14~mm exclusion union around the vertices. The $\gamma$H2AX-like proxy was computed voxelwise as
+\begin{equation}
+\Gamma(\mathbf{x}) = 1 - \exp\!\left[-\left(\alpha D_{\mathrm{phys}}(\mathbf{x}) + \beta D_{\mathrm{phys}}(\mathbf{x})^2 + 0.45\,R^*(\mathbf{x})\right)\right],
+\end{equation}
+where $R^*(\mathbf{x})$ is the peak-over-time ROS-like concentration normalized by the 99th percentile of the ROS peak field and clipped to the range $[0,3]$. The TUNEL-like proxy was defined as
+\begin{equation}
+T(\mathbf{x}) = 1 - S_{\mathrm{final}}(\mathbf{x}),
+\end{equation}
+so that it represented a relative survival-loss surrogate rather than an independently calibrated apoptosis model. Cytokine burden was summarized by temporal area under the curve (AUC) of the cytokine-like species concentration using trapezoidal integration over the full volume and over the peak and valley ROIs. Reported assay-like outputs were ROI means or ROI AUC summaries and were interpreted as relative contrasts or arbitrary-unit summaries rather than as calibrated experimental assay measurements.
+
+Transport-related uncertainty was assessed in a full-cohort repeat-run package spanning all 10 cases, using three random seeds and three history scales (9 repeated transport realizations per case). A sink-driven endpoint shift was treated as distinguishable from noise only when it exceeded the combined 95\% Monte Carlo plus uptake-sensitivity band derived from this repeat-run package. Falsification controls were then evaluated in a representative six-case subset. In that subset, the anatomical sink model was challenged against no-sink, mass-matched uniform washout, local vessel dropout within 20~mm of the tumour, randomized anatomy-constrained displacement, superior-inferior flip, and anterior-posterior flip. In this framework, the uniform washout control tested how much clearance was present, whereas the anatomical perturbation controls tested where clearance was placed. Together these falsification controls were designed to determine whether any sink-associated signal depended on anatomical placement rather than on generic smoothing or non-specific global washout alone.
+
+\begin{table}[H]
+\centering
+\caption{Interpretation of physical, biological, and assay-like outputs.}
+\label{tab:definitions}
+\footnotesize
+\begin{tabular}{p{0.23\linewidth}p{0.30\linewidth}p{0.37\linewidth}}
+\toprule
+Output class & Examples & Interpretation \\
+\midrule
+Absorbed physical dose & $\Dphys$, PTV $D_{95}$, peak dose, valley dose, OAR $D_2$, PVDR & Monte Carlo-derived absorbed dose in Gy describing the physical lattice distribution only. \\
+Effective-dose-like reinterpretation score & $\Deff$, biological valley EUD, model-derived OAR burden score & Gy-like quantity obtained by LQ inversion of modelled survival; useful for biological reinterpretation, but not delivered dose and not a validated toxicity predictor. \\
+Relative assay-like proxy & $\gamma$H2AX-like signal, TUNEL-like signal, cytokine AUC & Dimensionless or arbitrary-unit summaries derived from model fields to express experimentally recognizable spatial patterns; not calibrated assay measurements. \\
+\bottomrule
+\end{tabular}
+\end{table}
+\section{Results}
+\subsection{Physical lattice-dose benchmark and plausibility check}
+
+Before biological reinterpretation, the physical lattice dose distributions were assessed against broad published lattice and SFRT planning principles as a benchmark and plausibility check, rather than as a claim of clinical plan equivalence. Published lattice workflows commonly use intratumoural high-dose vertices embedded within a lower-dose background and are judged by target coverage, vertex dose, peak--valley contrast, dose fall-off, and OAR avoidance \cite{wu2020technical,duriseti2021lattice,kavanaugh2022planning,duriseti2022phase,grams2023clinical,iori2023lattice}. The synthetic transport-based plans reproduced these broad design features: PTV $D_{95}\approx3.5$~Gy by construction, intratumoural boosts near a nominal 15~Gy peak concept, 2--5 accepted vertices depending on tumour size and anatomical exclusions, and a cohort-average physical PVDR of 1.817. This level of modulation is more conservative than the peak--valley separation reported for microbeam or minibeam platforms, but it is plausible for a macroscopic photon-lattice surrogate. Accordingly, these plans should be interpreted as controlled, transport-grounded substrates for biological hypothesis testing within a synthetic framework, not as clinically optimized VMAT, SBRT, proton, or carbon-ion plans.
+
+\subsection{Locked non-local biology increased valley burden across transferred geometries}
+
+After a single half-field calibration, the locked non-local biology layer reproduced the intended reference pattern: survival below 0.01 at $-2$~mm inside the field, survival of 0.70 at $+2$~mm outside the field, and recovery to approximately 0.952 at $+10$~mm in the shielded region. The same coefficient set was then transferred without geometry-specific retuning to distinct holdout geometries. In the exact two-stripe holdout, centre-valley survival increased monotonically with pitch, from 0.699 at 20~mm to 0.900 at 30~mm and 0.972 at 40~mm, while the centre-valley physical dose remained 0~Gy by construction. In the three-dimensional lattice holdout sampled at 5.03~cm depth, the 20~mm pitch case had a physical valley dose of 0.668~Gy but an effective-dose-like valley score of 5.74~Gy; the 30~mm case had 0.306~Gy physically and 2.97~Gy effectively; and the 40~mm case had 0.184~Gy physically and 1.95~Gy effectively. So increasing pitch improved sparing, but physical valley dose alone did not capture the model-derived biological valley burden.
+
+The same qualitative behaviour was observed in irregular surrogate-plan geometries, where non-local transport broadened the response beyond the geometric peak layout and increased inferred valley burden relative to an LQ-only interpretation. These results should be interpreted narrowly; the transferred biology layer changes the endpoint interpretation of a transport-grounded synthetic dose pattern, but it does not establish clinical biological truth or patient-validated effect. These reinterpretations arise from the direct LQ term together with the spatially transported ROS-like and cytokine-like hazard only. 
+
+\subsection{Biological reinterpretation changed cohort-level plan interpretation}
+
+All 10 site-specific synthetic cases completed the physical transport workflow. Peripheral target coverage was stable by construction, with cohort-mean physical PTV $D_{95}=3.50$~Gy, while physical PVDR and OAR-adjacent dose varied across cases. Applying the biology-informed post-processing materially changed the cohort-level endpoint profile (\cref{fig:reinterpretation,tab:endpoints}). Relative to the physical-only view, the cohort-mean PVDR-like ratio decreased from 1.817 under physical-dose interpretation to 1.292 in the no-sink analysis and to 1.270 with the anatomical sink included, consistent with biological filling-in of the physical peak--valley pattern. Over the same comparison, the peri-GTV 0--5~mm mean increased from 7.219~Gy physically to 19.949~Gy without sink uptake and 19.350~Gy with anatomical sink uptake, while the peri-GTV 5--15~mm mean increased from 5.923~Gy to 16.779~Gy and 16.390~Gy, respectively. Brainstem $D_{2}$ increased from 11.454~Gy physically to 24.537~Gy in the no-sink mode and 24.317~Gy in the anatomical-sink mode, and right parotid mean increased from 5.875~Gy physically to 17.282~Gy and 16.665~Gy. These biological columns should be interpreted as effective-dose-like burden scores derived from modelled survival rather than as delivered absorbed dose or validated toxicity predictions.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{fig04_cohort_reinterpretation.png}
+    \caption{\textbf{Biological reinterpretation of the physical cohort.} \textbf{(a)} Cohort-mean endpoint summary across the physical-only, no-sink, and anatomy-localized sink analyses. Each cell reports the cohort-mean endpoint value, with the ratio to the physical baseline shown in parentheses. \textbf{(b)} Case-wise risk-rank trajectories across the same three scoring modes, where lower rank indicates lower composite biological risk. Together, the panels show that non-local biology changes endpoint interpretation broadly, whereas the vascular sink acts as a secondary spatial modifier of that reinterpretation.}
+    \label{fig:reinterpretation}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{\textbf{Cohort-mean endpoint summary across physical-only, no-sink, and anatomical-sink modes.} Values in the physical-only column are absorbed dose in Gy. Values in the biology-informed columns are effective-dose-like model scores in Gy-like units, except for the PVDR-like ratio, which remains dimensionless.}
+\label{tab:endpoints}
+\footnotesize
+\begin{tabular}{lccc}
+\toprule
+Endpoint & Physical-only & No-sink & Anatomical sink \\
+\midrule
+PTV $D_{95}$ (Gy) & 3.500 & 16.546 & 15.277 \\
+PVDR-like ratio & 1.817 & 1.292 & 1.270 \\
+Peri-GTV 0--5 mm mean (Gy) & 7.219 & 19.949 & 19.350 \\
+Peri-GTV 5--15 mm mean (Gy) & 5.923 & 16.779 & 16.390 \\
+Brainstem $D_{2}$ (Gy-like) & 11.454 & 24.537 & 24.317 \\
+Right parotid mean (Gy-like) & 5.875 & 17.282 & 16.665 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The biological layer also changed aggregate cohort ranking, but less strongly than it changed endpoint interpretation. Relative to the physical-only ordering, the no-sink analysis changed the final rank of 5 of 10 cases, and the anatomical-sink analysis changed the final rank of 6 of 10 cases. By contrast, the anatomical sink changed rank relative to the no-sink model in only 2 of 10 cases, indicating that most reinterpretation arose from the non-local biology layer itself, with the sink acting as a secondary spatial modifier. The best-ranked physical case, an oral tongue/floor-of-mouth horseshoe geometry, fell from rank 1 physically to rank 3 with anatomical sink uptake included, whereas the right sinonasal/maxillary bulky ellipsoid improved from physical rank 2 to biological rank 1. Two cases acquired biology-added brainstem burden flags in the biology-informed modes despite remaining below the corresponding physical threshold. These flags indicate divergence between physical dose metrics and model-derived biological burden scores within the synthetic framework; they should not be interpreted as clinical brainstem toxicity predictions.
+
+Taken together the non-local biology changes cohort-level endpoint interpretation broadly, whereas the anatomical vascular sink provides a smaller additional spatial modulation and is not a dominant rank-ordering driver. 
+
+\subsection{Vascular uptake was measurable but secondary}
+
+Across the 10-case synthetic cohort, the anatomical vascular sink consistently reduced the magnitude of the biology-informed reinterpretation relative to the no-sink mode, but the reduction was modest compared with the much larger shift produced by adding non-local signalling itself. Cohort-mean PTV $D_{95}$ decreased from 16.546~Gy-like units in the no-sink mode to 15.277~Gy-like units with anatomical sink uptake, while remaining well above the physical-only value of 3.500~Gy. Similarly, cohort-mean PVDR-like ratio decreased from 1.292 to 1.270, peri-GTV 0--5~mm mean decreased from 19.949 to 19.350~Gy-like units, brainstem $D_{2}$ decreased from 24.537 to 24.317~Gy-like units, and right parotid mean decreased from 17.282 to 16.665~Gy-like units. Thus, the sink term acted as a spatially localized modifier of propagated biological burden rather than as a mechanism that restored the physical-dose interpretation.
+
+The robustness analyses supported this narrower interpretation. In the full repeated-run uncertainty package, 65 of 70 case-endpoint with-sink versus no-sink deltas exceeded the combined 95\% Monte Carlo plus uptake-sensitivity band, showing that the sink signal remained detectable at the endpoint level after transport and parameter uncertainty were included. However, 0 of 10 cases showed a noise-qualified sink-driven rank change, indicating that the sink was weak as an independent rank-reversal mechanism. The biology-parameter robustness analysis further showed a mean probability of 0.831 for retaining the same final with-sink rank under parameter perturbation, while the baseline with-sink versus no-sink PVDR-like ratio delta remained sign-consistent in all sampled scenarios. Finally, smoothing-kernel sensitivity supported the same overall conclusion for the manuscript-default 4--6~mm range: non-local biology remained the dominant reinterpretation mechanism, whereas the sink contributed a smaller secondary shift. Taken together, these findings support interpreting the anatomical sink as a measurable endpoint-level spatial modifier, but not as a strong practical driver of rank reordering.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{fig05a_uncertainty_sensitivity.png}
+    \caption{\textbf{Repeat-run uncertainty and primary-model biological robustness.}\textbf{(a)} Case-by-endpoint heatmap of the absolute with-sink minus no-sink endpoint shift normalized by the combined 95\% uncertainty band, where the band combines repeat-run Monte Carlo variation and uptake-sensitivity variation; values above unity indicate sink-associated endpoint shifts larger than the combined uncertainty scale.\textbf{(b)} Maximum absolute correlation between sampled primary-model parameter perturbations and selected robustness outcomes, showing which phenomenological parameters most strongly influence rank stability and biology-added brainstem burden flags.\textbf{(c)} Sink-strength sweep showing how representative with-sink minus no-sink endpoint deltas vary as the global uptake scale is increased. \textbf{(d)} Fraction of evaluated endpoint deltas that remain above the combined 95\% uncertainty band, summarized by endpoint type. \textbf{(e)} Case-level probabilities of retaining the same final with-sink rank and of retaining a biology-added brainstem burden flag across the sampled parameter set.}
+    \label{fig:uncertainty_falsification}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{fig05b_sink_falsification.png}
+    \caption{\textbf{Endpoint-level falsification of the anatomy-localized sink against stronger surrogate controls.} \textbf{(a)} Number of endpoints for which the true-sink versus surrogate comparison excludes zero in the uncertainty-qualified confidence interval. \textbf{(b)} Fraction of endpoint comparisons that remain above the 95\% combined noise band for each surrogate control. \textbf{(c)} Number of noise-qualified rank changes attributable to replacing the true anatomical sink with each surrogate. The figure shows that the anatomical sink is distinguishable from several redistributed or weakened controls at the endpoint level, even when rank-level effects remain limited.}
+    \label{fig:placeholder}
+\end{figure}
+\begin{table}[H]
+\centering
+\caption{Vascular-sink falsification in the repeated six-case subset. Counts report anatomical-sink versus comparator differences that exceeded the combined 95\% uncertainty band.}
+\label{tab:falsification}
+\footnotesize
+\begin{tabular}{lcc}
+\toprule
+Comparator & Case-endpoint comparisons above 95\% band & Noise-qualified rank changes \\
+\midrule
+No sink & 42/48 & 0/6 \\
+Uniform body washout & 42/48 & 2/6 \\
+Local vessel dropout within 20 mm & 41/48 & 0/6 \\
+Randomized anatomy-constrained displacement & 34/48 & 0/6 \\
+Superior-inferior flip & 32/48 & 0/6 \\
+Anterior-posterior flip & 31/48 & 0/6 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\subsection{Cohort-level assay-like surrogates were consistent with propagated valley burden}
+
+To complement the endpoint analysis, we summarized three assay-like surrogate classes across the primary immune-free, oxygen-neutral 10-case cohort: a $\gamma$H2AX-like DNA-damage proxy, a TUNEL-like apoptosis proxy, and cytokine area-under-the-curve (AUC) summaries. As defined in the Methods, these quantities were derived from model fields and reported only as relative \textit{in silico} surrogates rather than calibrated laboratory measurements or experimental validation.
+
+The strongest qualitative change was seen in low-dose valley regions. Mean valley $\gamma$H2AX-like signal increased from 0.335 in the physical-only interpretation to 0.548 in the no-sink biological mode and 0.547 with anatomical vascular uptake. Peak $\gamma$H2AX-like signal also increased, but more modestly relative to its already elevated physical baseline, from 0.626 physically to 0.761 without sink and 0.760 with sink. The TUNEL-like proxy showed the same directional pattern with larger absolute separation: mean valley TUNEL rose from 0.335 physically to 0.865 without sink and 0.845 with sink, while mean peak TUNEL increased from 0.626 physically to 0.961 without sink and 0.942 with sink.
+
+Cytokine-related surrogates showed the clearest sensitivity to the presence of vascular uptake. Mean global cytokine AUC was 0 in the physical-only condition by construction, compared with 123.277 in the no-sink mode and 115.932 with anatomical sink. Mean peak-region cytokine AUC changed from 0 physically to 1620.219 without sink and 1382.819 with sink, while mean valley-region cytokine AUC changed from 0 physically to 1177.545 without sink and 1077.600 with sink. Thus, anatomical vascular uptake reduced the magnitude of the propagated signalling burden, but did not remove it.
+
+Taken together, these assay-like surrogates were consistent with the main endpoint-level interpretation: adding non-local biology primarily broadened burden into valley and peri-tumour regions rather than simply intensifying direct hotspot injury. The vascular sink acted as a secondary spatial modifier of that propagated burden, with only negligible effect on the $\gamma$H2AX-like summaries, a modest effect on TUNEL-like summaries, and a clearer effect on cytokine AUC. These results should therefore be read as supportive mechanistic surrogates within the synthetic framework, not as experimental confirmation of specific biological pathways.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.92\linewidth]{fig06_assay_readouts.png}
+    \caption{\textbf{Assay-like proxy readouts derived from the biological fields.} \textbf{(a)} $\gamma$H2AX-like proxy signal evaluated in peak and valley regions under physical-only, no-sink, and anatomical-sink scoring. \textbf{(b)} TUNEL-like positive fraction in the same peak and valley regions. \textbf{(c)} Global cytokine area-under-the-curve, reported as a whole-field signalling burden surrogate. \textbf{(d)} Valley-region cytokine area-under-the-curve, isolating the non-local signalling burden in low-physical-dose regions. These quantities are interpretive surrogates derived from the model state variables, not direct experimental validations.}
+    \label{fig:cohort_assay_outputs}
+\end{figure}
+
+
+\section{Discussion}
+
+This study presents a biology-informed computational risk-analysis framework rather than as a clinical planning or deliverability study. Its central result is that physical valley dose was not equivalent to model-derived biological valley burden. In the oxygen-neutral primary analysis, adding non-local signalling changed comparative interpretation in 5 of 10 cases even before any vascular uptake term was applied, while the with-sink versus physical comparison changed ranking in 6 of 10 cases and the with-sink versus no-sink comparison in only 2 of 10 cases. The strongest claim is therefore not that the vascular sink dramatically reorders plans, but that a fixed non-local biology layer can reveal endpoint-level liabilities in valley, peri-tumour, and organ-adjacent regions that are less visible in the physical-only view. This is consistent with lattice radiotherapy literature cautioning against interpreting response from peak dose or physical heterogeneity alone \cite{fernandez2022peak,prezado2024critical}.
+
+The mechanistic reading is consistent with the bystander-effect radiobiology literature. Bystander responses have long been reported in cells receiving little or no direct radiation dose and have been linked to soluble mediators, oxidative stress, inflammatory cytokines, and intercellular communication pathways \cite{prise2009bystander,seymour2004bystander,azzam2003oxidative,blyth2011bystander}. The ROS-like and cytokine-like fields used here are not intended as a complete molecular model. Rather, they provide a tractable phenomenological representation of the central idea that radiation associated stress can propagate beyond the directly irradiated hotspots, which in turn explains why the biological maps became broader and more spatially connected than the physical peak layout.
+
+This interpretation is also in line with earlier modelling work that separated direct and non-local components of response or introduced explicit intercellular signalling terms \cite{ebert2010framework,mcmahon2013kinetic,peng2018models}. Cahoon et al. further showed that spatially fractionated geometries can produce biologically meaningful low-dose-region effects that are not captured by physical dose descriptors alone \cite{cahoon2021spatial}. The present study extends that idea to lattice-style geometries embedded in synthetic head-and-neck anatomy with explicit vessel masks and falsification controls. The contribution of this framework is therefore methodological: not validation of a single biological pathway, but a structured way to test whether a physically acceptable lattice pattern retains the same interpretation once non-local signalling is propagated through anatomy.
+
+The vascular term in this framework requires careful interpretation. By construction the vascular sink term is a spatially localized first-order tissue-loss term acting on the mediator fields, intended to represent effective vascular uptake and downstream clearance from the tissue-accessible signalling pool. This is an important distinction, because the relevant falsification question is not simply how much signal is removed, but where removal is placed. Uniform washout tests clearance magnitude, whereas anatomical sink perturbations test clearance placement. On that basis, the sink term has a defensible biological rationale in the context of prior work on vascular and microenvironmental contributions to spatially fractionated response \cite{bouchet2015vascular,ortiz2024tumor,lu2024combining}, while remaining explicitly simpler than a flow-resolved vascular transport model.
+
+The falsification and repeat-run analyses support a deliberately limited interpretation of this sink effect. Across the repeated full-cohort uncertainty package, 65/70 case-endpoint with-sink minus no-sink differences exceeded the combined 95\% Monte Carlo plus uptake-sensitivity band, yet 0/10 cases showed a noise-qualified sink-driven rank change. Against no-sink, mass-matched uniform washout, local vessel dropout, and anatomy-perturbation controls, the anatomical sink remained distinguishable at the endpoint level, but not as a consistently strong independent ranking mechanism. This positive-negative result is important: it argues against the sink acting as a trivial smoothing artefact, while also showing that its practical influence is secondary to the broader non-local biology layer.
+
+Under bounded perturbations of the transferred phenomenological parameter set, the sign of the baseline endpoint reinterpretation and the sign of the PVDR-like ratio shift remained stable across the sampled scenarios, and the mean probability of retaining the same with-sink rank was 0.831. Supplementary oxygen-modulated reruns amplified some rank discordance and OAR reinterpretation relative to the oxygen-neutral primary branch, indicating that oxygen-state assumptions remain a genuine model uncertainty rather than a settled biological truth. Using the Morris-type screening logic the value of global sensitivity analysis is to identify which phenomenological terms most deserve future experimental anchoring, not to imply present-day biological identifiability. \cite{morris1991factorial,herman2017salib}.
+
+The smoothing-kernel analysis also matters for interpretation. The primary conclusion that non-local biology changes endpoint interpretation while vascular sink remains secondary survived on the 4--6~mm body-aware smoothing kernels, whereas the 2~mm branch did not survive cleanly. The smoothed Monte Carlo dose grid should therefore be understood as the defined analysis substrate for this study rather than as a negligible display choice. This does not remove Monte Carlo uncertainty as a limitation; instead, it makes the modelling dependency transparent and reproducible.
+
+The model-derived brainstem-adjacent flags and assay-like outputs require similarly careful reading. In the primary biology framework, biology-added brainstem flags were present in 2 of 10 cases. These are not toxicity predictions, not delivered absorbed doses, and not normal-tissue complication probabilities. They identify cases in which physical dose metrics and model-derived burden scores diverge. Likewise, the $\gamma$H2AX-like, TUNEL-like, and cytokine AUC outputs are not experimental measurements, even though they are framed in experimentally recognizable terms \cite{rogakou1998h2ax,gavrieli1992tunel}. Their role is interpretive: they help show that the dominant biological broadening occurs in valley and peri-tumour regions, and that the sink preferentially modulates diffusible mediator burden rather than direct hotspot injury.
+
+Several limitations define the present study scope. First, the cohort was fully synthetic and algorithmically generated: tumour shapes, vessel masks, OAR layouts, and lattice placements were not derived from patient images, patient contours, or statistical fits to patient populations. Second, the physical dose distributions were TOPAS-derived lattice surrogates rather than TPS-optimized clinical plans, and were intended as transport-grounded stress-test substrates rather than deliverable treatments. Third, the vascular sink was static and phenomenological; it did not model flow direction, permeability, endothelial injury, perfusion heterogeneity, immune-cell trafficking, or time-varying transport. Fourth, the biological parameters were a mixture of inherited reference settings and an internally calibrated transfer coefficient, not independently validated biological constants. Fifth, the assay-like outputs and effective-dose-like reinterpretation scores remained model-derived quantities without direct experimental or clinical validation.
+
+What the study does establish is internal falsifiability and endpoint-level biological reinterpretation within a controlled synthetic framework. What it does not establish is patient realism, vascular truth, clinical validity, or experimental validation of the assay-like surrogates. The most defensible conclusion is therefore that this framework can serve as a hypothesis-generating computational risk-analysis tool for lattice radiotherapy. It can identify where physically acceptable lattice patterns may conceal additional non-local biological liability, and it can do so in a way that is structured, reproducible, and falsifiable. The next step is not broader claim-making, but targeted validation using patient-derived RTSTRUCT/RTDOSE data, realistic vascular segmentation, and partial-field or lattice-like assay datasets \cite{duriseti2021lattice,kavanaugh2022planning,duriseti2022phase,grams2023clinical,zhang2023lattice,botti2024latticeopt}.
+
+
+
+\section{Conclusion}
+A locked reaction--diffusion bystander model combined with synthetic head-and-neck lattice cases showed that non-local biological signalling can materially alter the interpretation of physically plausible spatial fractionated radiotherapy plans. Anatomy-aware vascular uptake produced smaller but measurable endpoint modulation and remained distinguishable from surrogate washout controls. The framework is not a validated clinical decision tool, but provides a compact, testable risk-analysis layer for identifying biological liabilities not captured by physical dose metrics alone.
+
+\section*{Declarations and data availability}
+\textbf{Acknowledgements:} none at this time. \textbf{Funding:} no financial support was received for this work. \textbf{Conflicts of interest:} the author declares no conflicts of interest. \textbf{Ethics:} this study used only synthetic computational phantoms and involved no patient-identifiable data, human participants or animal experiments. \textbf{Data and code availability:} synthetic phantom definitions, lattice-case metadata, TOPAS templates, post-processing scripts, biological model code, endpoint extraction routines and figure-generation scripts should be made available in a public repository at submission or publication, with a permanent archived version deposited in Zenodo or an equivalent repository. Repository placeholder: \url{https://github.com/kair98-boop/SFRT}. Archived DOI placeholder: Zenodo DOI to be added before final submission.
+
+{\scriptsize
+\bibliographystyle{plainnat}
+\bibliography{references}
+}
+\section{Supplementary Information}
+\subsection{Table S1. Nominal biology post-processing coefficients and provenance}
+\begin{table}[H]
+\centering
+\caption{\textbf{Nominal biology post-processing coefficients and provenance.} The one-dimensional half-field calibration used three survival anchors relative to the field edge: 0.70 at $+2$~mm, below 0.01 at $-2$~mm, and approximately 0.95 at $+10$~mm. Reported values are treated as phenomenological framework coefficients rather than independently validated biological constants.}
+\label{tab:bio_parameters}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\textwidth}{p{2.7cm}p{1.8cm}p{4.0cm}X}
+\toprule
+Symbol / term & Value & Definition in the model & How the value was obtained \\
+\midrule
+$\alpha$ & 0.03~Gy$^{-1}$ & Linear coefficient in the direct radiation survival term $\mathrm{SF}_{\mathrm{LQ}}=\exp(-\alpha D-\beta D^2)$. & Fixed radiosensitivity reference setting. Not fitted to the half-field anchors. \\
+$\beta$ & 0.003~Gy$^{-2}$ & Quadratic coefficient in the direct radiation survival term. & Fixed radiosensitivity reference setting. Not fitted to the half-field anchors. \\
+$D_{\mathrm{ROS}}$ & 0.8 & Effective diffusion coefficient for the short-range ROS-like signalling channel, in model units. & Fixed phenomenological reference setting retained during calibration and transfer. \\
+$D_{\mathrm{cyto}}$ & 1.2 & Effective diffusion coefficient for the longer-range cytokine-like signalling channel, in model units. & Inherited reference setting carried unchanged through the half-field calibration and all transfer geometries. \\
+$\lambda_{\mathrm{ROS}}$ & 0.2 & First-order decay coefficient for the ROS-like channel, in model units. & Fixed phenomenological reference setting retained during calibration and transfer. \\
+$\lambda_{\mathrm{cyto}}$ & 0.001 & First-order decay coefficient for the cytokine-like channel, in model units. & Inherited reference setting carried unchanged through the half-field calibration and all transfer geometries. \\
+$E_{\max,\mathrm{ROS}}$ & 1.5 & Saturation amplitude of the ROS-like dose-driven source term. & Fixed phenomenological reference setting used during calibration; not re-tuned by geometry. \\
+$E_{\max,\mathrm{cyto}}$ & 0.8 & Saturation amplitude of the cytokine-like dose-driven source term. & Fixed phenomenological reference setting used during calibration; not re-tuned by geometry. \\
+$\gamma$ & 0.35 & Controls how quickly the source term approaches saturation as physical dose increases. & Inherited reference setting retained during calibration so the biology rule remained fixed across the cohort. \\
+$w_{\mathrm{ROS}}$ & 0.4 & Weight assigned to the ROS-like concentration when forming the cumulative non-local hazard $H(\mathbf{x})$. & Fixed transfer weight retained from the reference configuration; not independently fitted. \\
+$w_{\mathrm{cyto}}$ & 0.4 & Weight assigned to the cytokine-like concentration when forming the cumulative non-local hazard $H(\mathbf{x})$. & Fixed transfer weight retained from the reference configuration; not independently fitted. \\
+$s$ & $2.94\times10^{-3}$ & Global transfer coefficient mapping cumulative non-local hazard to added biological kill in the final immune-free survival model. & Internally calibrated in the one-dimensional half-field assay to satisfy the three survival anchors listed in the caption. This was the only coefficient fitted in the final immune-free revision. \\
+$M_{\mathrm{type}}(\mathbf{x},k)$ & 2.0 for tumour cytokine source; 1 otherwise & Species- and tissue-class emission modifier applied in the source term. & Fixed transfer modifier used to increase tumour-associated cytokine signalling. Not fitted to the half-field anchors. \\
+$M_{\mathrm{oxygen}}(\mathbf{x},k)$ & 1 outside hypoxia; 0.12 for ROS and 2.7 for cytokine within hypoxia & Species-specific emission modifier representing a phenomenological hypoxic state rather than an oxygen transport solution. & Fixed state modifier applied after calibration. Not independently fitted to the half-field anchors. \\
+$u_{\mathrm{ROS}}(\mathbf{x})$ & 0.05 in arterial and venous masks & Vessel-localized first-order uptake coefficient for the ROS-like channel. & Anatomy-dependent sink modifier introduced in the vascular-sink analyses. Not obtained from the half-field calibration. \\
+$u_{\mathrm{cyto}}(\mathbf{x})$ & 0.70 in arterial masks; 0.90 in venous masks & Vessel-localized first-order uptake coefficient for the cytokine-like channel. & Anatomy-dependent sink modifier introduced in the vascular-sink analyses. Not obtained from the half-field calibration. \\
+Temporal integration & 400 steps; $\Delta t=0.12$ & Numerical schedule used to integrate the signalling fields and accumulate $H(\mathbf{x})$. & Solver setting chosen for stable post-processing. Not a biological calibration parameter. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+\subsection{Supplementary Oxygen-modulated sensitivity analysis \texorpdfstring{$(M_{\mathrm{oxygen}}\neq 1)$}{(Moxygen not equal 1)}}
+
+The primary revision analysis was intentionally oxygen-neutral, with $M_{\mathrm{oxygen}}=1$ everywhere, so that the main results did not depend on an unresolved oxygen-transport model. As a supplementary sensitivity analysis, we also evaluated a non-unity oxygen-modulated branch in which the emission source term retained the same fixed transferred coefficient set but applied species-specific modifiers within the pre-defined synthetic hypoxia mask. Outside the hypoxia mask, $M_{\mathrm{oxygen}}=1$ for both species. Inside the hypoxia mask, the ROS-like channel was downscaled and the cytokine-like channel was upscaled:
+\begin{equation}
+M_{\mathrm{oxygen}}(\mathbf{x},\mathrm{ROS}) =
+\begin{cases}
+0.12, & \mathbf{x}\in\Omega_{\mathrm{hypoxia}},\\
+1, & \mathbf{x}\notin\Omega_{\mathrm{hypoxia}},
+\end{cases}
+\end{equation}
+\begin{equation}
+M_{\mathrm{oxygen}}(\mathbf{x},\mathrm{cyto}) =
+\begin{cases}
+2.7, & \mathbf{x}\in\Omega_{\mathrm{hypoxia}},\\
+1, & \mathbf{x}\notin\Omega_{\mathrm{hypoxia}}.
+\end{cases}
+\end{equation}
+This branch was included only as a bounded phenomenological sensitivity test. It was not intended to represent solved oxygen transport, measured tumour oxygenation, or validated hypoxia-dependent signalling kinetics.
+
+No other model components were re-tuned for this supplementary branch. The same transferred non-local framework, the same physical dose cohort, the same endpoint set, and the same vascular-sink comparisons were retained so that the effect of allowing $M_{\mathrm{oxygen}}\neq 1$ could be isolated. By construction, the oxygen-neutral primary branch and the explicit $M_{\mathrm{oxygen}}=1$ ablation were identical, confirming that any observed differences in this supplementary analysis arose from the non-unity hypoxia modifiers rather than from a hidden implementation change.
+
+Allowing $M_{\mathrm{oxygen}}\neq 1$ increased the magnitude of biological reinterpretation relative to the oxygen-neutral primary model. In the 10-case cohort, the mean PVDR-like ratio decreased from 1.817 under physical-dose interpretation to 1.478 in the no-sink oxygen-modulated branch and 1.436 in the with-sink oxygen-modulated branch. Mean peri-GTV 0--5~mm burden increased from 7.219~Gy physically to 20.612~Gy without sink and 19.926~Gy with sink, while mean brainstem $D_2$ increased from 11.454~Gy physically to 28.397~Gy and 27.948~Gy, respectively. Under this oxygen-modulated sensitivity branch, rank changes relative to the physical-only ordering were observed in 6/10 cases for no-sink versus physical-only and 8/10 cases for with-sink versus physical-only, with 4/10 shifts between with-sink and no-sink. Biology-added brainstem-adjacent burden flags were present in 5/10 cases.
+
+Despite this amplification, the qualitative interpretation of the framework did not change. The dominant effect still arose from adding non-local biology, while the anatomical vascular sink remained a secondary spatial modifier. Full-cohort robustness testing of the oxygen-modulated branch showed complete sign stability for the baseline endpoint and PVDR-like ratio reinterpretation directions, with a mean probability of retaining the same with-sink rank of 0.846 under bounded biology-parameter perturbation. The supplementary $M_{\mathrm{oxygen}}\neq 1$ analysis therefore supports a narrower conclusion: oxygen-state assumptions can materially affect the magnitude of biological reinterpretation, but they do not overturn the main finding that non-local biology alters endpoint interpretation more strongly than the vascular sink alters comparative plan ranking.
+
+These results are reported only as a sensitivity case. They should not be interpreted as validation of a hypoxia model, nor as evidence that the oxygen-modulated branch is more biologically correct than the oxygen-neutral primary analysis. Their purpose is to show that the principal framework conclusion is not restricted to the special case $M_{\mathrm{oxygen}}=1$, while also making clear that the size of the reinterpretation remains conditional on the chosen phenomenological oxygen-state assumptions.
+\subsection{Table S6. Monte Carlo repeat-run uncertainty}
+\begin{table}[H]
+\centering
+\caption{Monte Carlo repeat-run uncertainty summary from the revised 10-case repeat-run package. Three random seeds and three history scales were evaluated for each case (9 repeated transport realizations per case). Reported values are coefficients of variation (CV) for the physical-dose endpoints derived from repeated TOPAS transport.}
+\label{tab:s6_mc_repeat_run_uncertainty}
+\footnotesize
+\begin{tabular}{lccc}
+\toprule
+Endpoint & Units & Median CV (\%) & Range across 10 cases (\%) \\
+\midrule
+PTV $D_{95}$ & Gy & $\textless$0.001 & all $\textless$0.001 \\
+PVDR & ratio & 0.952 & 0.620--1.658 \\
+Peri-GTV 0--5 mm mean & Gy & 1.002 & 0.482--1.713 \\
+Peri-GTV 5--15 mm mean & Gy & 1.141 & 0.769--2.001 \\
+Spinal cord $D_2$ & Gy & 2.617 & 0.860--3.961 \\
+Brainstem $D_2$ & Gy & 2.379 & 0.924--5.087 \\
+Right parotid mean & Gy & 2.730 & 1.283--4.125 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\subsection{Table S7. Sink rank uncertainty}
+\begin{table}[H]
+\centering
+\caption{Sink rank uncertainty in the revised full-cohort repeat-run analysis. The nominal shift is the baseline with-sink minus no-sink rank change. Simulated mean shift and $P(\neq0)$ were derived from the repeated uncertainty package. No case met the noise-qualified sink-rank-change criterion.}
+\label{tab:s7_sink_rank_uncertainty}
+\footnotesize
+\begin{tabular}{lcccccc}
+\toprule
+Case & No-sink rank & With-sink rank & Nominal shift & Mean simulated shift & $P(\neq 0)$ & Noise-qualified \\
+\midrule
+case01 & 1 & 1 & 0 & 0.000 & 0.000 & No \\
+case02 & 3 & 2 & -1 & -0.116 & 0.491 & No \\
+case03 & 8 & 8 & 0 & 0.326 & 0.458 & No \\
+case04 & 4 & 4 & 0 & 0.000 & 0.000 & No \\
+case05 & 5 & 6 & 1 & 0.860 & 0.860 & No \\
+case06 & 6 & 5 & -1 & -0.868 & 0.860 & No \\
+case07 & 2 & 3 & 1 & 0.116 & 0.491 & No \\
+case08 & 7 & 7 & 0 & 0.013 & 0.013 & No \\
+case09 & 9 & 9 & 0 & -0.330 & 0.456 & No \\
+case10 & 10 & 10 & 0 & 0.000 & 0.000 & No \\
+\bottomrule
+\end{tabular}
+\end{table}
+\subsection{Table S8. Smoothing-kernel sensitivity}
+\begin{table}[H]
+\centering
+\caption{Smoothing-kernel sensitivity in the revised three-case kernel sweep (case03, case04, case06). Mean $|\Delta_{\mathrm{biology}}|$ denotes the mean absolute no-sink minus physical shift across the fixed primary endpoint set, and mean $|\Delta_{\mathrm{sink}}|$ denotes the mean absolute with-sink minus no-sink shift across the same endpoint set. These are internal comparative summary scores used only to compare relative biology-versus-sink magnitude within the kernel sweep.}
+\label{tab:s8_smoothing_kernel_sensitivity}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\linewidth}{c c c c c c X}
+\toprule
+Kernel $\sigma$ (mm) & Cases & Brainstem flags & Mean $|\Delta_{\mathrm{biology}}|$ & Mean $|\Delta_{\mathrm{sink}}|$ & Sink/biology ratio & Primary conclusion \\
+\midrule
+2.0 & 3 & 0/3 & 190.308 & 0.382 & 0.019 & Does not survive cleanly \\
+4.0 & 3 & 2/3 & 9.265 & 0.651 & 0.070 & Survives \\
+6.0 & 3 & 2/3 & 10.243 & 0.672 & 0.067 & Survives \\
+\bottomrule
+\end{tabularx}
+\end{table}
+\subsection{Table S9. Cohort-level sink-strength sensitivity table}
+\begin{table}[H]
+\centering
+\caption{Cohort-level uptake-strength sensitivity in the oxygen-neutral primary model. Biology shift magnitude denotes the mean absolute no-sink minus physical shift across the four sink-sweep metrics (PVDR-like ratio, peri-GTV 0--5 mm mean, brainstem $D_2$, and right parotid mean). Sink shift magnitude denotes the mean absolute with-sink minus no-sink shift across the same metrics at each uptake scale. These are internal comparative summary scores and are reported only as uptake-strength sensitivity, not as anatomical validation.}
+\label{tab:s9_uptake_strength_sensitivity}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\linewidth}{c c c c X}
+\toprule
+Uptake scale & Biology shift magnitude & Sink shift magnitude & Sink/biology ratio & Interpretation \\
+\midrule
+0.0 & 9.436 & 0.000 & 0.000 & Non-local biology remains present without vascular uptake. \\
+0.5 & 9.436 & 0.297 & 0.031 & Weak sink modulation; biology remains dominant. \\
+1.0 & 9.436 & 0.364 & 0.039 & Nominal uptake gives a measurable but secondary sink effect. \\
+2.0 & 9.436 & 0.413 & 0.044 & Stronger uptake increases sink magnitude, but it remains much smaller than the biology-only shift. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+\end{document}

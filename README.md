@@ -1,84 +1,37 @@
-# SFRT Biological Risk Analysis Reproducibility Package
+# SFRT biological risk-analysis reproducibility bundle
 
-This repository gathers the source code, figure-generation scripts, manuscript-facing figure outputs, and the curated result artifacts used for the current SFRT submission package.
+This repository is the clean GitHub-facing reproducibility package for the PMB revision workflow.
 
-This repository is provided for research reproducibility. The biological outputs are model-derived effective-dose-like scores and relative assay-like proxies. They are not delivered absorbed dose, clinical toxicity predictions, or treatment-planning recommendations.
+It exposes descriptive public entry points, descriptive manuscript-facing result directories, and the current publication-ready figure set, while preserving the original implementation scripts in a provenance layer so the scientific workflow remains reproducible.
 
-## Structure
-- `configs/` — reviewer-facing YAML snapshots of the locked biology, vascular-sink, TOPAS, and uncertainty settings used in the PMB submission.
-- `examples/` — small runnable examples that demonstrate biological reinterpretation, vascular-sink comparison, and endpoint extraction from the archived public result tables.
-- `project/scripts/` — project scripts, run wrappers, renderers, and analysis utilities. Start with `project/scripts/00_START_HERE.md`, then use `project/scripts/01_REPRODUCE_PMB.sh` and `project/scripts/02_SCRIPT_MAP.md`.
-- `project/topas/` — TOPAS templates.
-- `project/data/` — supporting input data.
-- `project/public_results/` — copied manuscript-facing summary tables, quick assessments, and selected result assets for public sharing.
-- `manuscript/parameter_table.csv` — consolidated reviewer-facing parameter table for the PMB submission.
-- `manuscript/pmb_reproducibility_guide.md` — direct rerun guide for the manuscript workflows and outputs.
-- `manuscript/figure_manifest.md` — manifest for the submission figures and their generator/source assets.
-- `manuscript/endpoint_manifest.csv` — definitions for the primary, supplemental, and assay-like outputs reported in the paper.
-- `figures/PMB_SFRT_publishable_source_clean/` — cleaned manuscript figure bundle.
-- `manuscript/SFRT_Submission.pdf` — current submission PDF.
+## Repository structure
 
-## Important note
-This is a portable public-clean package. Machine-specific symbolic links and oversized raw transport intermediates have been removed. The repository keeps the code, final figures, manuscript PDF, and manuscript-facing summary outputs needed to inspect the study and regenerate the paper workflow, while excluding bulky case-level dose cubes, binary material-tag files, and large volume arrays that are not suitable for standard GitHub hosting.
+- `project/scripts/` — clean public wrappers and verification scripts
+- `project/scripts/internal_legacy/` — preserved original implementation scripts
+- `project/public_results/` — clean manuscript-facing result tables and summaries
+- `project/data/` — small supporting input files
+- `project/topas/` — TOPAS templates
+- `figures/manuscript_clean/` — publication-ready figures
+- `manuscript/` — manuscript PDF plus reviewer-facing tables and guides
+- `bundle_manifest.tsv` — source-to-bundle mapping for this package
 
-The principal excluded raw artifacts were the largest transport-volume products and repeat-run intermediates, including the original `phase11c_assay_volumes.npz`, `phase12_mc_coupled_volumes.npz`, case-level combined physical dose grids, and repeated-subset raw dose exports. These can be regenerated from the included scripts.
+## Quick start
 
-The `project/public_results/` directory is intentionally curated rather than exhaustive. It contains the high-signal manuscript-facing summaries from the benchmark, cohort, uncertainty, and falsification analyses, while leaving raw transport scratch space out of the public repository.
-
-Current TOPAS defaults for the benchmark and cohort transport scripts are `1×10^6` histories for the background/base component and `2×10^6` histories for the vertex component.
-
-
-
-> **Biology-informed reinterpretation of lattice radiotherapy using non-local bystander signalling and anatomy-aware vascular sink modelling**
-
-The public bundle is **script-first**. Manuscript reproduction does not depend on a legacy package CLI. The central submission workflows in this repository cover:
-
-1. synthetic phantom generation,
-2. lattice candidate and retained-vertex generation,
-3. TOPAS input and template generation,
-4. biological reaction-diffusion post-processing,
-5. physical and biological endpoint extraction,
-6. vascular-sink falsification controls, and
-7. figure and table regeneration for the manuscript.
-
-### Minimal environment setup
 ```bash
-git clone https://github.com/kair98-boop/SFRT.git
-cd SFRT
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements-repro.txt
+bash project/scripts/reproduce_manuscript.sh --mode public
 ```
 
-### Core manuscript rerun sequence
+## Full rerun
+
 ```bash
-python project/scripts/run_phase32_site_specific_template_phantoms.py
-python project/scripts/run_phase33_phase32_topas_cohort.py --topas-bin /path/to/topas --g4-data-dir /path/to/GEANT4
-python project/scripts/run_phase34_phase32_bio_cohort.py
-python project/scripts/run_phase35_subset_repeat_uncertainty.py
-python project/scripts/run_phase37a_vessel_falsification_cohort.py
-python project/scripts/run_phase37b_vessel_falsification_uncertainty.py
-python project/scripts/render_pmb_source_clean_figures.py
+TOPAS_BIN=/path/to/topas \
+G4_DATA_DIR=/path/to/GEANT4 \
+bash project/scripts/reproduce_manuscript.sh --mode full
 ```
 
-### Reviewer-facing guides and manifests
-- `manuscript/pmb_reproducibility_guide.md`
-- `manuscript/parameter_table.csv`
-- `manuscript/figure_manifest.md`
-- `manuscript/endpoint_manifest.csv`
-- `configs/biology_parameters.yaml`
-- `configs/vascular_sink_parameters.yaml`
-- `configs/topas_case_parameters.yaml`
-- `configs/uncertainty_parameters.yaml`
+## Reproducibility note
 
-## Main reproduction entry points
-- `project/scripts/run_phase30_phase28_topas_true_lattice_delivery.py`
-- `project/scripts/run_phase33_phase32_topas_cohort.py`
-- `project/scripts/run_phase34_phase32_bio_cohort.py`
-- `project/scripts/run_phase35_subset_repeat_uncertainty.py`
-- `project/scripts/run_phase36a_vessel_falsification_cohort.py`
-- `project/scripts/run_phase36b_vessel_falsification_uncertainty.py`
-- `project/scripts/run_phase37a_vessel_falsification_cohort.py`
-- `project/scripts/run_phase37b_vessel_falsification_uncertainty.py`
-- `project/scripts/render_pmb_source_clean_figures.py`
-- `project/scripts/run_high_history_paper_refresh.sh`
+The clean public layer avoids internal stage labels in the main review surface. Where historical implementation names were necessary for script stability, they were preserved inside `project/scripts/internal_legacy/` and kept out of the first-pass review path.

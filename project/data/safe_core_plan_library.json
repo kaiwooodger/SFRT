@@ -1,0 +1,69 @@
+{
+  "plans": [
+    {
+      "plan_id": "safe_core_plan01",
+      "strategy": "phase25_safe_core_library",
+      "heuristic_score": 22.1963,
+      "spots_mm": [
+        [15.0, -3.0, -9.75],
+        [40.5, -39.0, 11.25]
+      ],
+      "layout_debug": {
+        "clinical_note": "Two-vertex safe-core pair with superior primary-core point and inferior posterior-lateral nodal point.",
+        "vertex_count": 2
+      }
+    },
+    {
+      "plan_id": "safe_core_plan02",
+      "strategy": "phase25_safe_core_library",
+      "heuristic_score": 21.9538,
+      "spots_mm": [
+        [15.0, -3.0, -9.75],
+        [34.5, -43.5, -11.25]
+      ],
+      "layout_debug": {
+        "clinical_note": "Two-vertex safe-core pair spanning superior primary-core and inferior posterior nodal compartment.",
+        "vertex_count": 2
+      }
+    },
+    {
+      "plan_id": "safe_core_plan03",
+      "strategy": "phase25_safe_core_library",
+      "heuristic_score": 21.1345,
+      "spots_mm": [
+        [15.0, -3.0, -9.75],
+        [40.5, -33.0, 11.25]
+      ],
+      "layout_debug": {
+        "clinical_note": "Two-vertex safe-core pair with a slightly more cranial inferior nodal hotspot than plan01.",
+        "vertex_count": 2
+      }
+    },
+    {
+      "plan_id": "safe_core_plan04",
+      "strategy": "phase25_safe_core_library",
+      "heuristic_score": 20.8764,
+      "spots_mm": [
+        [13.5, -7.5, -8.25],
+        [42.0, -40.5, 11.25]
+      ],
+      "layout_debug": {
+        "clinical_note": "Two-vertex safe-core pair using the alternate superior admissible point and the deepest inferior lateral-safe point.",
+        "vertex_count": 2
+      }
+    },
+    {
+      "plan_id": "safe_core_plan05",
+      "strategy": "phase25_safe_core_library",
+      "heuristic_score": 20.6366,
+      "spots_mm": [
+        [13.5, -7.5, -8.25],
+        [33.0, -43.5, -11.25]
+      ],
+      "layout_debug": {
+        "clinical_note": "Two-vertex safe-core pair using the alternate superior point and a posterior-inferior nodal point with negative-z alignment.",
+        "vertex_count": 2
+      }
+    }
+  ]
+}

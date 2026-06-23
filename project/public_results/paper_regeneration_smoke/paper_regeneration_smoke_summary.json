@@ -1,0 +1,23 @@
+{
+  "status": "paper-regeneration passed; full TOPAS rerun not included",
+  "figureR2_match": true,
+  "figureRS1_match": true,
+  "rank_audit": {
+    "max_score_diff": 0.0,
+    "max_rank_diff": 0
+  },
+  "effective_dose_sanity": {
+    "max_abs_deff_minus_dphys_when_H0": 1.9073486328125e-06,
+    "monotonic_deff_with_increasing_H": true
+  },
+  "headline_checks": {
+    "primary_with_sink_vs_physical": "6/10",
+    "primary_no_sink_vs_physical": "5/10",
+    "with_sink_vs_no_sink": "2/10",
+    "primary_brainstem_flags": "2/10",
+    "endpoint_deltas_above_band": "65/70",
+    "noise_qualified_rank_changes": "0/10",
+    "stable_smoothing_range": "4,6",
+    "unstable_smoothing_range": "2"
+  }
+}

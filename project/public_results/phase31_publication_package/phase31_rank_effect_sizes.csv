@@ -1,4 +1,0 @@
-metric,label,n,mean_shift,mean_shift_ci_lower,mean_shift_ci_upper,mean_absolute_shift,mean_absolute_shift_ci_lower,mean_absolute_shift_ci_upper,fraction_nonzero,cohens_dz
-no_sink_vs_physical_shift,No-sink rank minus physical rank,5,0.0,-0.8,0.8,0.8,0.4,1.0,0.8,0.0
-with_sink_vs_physical_shift,With-sink rank minus physical rank,5,0.0,-1.0,0.8,0.8,0.2,1.4,0.6,0.0
-with_sink_vs_no_sink_shift,With-sink rank minus no-sink rank,5,0.0,-0.8,0.8,0.8,0.4,1.0,0.8,0.0

@@ -3,7 +3,7 @@ physics,background histories,histories_base,1000000,histories per run,project/sc
 physics,vertex histories,histories_vertex,2000000,histories per run,project/scripts/run_phase33_phase32_topas_cohort.py,Default TOPAS histories for focused vertex component
 physics,threads,,4,threads,project/scripts/run_phase33_phase32_topas_cohort.py,Default TOPAS thread count
 physics,seed,,33,integer,project/scripts/run_phase33_phase32_topas_cohort.py,Default TOPAS seed
-physics,SAD,,260.0,mm,project/scripts/run_phase33_phase32_topas_cohort.py,Source-to-axis distance surrogate
+physics,source-to-isocentre distance,,260.0,mm,project/scripts/run_phase33_phase32_topas_cohort.py,Fixed distance used in the coplanar beam construction
 physics,base angles,,0;30;60;90;120;150;180;210;240;270;300;330,degrees,project/scripts/run_phase33_phase32_topas_cohort.py,Coplanar base-component directions
 physics,vertex angles,,0;60;120;180;240;300,degrees,project/scripts/run_phase33_phase32_topas_cohort.py,Coplanar vertex-component directions
 physics,base margin,,4.0,mm,project/scripts/run_phase33_phase32_topas_cohort.py,Margin for broad component aperture generation
@@ -24,28 +24,26 @@ planning,vertex OAR clearance,,10.0,mm,project/scripts/run_phase32_site_specific
 planning,vertex search step,,2.0,mm,project/scripts/run_phase32_site_specific_template_phantoms.py,Local search step for accepted vertices
 planning,vertex search extent,,8.0,mm,project/scripts/run_phase32_site_specific_template_phantoms.py,Local search extent for accepted vertices
 planning,min centre spacing,,16.0,mm,project/scripts/run_phase32_site_specific_template_phantoms.py,Minimum retained inter-vertex spacing
-biology,LQ alpha,α,0.03,Gy^-1,project/public_results/phase37_methods_overleaf_bundle/tables/table04_biology_parameters.tex,Locked biology parameter
-biology,LQ beta,β,0.003,Gy^-2,project/public_results/phase37_methods_overleaf_bundle/tables/table04_biology_parameters.tex,Locked biology parameter
-biology,ROS diffusion,D_ROS,0.8,arbitrary diffusion units,project/scripts/run_phase15_detailed_headneck_bioaware.py,Locked biology parameter
-biology,cytokine diffusion,D_cyto,1.2,arbitrary diffusion units,project/scripts/run_phase15_detailed_headneck_bioaware.py,Locked biology parameter
-biology,ROS decay,λ_ROS,0.2,arbitrary inverse time units,project/scripts/run_phase15_detailed_headneck_bioaware.py,Locked biology parameter
-biology,cytokine decay,λ_cyto,0.001,arbitrary inverse time units,project/scripts/run_phase15_detailed_headneck_bioaware.py,Locked biology parameter
-biology,ROS emission maximum,Emax_ROS,1.5,relative units,project/public_results/phase37_methods_overleaf_bundle/tables/table04_biology_parameters.tex,Locked biology parameter
-biology,cytokine emission maximum,Emax_cyto,0.8,relative units,project/public_results/phase37_methods_overleaf_bundle/tables/table04_biology_parameters.tex,Locked biology parameter
-biology,dose-to-emission slope,γ,0.35,Gy^-1,project/scripts/run_phase15_detailed_headneck_bioaware.py,Locked biology parameter
-biology,non-local scaling,s,0.0029365813,dimensionless,project/scripts/run_phase15_detailed_headneck_bioaware.py,Scaling from cumulative hazard to survival penalty
-biology,ROS hazard weight,w_ROS,0.4,dimensionless,project/scripts/run_phase15_detailed_headneck_bioaware.py,Channel weight in integrated hazard
-biology,cytokine hazard weight,w_cyto,0.4,dimensionless,project/scripts/run_phase15_detailed_headneck_bioaware.py,Channel weight in integrated hazard
-biology,immune hazard weight,w_immune,0.2,dimensionless,project/scripts/run_phase15_detailed_headneck_bioaware.py,Global immune-penalty weight
-biology,immune maximum penalty,,1.0,dimensionless,project/scripts/bystander_multispecies_pde_solver.py,Upper bound in systemic immune penalty term
-biology,immune half-volume,,5.0,cm^3,project/scripts/bystander_multispecies_pde_solver.py,Half-saturation volume for immune penalty
+biology,LQ alpha,α,0.03,Gy^-1,project/scripts/phase37_bio_model_params.py,Local LQ survival coefficient used in all physical-to-biological conversions
+biology,LQ beta,β,0.003,Gy^-2,project/scripts/phase37_bio_model_params.py,Local LQ survival coefficient used in all physical-to-biological conversions
+biology,ROS diffusion,D_ROS,0.8,arbitrary diffusion units,project/scripts/phase37_bio_model_params.py,Inherited phenomenological reference setting
+biology,cytokine diffusion,D_cyto,1.2,arbitrary diffusion units,project/scripts/phase37_bio_model_params.py,Inherited phenomenological reference setting
+biology,ROS decay,λ_ROS,0.2,arbitrary inverse time units,project/scripts/phase37_bio_model_params.py,Inherited phenomenological reference setting
+biology,cytokine decay,λ_cyto,0.001,arbitrary inverse time units,project/scripts/phase37_bio_model_params.py,Inherited phenomenological reference setting
+biology,ROS emission maximum,Emax_ROS,1.5,relative units,project/scripts/phase37_bio_model_params.py,Inherited phenomenological reference setting
+biology,cytokine emission maximum,Emax_cyto,0.8,relative units,project/scripts/phase37_bio_model_params.py,Inherited phenomenological reference setting
+biology,dose-to-emission saturation,γ,0.35,Gy^-1,project/scripts/phase37_bio_model_params.py,Inherited phenomenological reference setting
+biology,non-local transfer coefficient,s,0.00294,dimensionless,project/scripts/phase37_bio_model_params.py,Internally calibrated transfer coefficient carried forward from the simplified calibration stage
+biology,ROS hazard weight,w_ROS,0.4,dimensionless,project/scripts/phase37_bio_model_params.py,Relative ROS-like contribution to cumulative non-local hazard
+biology,cytokine hazard weight,w_cyto,0.4,dimensionless,project/scripts/phase37_bio_model_params.py,Relative cytokine-like contribution to cumulative non-local hazard
+biology,immune hazard weight,w_immune,0.0,dimensionless,project/scripts/phase37_bio_model_params.py,Removed from the main revision model and retained only for optional supplementary sensitivity tests
 biology,PDE steps,,400,steps,project/public_results/phase25_safe_core/phase25_config.json,Temporal integration steps
 biology,time step,Δt,0.12,arbitrary time units,project/public_results/phase25_safe_core/phase25_config.json,Temporal integration increment
 biology,final integration time,t_final,48.0,arbitrary time units,derived from pde_steps and pde_dt,Computed as steps × dt
 biology,boundary condition,,nearest-mode zero-flux approximation,,project/scripts/bystander_pde_solver.py,Finite-difference Laplacian uses ndimage mode=\"nearest\"
 vascular,tumour cytokine multiplier,,2.0,dimensionless,project/public_results/phase25_safe_core/phase25_config.json,Type modifier inside tumour voxels
-vascular,hypoxic ROS scale,,0.12,dimensionless,project/public_results/phase25_safe_core/phase25_config.json,Oxygen modifier inside hypoxic voxels
-vascular,hypoxic cytokine multiplier,,2.7,dimensionless,project/public_results/phase25_safe_core/phase25_config.json,Oxygen modifier inside hypoxic voxels
+vascular,hypoxic ROS scale,M_oxygen ROS,1.0,dimensionless,project/scripts/phase37_bio_model_params.py,Primary oxygen-neutral model sets M_oxygen to 1 everywhere; oxygen-modulated sensitivity reruns used 0.12 inside the synthetic hypoxic mask
+vascular,hypoxic cytokine multiplier,M_oxygen cyto,1.0,dimensionless,project/scripts/phase37_bio_model_params.py,Primary oxygen-neutral model sets M_oxygen to 1 everywhere; oxygen-modulated sensitivity reruns used 2.7 inside the synthetic hypoxic mask
 vascular,arterial ROS uptake,,0.05,dimensionless uptake,project/public_results/phase25_safe_core/phase25_config.json,Applied in artery mask voxels
 vascular,arterial cytokine uptake,,0.70,dimensionless uptake,project/public_results/phase25_safe_core/phase25_config.json,Applied in artery mask voxels
 vascular,venous ROS uptake,,0.05,dimensionless uptake,project/public_results/phase25_safe_core/phase25_config.json,Applied in vein mask voxels

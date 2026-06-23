@@ -1,0 +1,53 @@
+{
+  "phase33_root": "/Users/kw/Documents/Playground/vhee_topas/runs/phase33_phase32_topas_cohort",
+  "phase32_root": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/public_results/phase32_site_specific_cohort_regenerated",
+  "phase25_config": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/public_results/revision_checks_20260616/step05_phase25_no_moxygen/phase25_config.json",
+  "samples": 12,
+  "seed": 38,
+  "sink_scales": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5,
+    2.0
+  ],
+  "case_ids": [
+    "case01",
+    "case02",
+    "case03",
+    "case04",
+    "case05",
+    "case06",
+    "case07",
+    "case08",
+    "case09",
+    "case10"
+  ],
+  "base_params": {
+    "alpha": 0.03,
+    "beta": 0.003,
+    "diffusion_ros": 0.8,
+    "diffusion_cyto": 1.2,
+    "decay_ros": 0.2,
+    "decay_cyto": 0.001,
+    "emax_ros": 1.5,
+    "emax_cyto": 0.8,
+    "gamma": 0.35,
+    "scaling_factor": 0.0029365813,
+    "weight_ros": 0.4,
+    "weight_cyto": 0.4,
+    "weight_immune": 0.0,
+    "tumor_cytokine_multiplier": 2.0,
+    "hypoxic_ros_scale": 1.0,
+    "hypoxic_cytokine_multiplier": 1.0,
+    "artery_ros_uptake": 0.05,
+    "artery_cyto_uptake": 0.7,
+    "vein_ros_uptake": 0.05,
+    "vein_cyto_uptake": 0.9,
+    "pde_steps": 400,
+    "pde_dt": 0.12
+  }
+}

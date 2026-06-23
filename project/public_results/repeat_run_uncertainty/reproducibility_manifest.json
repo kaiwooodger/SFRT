@@ -1,0 +1,137 @@
+{
+  "phase": 35,
+  "description": "Repeated subset uncertainty package for the Phase 32/33/34 site-specific cohort.",
+  "script": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/scripts/run_phase35_subset_repeat_uncertainty.py",
+  "repo_root": "/Users/kw/Desktop/SFRT_repo_docs_fix/project",
+  "selected_case_ids": [
+    "case01",
+    "case02",
+    "case03",
+    "case04",
+    "case05",
+    "case06",
+    "case07",
+    "case08",
+    "case09",
+    "case10"
+  ],
+  "input_roots": {
+    "phase32_root": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/public_results/phase32_site_specific_cohort_regenerated",
+    "baseline_phase33_root": "/Users/kw/Documents/Playground/vhee_topas/runs/phase33_phase32_topas_cohort",
+    "baseline_phase34_root": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/public_results/phase33_34_cohort/phase34_bio_cohort_revision_full",
+    "phase25_run_root": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/public_results/phase25_safe_core",
+    "phase26_run_root": "/Users/kw/Documents/Playground/vhee_topas/runs/linac_6mv_headneck_detailed_voxel_lattice_sfrt_phase25_safe_core_plan_library_1e5/phase26_vascular_sink_ablation"
+  },
+  "output_root": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/public_results/revision_checks_20260616/step02_phase35_fullcohort",
+  "repeat_settings": {
+    "seeds": [
+      11,
+      22,
+      33
+    ],
+    "history_scales": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "histories_base": 1000000,
+    "histories_spot": 2000000,
+    "topas_bin": "/Users/kw/shellScripts/topas",
+    "g4_data_dir": "/Applications/GEANT4",
+    "threads": 4,
+    "dose_smoothing_mm": 6.0
+  },
+  "bootstrap": {
+    "samples": 2000,
+    "seed": 35
+  },
+  "rank_simulation_samples": 2000,
+  "repeat_runs": [
+    {
+      "repeat_id": "seed11_hist0p5",
+      "seed": 11,
+      "history_scale": 0.5,
+      "histories_base": 500000,
+      "histories_spot": 1000000,
+      "phase33_root": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/public_results/revision_checks_20260616/step02_phase35_fullcohort/repeat_runs/seed11_hist0p5/phase33",
+      "phase34_root": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/public_results/revision_checks_20260616/step02_phase35_fullcohort/repeat_runs/seed11_hist0p5/phase34_bio_cohort"
+    },
+    {
+      "repeat_id": "seed11_hist1p0",
+      "seed": 11,
+      "history_scale": 1.0,
+      "histories_base": 1000000,
+      "histories_spot": 2000000,
+      "phase33_root": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/public_results/revision_checks_20260616/step02_phase35_fullcohort/repeat_runs/seed11_hist1p0/phase33",
+      "phase34_root": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/public_results/revision_checks_20260616/step02_phase35_fullcohort/repeat_runs/seed11_hist1p0/phase34_bio_cohort"
+    },
+    {
+      "repeat_id": "seed11_hist2p0",
+      "seed": 11,
+      "history_scale": 2.0,
+      "histories_base": 2000000,
+      "histories_spot": 4000000,
+      "phase33_root": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/public_results/revision_checks_20260616/step02_phase35_fullcohort/repeat_runs/seed11_hist2p0/phase33",
+      "phase34_root": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/public_results/revision_checks_20260616/step02_phase35_fullcohort/repeat_runs/seed11_hist2p0/phase34_bio_cohort"
+    },
+    {
+      "repeat_id": "seed22_hist0p5",
+      "seed": 22,
+      "history_scale": 0.5,
+      "histories_base": 500000,
+      "histories_spot": 1000000,
+      "phase33_root": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/public_results/revision_checks_20260616/step02_phase35_fullcohort/repeat_runs/seed22_hist0p5/phase33",
+      "phase34_root": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/public_results/revision_checks_20260616/step02_phase35_fullcohort/repeat_runs/seed22_hist0p5/phase34_bio_cohort"
+    },
+    {
+      "repeat_id": "seed22_hist1p0",
+      "seed": 22,
+      "history_scale": 1.0,
+      "histories_base": 1000000,
+      "histories_spot": 2000000,
+      "phase33_root": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/public_results/revision_checks_20260616/step02_phase35_fullcohort/repeat_runs/seed22_hist1p0/phase33",
+      "phase34_root": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/public_results/revision_checks_20260616/step02_phase35_fullcohort/repeat_runs/seed22_hist1p0/phase34_bio_cohort"
+    },
+    {
+      "repeat_id": "seed22_hist2p0",
+      "seed": 22,
+      "history_scale": 2.0,
+      "histories_base": 2000000,
+      "histories_spot": 4000000,
+      "phase33_root": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/public_results/revision_checks_20260616/step02_phase35_fullcohort/repeat_runs/seed22_hist2p0/phase33",
+      "phase34_root": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/public_results/revision_checks_20260616/step02_phase35_fullcohort/repeat_runs/seed22_hist2p0/phase34_bio_cohort"
+    },
+    {
+      "repeat_id": "seed33_hist0p5",
+      "seed": 33,
+      "history_scale": 0.5,
+      "histories_base": 500000,
+      "histories_spot": 1000000,
+      "phase33_root": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/public_results/revision_checks_20260616/step02_phase35_fullcohort/repeat_runs/seed33_hist0p5/phase33",
+      "phase34_root": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/public_results/revision_checks_20260616/step02_phase35_fullcohort/repeat_runs/seed33_hist0p5/phase34_bio_cohort"
+    },
+    {
+      "repeat_id": "seed33_hist1p0",
+      "seed": 33,
+      "history_scale": 1.0,
+      "histories_base": 1000000,
+      "histories_spot": 2000000,
+      "phase33_root": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/public_results/revision_checks_20260616/step02_phase35_fullcohort/repeat_runs/seed33_hist1p0/phase33",
+      "phase34_root": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/public_results/revision_checks_20260616/step02_phase35_fullcohort/repeat_runs/seed33_hist1p0/phase34_bio_cohort"
+    },
+    {
+      "repeat_id": "seed33_hist2p0",
+      "seed": 33,
+      "history_scale": 2.0,
+      "histories_base": 2000000,
+      "histories_spot": 4000000,
+      "phase33_root": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/public_results/revision_checks_20260616/step02_phase35_fullcohort/repeat_runs/seed33_hist2p0/phase33",
+      "phase34_root": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/public_results/revision_checks_20260616/step02_phase35_fullcohort/repeat_runs/seed33_hist2p0/phase34_bio_cohort"
+    }
+  ],
+  "script_dependencies": [
+    "/Users/kw/Desktop/SFRT_repo_docs_fix/project/scripts/run_phase33_phase32_topas_cohort.py",
+    "/Users/kw/Desktop/SFRT_repo_docs_fix/project/scripts/run_phase34_phase32_bio_cohort.py",
+    "/Users/kw/Desktop/SFRT_repo_docs_fix/project/scripts/run_phase35_subset_repeat_uncertainty.py"
+  ]
+}

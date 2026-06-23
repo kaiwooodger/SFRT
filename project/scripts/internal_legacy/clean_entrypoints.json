@@ -1,0 +1,11 @@
+{
+  "generate_synthetic_cohort": "run_phase32_site_specific_template_phantoms.py",
+  "run_topas_cohort": "run_phase33_phase32_topas_cohort.py",
+  "apply_biological_reinterpretation": "run_phase34_phase32_bio_cohort.py",
+  "run_repeat_uncertainty": "run_phase35_subset_repeat_uncertainty.py",
+  "run_sink_falsification_cohort": "run_phase37a_vessel_falsification_cohort.py",
+  "run_sink_falsification_uncertainty": "run_phase37b_vessel_falsification_uncertainty.py",
+  "run_biology_parameter_robustness": "run_phase38_bio_parameter_robustness.py",
+  "run_smoothing_kernel_sensitivity": "run_phase40_smoothing_kernel_sensitivity.py",
+  "regenerate_manuscript_figures": "render_pmb_source_clean_figures.py"
+}

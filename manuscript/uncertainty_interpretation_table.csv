@@ -1,0 +1,8 @@
+endpoint,repeat_run_cv_pct_mean,repeat_run_cv_display,sink_delta_above_95pct_band
+PVDR,0.9957837850854618,1.00%,10/10
+Peri-GTV 0-5 mm,1.0213689999905489,1.02%,10/10
+Peri-GTV 5-15 mm,1.2002577974225352,1.20%,10/10
+Cord D2,2.5063313379890926,2.51%,10/10
+Brainstem D2,2.697232900925463,2.70%,10/10
+Parotid mean,2.8131104882989857,2.81%,10/10
+PTV D95,,fixed by calibration,5/10

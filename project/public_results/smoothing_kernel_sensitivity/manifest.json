@@ -1,0 +1,15 @@
+{
+  "phase32_root": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/public_results/phase32_site_specific_cohort_regenerated",
+  "phase33_root": "/Users/kw/Documents/Playground/vhee_topas/runs/phase33_phase32_topas_cohort",
+  "phase25_config": "/Users/kw/Desktop/SFRT_repo_docs_fix/project/public_results/phase25_safe_core/phase25_config.json",
+  "case_ids": [
+    "case03",
+    "case04",
+    "case06"
+  ],
+  "sigma_mm": [
+    2.0,
+    4.0,
+    6.0
+  ]
+}

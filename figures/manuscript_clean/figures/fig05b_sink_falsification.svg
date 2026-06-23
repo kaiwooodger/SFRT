@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="970" viewBox="0 0 2200 970">
+<rect width="2200" height="970" fill="white" />
+<line x1="128.00" y1="738.00" x2="712.00" y2="738.00" stroke="#d6d6d6" stroke-width="1" />
+<text x="116.00" y="744.00" font-family="Arial" font-size="22" font-weight="400" fill="black" text-anchor="end">0</text>
+<line x1="128.00" y1="577.07" x2="712.00" y2="577.07" stroke="#d6d6d6" stroke-width="1" />
+<text x="116.00" y="583.07" font-family="Arial" font-size="22" font-weight="400" fill="black" text-anchor="end">2</text>
+<line x1="128.00" y1="416.14" x2="712.00" y2="416.14" stroke="#d6d6d6" stroke-width="1" />
+<text x="116.00" y="422.14" font-family="Arial" font-size="22" font-weight="400" fill="black" text-anchor="end">4</text>
+<line x1="128.00" y1="255.21" x2="712.00" y2="255.21" stroke="#d6d6d6" stroke-width="1" />
+<text x="116.00" y="261.21" font-family="Arial" font-size="22" font-weight="400" fill="black" text-anchor="end">6</text>
+<line x1="128.00" y1="94.28" x2="712.00" y2="94.28" stroke="#d6d6d6" stroke-width="1" />
+<text x="116.00" y="100.28" font-family="Arial" font-size="22" font-weight="400" fill="black" text-anchor="end">8</text>
+<rect x="128.00" y="46.00" width="584.00" height="692.00" fill="none" stroke="#c9c9c9" stroke-width="1.8" />
+<rect x="138.71" y="174.74" width="75.92" height="563.26" fill="#4b6179" />
+<text x="176.67" y="774.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">No sink</text>
+<rect x="236.04" y="255.21" width="75.92" height="482.79" fill="#d95f02" />
+<text x="274.00" y="774.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">Uniform</text>
+<text x="274.00" y="795.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">sink</text>
+<rect x="333.37" y="174.74" width="75.92" height="563.26" fill="#2ca089" />
+<text x="371.33" y="774.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">Local</text>
+<text x="371.33" y="795.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">dropout</text>
+<rect x="430.71" y="335.67" width="75.92" height="402.33" fill="#8e44ad" />
+<text x="468.67" y="774.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">SI-flip</text>
+<rect x="528.04" y="496.60" width="75.92" height="241.40" fill="#3f86b9" />
+<text x="566.00" y="774.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">AP-flip</text>
+<rect x="625.37" y="657.53" width="75.92" height="80.47" fill="#9aa8ab" />
+<text x="663.33" y="774.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">Random</text>
+<text x="663.33" y="795.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">shift</text>
+<text x="420.00" y="880.00" font-family="Arial" font-size="20" font-weight="400" fill="black" text-anchor="middle">Comparator control</text>
+<text x="60.00" y="392.00" font-family="Arial" font-size="20" fill="#4d4d4d" text-anchor="middle" transform="rotate(-90 60.00 392.00)">Endpoint summaries excl. zero CI</text>
+<rect x="656.00" y="54.00" width="62.00" height="50.00" fill="white" stroke="black" stroke-width="1.4" />
+<text x="687.00" y="88.00" font-family="Arial" font-size="22" font-weight="700" fill="black" text-anchor="middle">(a)</text>
+<line x1="843.00" y1="738.00" x2="1427.00" y2="738.00" stroke="#d6d6d6" stroke-width="1" />
+<text x="831.00" y="744.00" font-family="Arial" font-size="22" font-weight="400" fill="black" text-anchor="end">0</text>
+<line x1="843.00" y1="571.65" x2="1427.00" y2="571.65" stroke="#d6d6d6" stroke-width="1" />
+<text x="831.00" y="577.65" font-family="Arial" font-size="22" font-weight="400" fill="black" text-anchor="end">0.2</text>
+<line x1="843.00" y1="405.31" x2="1427.00" y2="405.31" stroke="#d6d6d6" stroke-width="1" />
+<text x="831.00" y="411.31" font-family="Arial" font-size="22" font-weight="400" fill="black" text-anchor="end">0.5</text>
+<line x1="843.00" y1="238.96" x2="1427.00" y2="238.96" stroke="#d6d6d6" stroke-width="1" />
+<text x="831.00" y="244.96" font-family="Arial" font-size="22" font-weight="400" fill="black" text-anchor="end">0.8</text>
+<line x1="843.00" y1="72.62" x2="1427.00" y2="72.62" stroke="#d6d6d6" stroke-width="1" />
+<text x="831.00" y="78.62" font-family="Arial" font-size="22" font-weight="400" fill="black" text-anchor="end">1</text>
+<rect x="843.00" y="46.00" width="584.00" height="692.00" fill="none" stroke="#c9c9c9" stroke-width="1.8" />
+<rect x="853.71" y="155.79" width="75.92" height="582.21" fill="#4b6179" />
+<text x="891.67" y="774.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">No sink</text>
+<rect x="951.04" y="155.79" width="75.92" height="582.21" fill="#d95f02" />
+<text x="989.00" y="774.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">Uniform</text>
+<text x="989.00" y="795.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">sink</text>
+<rect x="1048.37" y="169.65" width="75.92" height="568.35" fill="#2ca089" />
+<text x="1086.33" y="774.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">Local</text>
+<text x="1086.33" y="795.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">dropout</text>
+<rect x="1145.71" y="294.41" width="75.92" height="443.59" fill="#8e44ad" />
+<text x="1183.67" y="774.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">SI-flip</text>
+<rect x="1243.04" y="308.27" width="75.92" height="429.73" fill="#3f86b9" />
+<text x="1281.00" y="774.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">AP-flip</text>
+<rect x="1340.37" y="266.69" width="75.92" height="471.31" fill="#9aa8ab" />
+<text x="1378.33" y="774.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">Random</text>
+<text x="1378.33" y="795.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">shift</text>
+<text x="1135.00" y="880.00" font-family="Arial" font-size="20" font-weight="400" fill="black" text-anchor="middle">Comparator control</text>
+<text x="775.00" y="392.00" font-family="Arial" font-size="20" fill="#4d4d4d" text-anchor="middle" transform="rotate(-90 775.00 392.00)">Fraction above 95% band</text>
+<rect x="1371.00" y="54.00" width="62.00" height="50.00" fill="white" stroke="black" stroke-width="1.4" />
+<text x="1402.00" y="88.00" font-family="Arial" font-size="22" font-weight="700" fill="black" text-anchor="middle">(b)</text>
+<line x1="1558.00" y1="738.00" x2="2142.00" y2="738.00" stroke="#d6d6d6" stroke-width="1" />
+<text x="1546.00" y="744.00" font-family="Arial" font-size="22" font-weight="400" fill="black" text-anchor="end">0</text>
+<line x1="1558.00" y1="437.13" x2="2142.00" y2="437.13" stroke="#d6d6d6" stroke-width="1" />
+<text x="1546.00" y="443.13" font-family="Arial" font-size="22" font-weight="400" fill="black" text-anchor="end">1</text>
+<line x1="1558.00" y1="136.26" x2="2142.00" y2="136.26" stroke="#d6d6d6" stroke-width="1" />
+<text x="1546.00" y="142.26" font-family="Arial" font-size="22" font-weight="400" fill="black" text-anchor="end">2</text>
+<rect x="1558.00" y="46.00" width="584.00" height="692.00" fill="none" stroke="#c9c9c9" stroke-width="1.8" />
+<rect x="1568.71" y="738.00" width="75.92" height="0.00" fill="#4b6179" />
+<text x="1606.67" y="774.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">No sink</text>
+<rect x="1666.04" y="136.26" width="75.92" height="601.74" fill="#d95f02" />
+<text x="1704.00" y="774.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">Uniform</text>
+<text x="1704.00" y="795.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">sink</text>
+<rect x="1763.37" y="738.00" width="75.92" height="0.00" fill="#2ca089" />
+<text x="1801.33" y="774.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">Local</text>
+<text x="1801.33" y="795.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">dropout</text>
+<rect x="1860.71" y="738.00" width="75.92" height="0.00" fill="#8e44ad" />
+<text x="1898.67" y="774.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">SI-flip</text>
+<rect x="1958.04" y="738.00" width="75.92" height="0.00" fill="#3f86b9" />
+<text x="1996.00" y="774.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">AP-flip</text>
+<rect x="2055.37" y="738.00" width="75.92" height="0.00" fill="#9aa8ab" />
+<text x="2093.33" y="774.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">Random</text>
+<text x="2093.33" y="795.00" font-family="Arial" font-size="21" font-weight="400" fill="black" text-anchor="middle">shift</text>
+<text x="1850.00" y="880.00" font-family="Arial" font-size="20" font-weight="400" fill="black" text-anchor="middle">Comparator control</text>
+<text x="1490.00" y="392.00" font-family="Arial" font-size="20" fill="#4d4d4d" text-anchor="middle" transform="rotate(-90 1490.00 392.00)">Noise-qualified rank changes</text>
+<rect x="2086.00" y="54.00" width="62.00" height="50.00" fill="white" stroke="black" stroke-width="1.4" />
+<text x="2117.00" y="88.00" font-family="Arial" font-size="22" font-weight="700" fill="black" text-anchor="middle">(c)</text>
+</svg>

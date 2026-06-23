@@ -1,0 +1,11 @@
+plan_id,baseline_with_sink_vs_physical_shift,baseline_with_sink_vs_no_sink_shift,prob_nonzero_with_sink_vs_physical_shift,prob_same_sign_with_sink_vs_physical_shift,prob_nonzero_with_sink_vs_no_sink_shift,prob_same_sign_with_sink_vs_no_sink_shift
+case01,-1,0,1.0,1.0,0.0,1.0
+case02,-1,-1,0.7692307692307693,0.7692307692307693,0.38461538461538464,0.38461538461538464
+case03,-1,0,0.46153846153846156,0.46153846153846156,0.15384615384615385,0.8461538461538461
+case04,0,0,0.0,1.0,0.0,1.0
+case05,1,1,1.0,1.0,1.0,1.0
+case06,-2,-1,1.0,1.0,1.0,1.0
+case07,2,1,1.0,1.0,0.38461538461538464,0.38461538461538464
+case08,-1,0,1.0,1.0,0.23076923076923078,0.7692307692307693
+case09,3,0,1.0,1.0,0.15384615384615385,0.8461538461538461
+case10,0,0,0.0,1.0,0.0,1.0

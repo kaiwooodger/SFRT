@@ -1,0 +1,8 @@
+metric,full_cohort_result,robustness_interpretation
+with_sink vs physical rank shifts,8/10,ranking changes occur in main model
+no_sink vs physical rank shifts,6/10,non-local biology alone drives much of the effect
+with_sink vs no-sink rank shifts,4/10,sink modifies interpretation in a subset
+biology-added brainstem flags,5/10,endpoint-level OAR reinterpretation present
+same-rank probability,0.846,ranking robustness test
+endpoint sign stability,1.000,endpoint-direction robustness test
+PVDR sign stability,1.000,PVDR robustness test
